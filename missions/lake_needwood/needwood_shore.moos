@@ -5,7 +5,7 @@
 
 ServerHost   = localhost
 ServerPort   = 9001
-Community    = alpha_shore
+Community    = needwood_robocat
 MOOSTimeWarp = 1
 
 //Lake Needwood, MOOSDB
