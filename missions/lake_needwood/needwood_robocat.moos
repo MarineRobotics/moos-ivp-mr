@@ -28,12 +28,12 @@ ProcessConfig = ANTLER
 
   Run = MOOSDB          @ NewConsole = false
   Run = pLogger         @ NewConsole = false
-  Run = pHelmIvP        @ NewConsole = true
-  Run = uProcessWatch	@ NewConsole = false
-  Run = pNodeReporter	@ NewConsole = false
+  Run = pHelmIvP        @ NewConsole = false
+  Run = uProcessWatch	  @ NewConsole = false
+  Run = pNodeReporter	  @ NewConsole = false
   Run = uMemWatch       @ NewConsole = false
-  Run = iFrontSeat	@ NewConsole = true
-  Run = pShare		@ NewConsole = false
+  Run = iFrontSeat	    @ NewConsole = false
+  Run = pShare		      @ NewConsole = false
 }
 
 //------------------------------------------
