@@ -1,0 +1,21 @@
+[ 2018-Oct-17 15:28:27.206641 ]: D2: common {
+[ 2018-Oct-17 15:28:27.206692 ]: }
+[ 2018-Oct-17 15:28:27.206707 ]: moos_var {
+[ 2018-Oct-17 15:28:27.206719 ]: }
+[ 2018-Oct-17 15:28:27.206730 ]: legacy_cfg {
+[ 2018-Oct-17 15:28:27.206741 ]: }
+[ 2018-Oct-17 15:28:27.206751 ]: 
+[ 2018-Oct-17 15:28:27.206971 ]: D: Adding FlexOstream group: FrontSeatInterfaceBase::raw::out ()
+[ 2018-Oct-17 15:28:27.207016 ]: Adding FlexOstream group: FrontSeatInterfaceBase::raw::in ()
+[ 2018-Oct-17 15:28:27.207225 ]: Trying to connect to Huxley server @ :29500
+[ 2018-Oct-17 15:28:27.207275 ]: subscribing for MOOS variable: DESIRED_HEADING @ 1
+[ 2018-Oct-17 15:28:27.207317 ]: subscribing for MOOS variable: DESIRED_SPEED @ 1
+[ 2018-Oct-17 15:28:27.207352 ]: subscribing for MOOS variable: DESIRED_DEPTH @ 1
+[ 2018-Oct-17 15:28:27.207385 ]: subscribing for MOOS variable: DESIRED_PITCH @ 1
+[ 2018-Oct-17 15:28:27.207420 ]: subscribing for MOOS variable: DESIRED_ROLL @ 1
+[ 2018-Oct-17 15:28:27.207453 ]: subscribing for MOOS variable: DESIRED_Z_RATE @ 1
+[ 2018-Oct-17 15:28:27.207492 ]: subscribing for MOOS variable: IFS_COMMAND_REQUEST @ 0
+[ 2018-Oct-17 15:28:27.207527 ]: subscribing for MOOS variable: IFS_DATA_OUT @ 0
+[ 2018-Oct-17 15:28:27.207604 ]: (Warning): Error connecting to address: :29500: Cannot assign requested address
+[ 2018-Oct-17 15:28:27.207659 ]: subscribing for MOOS variable: IFS_RAW_OUT @ 0
+[ 2018-Oct-17 15:28:27.207720 ]: subscribing for MOOS variable: IVPHELM_STATE @ 0

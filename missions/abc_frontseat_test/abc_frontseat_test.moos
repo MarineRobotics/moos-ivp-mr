@@ -1,0 +1,116 @@
+// Level 2 Configuration file: M. Benjamin
+
+ServerHost = localhost
+ServerPort = 9000
+
+Community  = abc
+
+MOOSTimeWarp = 1
+
+LatOrigin  = 43.825300
+LongOrigin = -70.330400
+
+//------------------------------------------
+// Antler configuration  block
+ProcessConfig = ANTLER
+{
+  MSBetweenLaunches = 200
+
+  Run = MOOSDB		        @ NewConsole = false
+  Run = pNodeReporter	    @ NewConsole = false
+  Run = uProcessWatch     @ NewConsole = true
+  Run = pHelmIvP	        @ NewConsole = false
+  Run = iFrontSeat        @ NewConsole = true
+}
+
+//------------------------------------------
+// iFrontSeat configuration  block
+ProcessConfig = iFrontSeat_bluefin
+{
+    common {
+        verbosity: DEBUG1
+    }
+    [abc_config] {  #  (optional)
+      tcp_address: "localhost"  #  (required)
+      tcp_port: 54321  #  (optional) (default=54321)
+      start { lat: 44.0888889 lon: 9.84861111 duration: 600 }
+    }
+}
+
+//------------------------------------------
+// uProcessWatch config block
+
+ProcessConfig = uProcessWatch
+{
+  AppTick   = 4
+  CommsTick = 4
+
+  term_report_interval = 0.8
+
+  summary_wait = 5
+
+  nowatch   = uXMS*
+  nowatch   = uPokeDB*
+  nowatch   = uTermCommand*
+  watch_all = true
+}
+
+
+//------------------------------------------
+// pHelmIvP config block
+
+ProcessConfig = pHelmIvP
+{
+  AppTick    = 4
+  CommsTick  = 4
+
+  Behaviors  = abc_frontseat_test.bhv
+  Verbose    = quiet
+  Domain     = course:0:359:360
+  Domain     = speed:0:4:21
+
+}
+
+
+//------------------------------------------
+// pMarinePID config block
+
+ProcessConfig = pMarinePID
+{
+  AppTick    = 20
+  CommsTick  = 20
+
+  VERBOSE       = true
+  DEPTH_CONTROL = false
+
+  // Yaw PID controller
+  YAW_PID_KP		 = 0.5
+  YAW_PID_KD		 = 0.0
+  YAW_PID_KI		 = 0.0
+  YAW_PID_INTEGRAL_LIMIT = 0.07
+
+  // Speed PID controller
+  SPEED_PID_KP		 = 1.0
+  SPEED_PID_KD		 = 0.0
+  SPEED_PID_KI		 = 0.0
+  SPEED_PID_INTEGRAL_LIMIT = 0.07
+
+  //MAXIMUMS
+  MAXRUDDER    = 100
+  MAXTHRUST    = 100
+
+  // A non-zero SPEED_FACTOR overrides use of SPEED_PID
+  // Will set DESIRED_THRUST = DESIRED_SPEED * SPEED_FACTOR
+  SPEED_FACTOR = 20
+}
+
+
+//------------------------------------------
+// pNodeReporter config block
+
+ProcessConfig = pNodeReporter
+{
+  AppTick	= 2
+  CommsTick	= 2
+  VESSEL_TYPE   = KAYAK
+}

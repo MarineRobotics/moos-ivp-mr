@@ -1,0 +1,980 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% LOG FILE:       ./MOOSLog_25_6_2019_____10_46_59/MOOSLog_25_6_2019_____10_46_59.alog
+%% FILE OPENED ON  Wed Dec 31 19:00:00 1969
+%% LOGSTART               1561474019.34
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+0.653           LOGGER_DIRECTORY     pLogger         ./MOOSLog_25_6_2019_____10_46_59 
+0.792           DB_EVENT             MOOSDB_apples   connected=pShare 
+0.854           PLOGGER_STATUS       pLogger         AppErrorFlag=false,Uptime=0.854346,cpuload=1.084,memory_kb=2272,memory_max_kb=2352,MOOSName=pLogger,Publishing="LOGGER_DIRECTORY,",Subscribing="LOGGER_RESTART,MOOS_DEBUG,MOOS_SYSTEM,PLOGGER_CMD,",LogAuxSrc=false 
+1.896           DB_TIME              MOOSDB_apples   1561474021.23598 
+1.896           DB_UPTIME            MOOSDB_apples   2.09860      
+1.896           DB_CLIENTS           MOOSDB_apples   pShare,uXMS_629,pXRelay_APPLES,pLogger, 
+1.897           DB_VARSUMMARY        MOOSDB_apples   APPCAST              10:47:00.634         uXMS_629             0.0 Hz S  proc=uXMS_629!@#iter=1...
+APPCAST_REQ          18:59:59.000         (write pending)      0.0 Hz ~  
+                   APPLES               18:59:59.000         (write pending)      0.0 Hz ~  
+                   APPLES_ITER_HZ       10:47:00.993         pXRelay_APPLES       0.0 Hz D  6.0                  
+APPLES_POST_HZ       18:59:59.000         (write pending)      0.0 Hz ~  
+                   DB_CLIENTS           10:47:01.236         MOOSDB_apples        0.0 Hz S  pShare,uXMS_629,pXRela...
+DB_EVENT             10:47:00.131         MOOSDB_apples        2.2 Hz S  connected=pShare    
+DB_QOS               10:46:59.136         MOOSDB#1             0.0 Hz S                      
+DB_RWSUMMARY         10:46:59.136         MOOSDB#1             0.0 Hz S                      
+DB_TIME              10:47:01.235         MOOSDB_apples        0.0 Hz D  1561474021.2         
+DB_UPTIME            10:47:01.235         MOOSDB_apples        0.0 Hz D  2.1                  
+DB_VARSUMMARY        10:46:59.136         MOOSDB#1             0.0 Hz S                      
+LOGGER_DIRECTORY     10:47:00.036         pLogger              0.0 Hz S  ./MOOSLog_25_6_2019___...
+LOGGER_RESTART       18:59:59.000         (write pending)      0.0 Hz ~  
+                   MOOS_DEBUG           18:59:59.000         (write pending)      0.0 Hz ~  
+                   MOOS_SYSTEM          18:59:59.000         (write pending)      0.0 Hz ~  
+                   PEARS                18:59:59.000         (write pending)      0.0 Hz ~  
+                   PEARS_ITER_HZ        18:59:59.000         (write pending)      0.0 Hz ~  
+                   PEARS_POST_HZ        18:59:59.000         (write pending)      0.0 Hz ~  
+                   PLOGGER_CMD          18:59:59.000         (write pending)      0.0 Hz ~  
+                   PLOGGER_STATUS       10:47:00.194         pLogger              0.0 Hz S  AppErrorFlag=false,Upt...
+PSHARE_CMD           18:59:59.000         (write pending)      0.0 Hz ~  
+                   PSHARE_STATUS        10:47:00.728         pShare               0.0 Hz S  AppErrorFlag=false,Upt...
+PXRELAY_APPLES_STATUS 10:47:00.492         pXRelay_APPLES       0.0 Hz S  AppErrorFlag=false,Upt...
+UXMS_629_ITER_GAP    10:47:01.235         uXMS_629             0.0 Hz D  1.0                  
+UXMS_629_ITER_LEN    10:47:01.235         uXMS_629             2.5 Hz D  0.0                  
+UXMS_629_STATUS      10:47:00.633         uXMS_629             0.0 Hz S  AppErrorFlag=false,Upt...
+ 
+1.897           DB_QOS               MOOSDB_apples   pLogger=0:0.274181:0.262976:0,pShare=0:0.280142:0.280142:0,pXRelay_APPLES=0:0.179052:0.179052:0,uXMS_629=0:0.30303:0.168085:0, 
+1.897           DB_RWSUMMARY         MOOSDB_apples   pShare=APPLES:PSHARE_CMD&PSHARE_STATUS,uXMS_629=APPCAST_REQ:APPLES:APPLES_ITER_HZ:APPLES_POST_HZ:DB_UPTIME:PEARS:PEARS_ITER_HZ:PEARS_POST_HZ&APPCAST:UXMS_629_ITER_GAP:UXMS_629_ITER_LEN:UXMS_629_STATUS,pXRelay_APPLES=PEARS&APPLES_ITER_HZ:PXRELAY_APPLES_STATUS,pLogger=APPCAST_REQ:DB_CLIENTS:DB_EVENT:DB_QOS:DB_RWSUMMARY:DB_TIME:DB_UPTIME:DB_VARSUMMARY:LOGGER_DIRECTORY:LOGGER_RESTART:MOOS_DEBUG:MOOS_SYSTEM:PLOGGER_CMD:PLOGGER_STATUS&LOGGER_DIRECTORY:PLOGGER_STATUS 
+1.153           PXRELAY_APPLES_STATUS pXRelay_APPLES  AppErrorFlag=false,Uptime=0.900894,cpuload=0.4635,memory_kb=2368,memory_max_kb=6932,MOOSName=pXRelay_APPLES,Publishing="",Subscribing="PEARS," 
+1.294           UXMS_629_STATUS      uXMS_629        AppErrorFlag=false,Uptime=0.851802,cpuload=0.6614,memory_kb=2396,memory_max_kb=6860,MOOSName=uXMS_629,Publishing="",Subscribing="APPCAST_REQ,APPLES,APPLES_ITER_HZ,APPLES_POST_HZ,DB_UPTIME,PEARS,PEARS_ITER_HZ,PEARS_POST_HZ," 
+1.294           APPCAST              uXMS_629        proc=uXMS_629!@#iter=1!@#node=apples!@#iter=1!@#messages=VarName         (S)ource  (T)ime  (C)ommunity  VarValue (SCOPING:[7;32mEVENTS[0m)!@--------------  --------  ------  -----------  -------------------------!@APPLES           n/a       n/a                 n/a!@APPLES_ITER_HZ   n/a       n/a                 n/a!@APPLES_POST_HZ   n/a       n/a                 n/a!@PEARS            n/a       n/a                 n/a!@PEARS_ITER_HZ    n/a       n/a                 n/a!@PEARS_POST_HZ    n/a       n/a                 n/a!@!@#config_warnings=Unhandled config line: PAUSED parameter deprecated, use REFRESH_MODE instead!@#events_total=0!@#!@#run_warning_total=0!@# 
+1.368           PSHARE_STATUS        pShare          AppErrorFlag=false,Uptime=0.676656,cpuload=0.5655,memory_kb=2344,memory_max_kb=6984,MOOSName=pShare,Publishing="",Subscribing="APPLES,PSHARE_CMD," 
+2.096           UXMS_629_ITER_GAP    uXMS_629        1.00123      
+2.096           UXMS_629_ITER_LEN    uXMS_629        0.00018      
+2.153           APPLES_ITER_HZ       pXRelay_APPLES  4.99617      
+2.297           UXMS_629_ITER_GAP    uXMS_629        1.00297      
+2.297           UXMS_629_ITER_LEN    uXMS_629        0.00016      
+2.404           APPLES_ITER_HZ       pXRelay_APPLES  4.79584      
+2.497           UXMS_629_ITER_GAP    uXMS_629        1.00114      
+2.497           UXMS_629_ITER_LEN    uXMS_629        0.00020      
+2.654           APPLES_ITER_HZ       pXRelay_APPLES  4.66275      
+2.697           UXMS_629_ITER_GAP    uXMS_629        1.00268      
+2.697           UXMS_629_ITER_LEN    uXMS_629        0.00018      
+2.857           PLOGGER_STATUS       pLogger         AppErrorFlag=false,Uptime=2.85698,cpuload=0.485,memory_kb=4500,memory_max_kb=4500,MOOSName=pLogger,Publishing="LOGGER_DIRECTORY,PLOGGER_STATUS,",Subscribing="APPCAST,APPCAST_REQ,APPLES,APPLES_ITER_HZ,APPLES_POST_HZ,DB_CLIENTS,DB_EVENT,DB_QOS,DB_RWSUMMARY,DB_TIME,DB_UPTIME,DB_VARSUMMARY,LOGGER_DIRECTORY,LOGGER_RESTART,MOOS_DEBUG,MOOS_SYSTEM,PEARS,PEARS_ITER_HZ,PEARS_POST_HZ,PLOGGER_CMD,PLOGGER_STATUS,PSHARE_CMD,PSHARE_STATUS,PXRELAY_APPLES_STATUS,UXMS_629_ITER_GAP,UXMS_629_ITER_LEN,UXMS_629_STATUS,",LogAuxSrc=false 
+2.898           UXMS_629_ITER_GAP    uXMS_629        1.00148      
+2.898           UXMS_629_ITER_LEN    uXMS_629        0.00027      
+2.904           APPLES_ITER_HZ       pXRelay_APPLES  4.56763      
+3.098           UXMS_629_ITER_GAP    uXMS_629        1.00283      
+3.098           UXMS_629_ITER_LEN    uXMS_629        0.00017      
+3.154           PXRELAY_APPLES_STATUS pXRelay_APPLES  AppErrorFlag=false,Uptime=2.90271,cpuload=0.1511,memory_kb=2368,memory_max_kb=6932,MOOSName=pXRelay_APPLES,Publishing="APPLES_ITER_HZ,PXRELAY_APPLES_STATUS,",Subscribing="PEARS," 
+3.154           APPLES_ITER_HZ       pXRelay_APPLES  4.49587      
+2.375           PSHARE_OUTPUT_SUMMARY pShare          APPLES->APPLES:localhost:9201 
+2.375           PSHARE_INPUT_SUMMARY pShare          localhost:9200 
+3.299           UXMS_629_STATUS      uXMS_629        AppErrorFlag=false,Uptime=2.85648,cpuload=0.4142,memory_kb=2396,memory_max_kb=6860,MOOSName=uXMS_629,Publishing="APPCAST,UXMS_629_ITER_GAP,UXMS_629_ITER_LEN,UXMS_629_STATUS,",Subscribing="APPCAST_REQ,APPLES,APPLES_ITER_HZ,APPLES_POST_HZ,DB_UPTIME,PEARS,PEARS_ITER_HZ,PEARS_POST_HZ," 
+3.299           UXMS_629_ITER_GAP    uXMS_629        1.00171      
+3.299           UXMS_629_ITER_LEN    uXMS_629        0.00008      
+3.381           PSHARE_STATUS        pShare          AppErrorFlag=false,Uptime=2.69019,cpuload=0.2803,memory_kb=2344,memory_max_kb=6984,MOOSName=pShare,Publishing="PSHARE_INPUT_SUMMARY,PSHARE_OUTPUT_SUMMARY,PSHARE_STATUS,",Subscribing="APPLES,PSHARE_CMD," 
+3.381           PSHARE_OUTPUT_SUMMARY pShare          APPLES->APPLES:localhost:9201 
+3.381           PSHARE_INPUT_SUMMARY pShare          localhost:9200 
+3.405           APPLES_ITER_HZ       pXRelay_APPLES  4.44057      
+3.499           UXMS_629_ITER_GAP    uXMS_629        1.00255      
+3.499           UXMS_629_ITER_LEN    uXMS_629        0.00018      
+3.655           APPLES_ITER_HZ       pXRelay_APPLES  4.39626      
+3.699           UXMS_629_ITER_GAP    uXMS_629        1.00203      
+3.700           UXMS_629_ITER_LEN    uXMS_629        0.00022      
+3.900           UXMS_629_ITER_GAP    uXMS_629        1.00212      
+3.900           UXMS_629_ITER_LEN    uXMS_629        0.00019      
+3.900           DB_TIME              MOOSDB_apples   1561474023.24002 
+3.900           DB_UPTIME            MOOSDB_apples   4.10264      
+3.900           DB_CLIENTS           MOOSDB_apples   pShare,uXMS_629,pXRelay_APPLES,pLogger, 
+3.901           DB_VARSUMMARY        MOOSDB_apples   APPCAST              10:47:00.634         uXMS_629             0.0 Hz S  proc=uXMS_629!@#iter=1...
+APPCAST_REQ          18:59:59.000         (write pending)      0.0 Hz ~  
+                   APPLES               18:59:59.000         (write pending)      0.0 Hz ~  
+                   APPLES_ITER_HZ       10:47:02.994         pXRelay_APPLES       3.7 Hz D  4.4                  
+APPLES_POST_HZ       18:59:59.000         (write pending)      0.0 Hz ~  
+                   DB_CLIENTS           10:47:03.240         MOOSDB_apples        0.2 Hz S  pShare,uXMS_629,pXRela...
+DB_EVENT             10:47:00.131         MOOSDB_apples        2.2 Hz S  connected=pShare    
+DB_QOS               10:47:01.236         MOOSDB_apples        0.0 Hz S  pLogger=0:0.274181:0.2...
+DB_RWSUMMARY         10:47:01.236         MOOSDB_apples        0.0 Hz S  pShare=APPLES:PSHARE_C...
+DB_TIME              10:47:03.240         MOOSDB_apples        0.2 Hz D  1561474023.2         
+DB_UPTIME            10:47:03.240         MOOSDB_apples        0.2 Hz D  4.1                  
+DB_VARSUMMARY        10:47:01.236         MOOSDB_apples        0.0 Hz S  APPCAST              1...
+LOGGER_DIRECTORY     10:47:00.036         pLogger              0.0 Hz S  ./MOOSLog_25_6_2019___...
+LOGGER_RESTART       18:59:59.000         (write pending)      0.0 Hz ~  
+                   MOOS_DEBUG           18:59:59.000         (write pending)      0.0 Hz ~  
+                   MOOS_SYSTEM          18:59:59.000         (write pending)      0.0 Hz ~  
+                   PEARS                18:59:59.000         (write pending)      0.0 Hz ~  
+                   PEARS_ITER_HZ        18:59:59.000         (write pending)      0.0 Hz ~  
+                   PEARS_POST_HZ        18:59:59.000         (write pending)      0.0 Hz ~  
+                   PLOGGER_CMD          18:59:59.000         (write pending)      0.0 Hz ~  
+                   PLOGGER_STATUS       10:47:02.197         pLogger              0.2 Hz S  AppErrorFlag=false,Upt...
+PSHARE_CMD           18:59:59.000         (write pending)      0.0 Hz ~  
+                   PSHARE_INPUT_SUMMARY 10:47:02.764         pShare               0.5 Hz S  localhost:9200      
+PSHARE_OUTPUT_SUMMARY 10:47:02.764         pShare               0.5 Hz S  APPLES->APPLES:localho...
+PSHARE_STATUS        10:47:02.721         pShare               0.3 Hz S  AppErrorFlag=false,Upt...
+PXRELAY_APPLES_STATUS 10:47:02.494         pXRelay_APPLES       0.2 Hz S  AppErrorFlag=false,Upt...
+UXMS_629_ITER_GAP    10:47:03.240         uXMS_629             4.7 Hz D  1.0                  
+UXMS_629_ITER_LEN    10:47:03.039         uXMS_629             4.7 Hz D  0.0                  
+UXMS_629_STATUS      10:47:02.638         uXMS_629             0.2 Hz S  AppErrorFlag=false,Upt...
+ 
+3.901           DB_QOS               MOOSDB_apples   pLogger=0:0.302076:0.262976:0,pShare=0:0.305176:0.280142:0,pXRelay_APPLES=0:0.301838:0.179052:0,uXMS_629=0:0.30303:0.168085:0, 
+3.901           DB_RWSUMMARY         MOOSDB_apples   pShare=APPLES:PSHARE_CMD&PSHARE_INPUT_SUMMARY:PSHARE_OUTPUT_SUMMARY:PSHARE_STATUS,uXMS_629=APPCAST_REQ:APPLES:APPLES_ITER_HZ:APPLES_POST_HZ:DB_UPTIME:PEARS:PEARS_ITER_HZ:PEARS_POST_HZ&APPCAST:UXMS_629_ITER_GAP:UXMS_629_ITER_LEN:UXMS_629_STATUS,pXRelay_APPLES=PEARS&APPLES_ITER_HZ:PXRELAY_APPLES_STATUS,pLogger=APPCAST:APPCAST_REQ:APPLES:APPLES_ITER_HZ:APPLES_POST_HZ:DB_CLIENTS:DB_EVENT:DB_QOS:DB_RWSUMMARY:DB_TIME:DB_UPTIME:DB_VARSUMMARY:LOGGER_DIRECTORY:LOGGER_RESTART:MOOS_DEBUG:MOOS_SYSTEM:PEARS:PEARS_ITER_HZ:PEARS_POST_HZ:PLOGGER_CMD:PLOGGER_STATUS:PSHARE_CMD:PSHARE_INPUT_SUMMARY:PSHARE_OUTPUT_SUMMARY:PSHARE_STATUS:PXRELAY_APPLES_STATUS:UXMS_629_ITER_GAP:UXMS_629_ITER_LEN:UXMS_629_STATUS&LOGGER_DIRECTORY:PLOGGER_STATUS 
+3.905           APPLES_ITER_HZ       pXRelay_APPLES  4.35999      
+4.100           UXMS_629_ITER_GAP    uXMS_629        1.00116      
+4.100           UXMS_629_ITER_LEN    uXMS_629        0.00021      
+4.155           APPLES_ITER_HZ       pXRelay_APPLES  4.32978      
+4.301           UXMS_629_ITER_GAP    uXMS_629        1.00250      
+4.301           UXMS_629_ITER_LEN    uXMS_629        0.00015      
+4.389           PSHARE_OUTPUT_SUMMARY pShare          APPLES->APPLES:localhost:9201 
+4.389           PSHARE_INPUT_SUMMARY pShare          localhost:9200 
+4.405           APPLES_ITER_HZ       pXRelay_APPLES  4.30409      
+4.501           UXMS_629_ITER_GAP    uXMS_629        1.00088      
+4.501           UXMS_629_ITER_LEN    uXMS_629        0.00018      
+4.655           APPLES_ITER_HZ       pXRelay_APPLES  4.28225      
+4.701           UXMS_629_ITER_GAP    uXMS_629        1.00247      
+4.701           UXMS_629_ITER_LEN    uXMS_629        0.00017      
+4.861           PLOGGER_STATUS       pLogger         AppErrorFlag=false,Uptime=4.86143,cpuload=0.3717,memory_kb=4500,memory_max_kb=4500,MOOSName=pLogger,Publishing="LOGGER_DIRECTORY,PLOGGER_STATUS,",Subscribing="APPCAST,APPCAST_REQ,APPLES,APPLES_ITER_HZ,APPLES_POST_HZ,DB_CLIENTS,DB_EVENT,DB_QOS,DB_RWSUMMARY,DB_TIME,DB_UPTIME,DB_VARSUMMARY,LOGGER_DIRECTORY,LOGGER_RESTART,MOOS_DEBUG,MOOS_SYSTEM,PEARS,PEARS_ITER_HZ,PEARS_POST_HZ,PLOGGER_CMD,PLOGGER_STATUS,PSHARE_CMD,PSHARE_INPUT_SUMMARY,PSHARE_OUTPUT_SUMMARY,PSHARE_STATUS,PXRELAY_APPLES_STATUS,UXMS_629_ITER_GAP,UXMS_629_ITER_LEN,UXMS_629_STATUS,",LogAuxSrc=false 
+4.901           UXMS_629_ITER_GAP    uXMS_629        1.00085      
+4.902           UXMS_629_ITER_LEN    uXMS_629        0.00025      
+4.906           APPLES_ITER_HZ       pXRelay_APPLES  4.26327      
+5.102           UXMS_629_ITER_GAP    uXMS_629        1.00250      
+5.102           UXMS_629_ITER_LEN    uXMS_629        0.00021      
+5.156           PXRELAY_APPLES_STATUS pXRelay_APPLES  AppErrorFlag=false,Uptime=4.90407,cpuload=0.1605,memory_kb=2368,memory_max_kb=6932,MOOSName=pXRelay_APPLES,Publishing="APPLES_ITER_HZ,PXRELAY_APPLES_STATUS,",Subscribing="PEARS," 
+5.156           APPLES_ITER_HZ       pXRelay_APPLES  4.24662      
+5.302           UXMS_629_STATUS      uXMS_629        AppErrorFlag=false,Uptime=4.86019,cpuload=0.404,memory_kb=2396,memory_max_kb=6860,MOOSName=uXMS_629,Publishing="APPCAST,UXMS_629_ITER_GAP,UXMS_629_ITER_LEN,UXMS_629_STATUS,",Subscribing="APPCAST_REQ,APPLES,APPLES_ITER_HZ,APPLES_POST_HZ,DB_UPTIME,PEARS,PEARS_ITER_HZ,PEARS_POST_HZ," 
+5.302           UXMS_629_ITER_GAP    uXMS_629        1.00147      
+5.302           UXMS_629_ITER_LEN    uXMS_629        0.00009      
+5.395           PSHARE_STATUS        pShare          AppErrorFlag=false,Uptime=4.70361,cpuload=0.2233,memory_kb=2344,memory_max_kb=6984,MOOSName=pShare,Publishing="PSHARE_INPUT_SUMMARY,PSHARE_OUTPUT_SUMMARY,PSHARE_STATUS,",Subscribing="APPLES,PSHARE_CMD," 
+5.395           PSHARE_OUTPUT_SUMMARY pShare          APPLES->APPLES:localhost:9201 
+5.395           PSHARE_INPUT_SUMMARY pShare          localhost:9200 
+5.406           APPLES_ITER_HZ       pXRelay_APPLES  4.23197      
+5.503           UXMS_629_ITER_GAP    uXMS_629        1.00254      
+5.503           UXMS_629_ITER_LEN    uXMS_629        0.00017      
+5.656           APPLES_ITER_HZ       pXRelay_APPLES  4.21895      
+5.703           UXMS_629_ITER_GAP    uXMS_629        1.00105      
+5.703           UXMS_629_ITER_LEN    uXMS_629        0.00016      
+5.903           UXMS_629_ITER_GAP    uXMS_629        1.00210      
+5.903           UXMS_629_ITER_LEN    uXMS_629        0.00022      
+5.904           DB_TIME              MOOSDB_apples   1561474025.24356 
+5.904           DB_UPTIME            MOOSDB_apples   6.10618      
+5.904           DB_CLIENTS           MOOSDB_apples   pShare,uXMS_629,pXRelay_APPLES,pLogger, 
+5.904           DB_VARSUMMARY        MOOSDB_apples   APPCAST              10:47:00.634         uXMS_629             0.0 Hz S  proc=uXMS_629!@#iter=1...
+APPCAST_REQ          18:59:59.000         (write pending)      0.0 Hz ~  
+                   APPLES               18:59:59.000         (write pending)      0.0 Hz ~  
+                   APPLES_ITER_HZ       10:47:04.996         pXRelay_APPLES       4.0 Hz D  4.2                  
+APPLES_POST_HZ       18:59:59.000         (write pending)      0.0 Hz ~  
+                   DB_CLIENTS           10:47:05.243         MOOSDB_apples        0.4 Hz S  pShare,uXMS_629,pXRela...
+DB_EVENT             10:47:00.131         MOOSDB_apples        2.2 Hz S  connected=pShare    
+DB_QOS               10:47:03.240         MOOSDB_apples        0.2 Hz S  pLogger=0:0.302076:0.2...
+DB_RWSUMMARY         10:47:03.240         MOOSDB_apples        0.2 Hz S  pShare=APPLES:PSHARE_C...
+DB_TIME              10:47:05.243         MOOSDB_apples        0.4 Hz D  1561474025.2         
+DB_UPTIME            10:47:05.243         MOOSDB_apples        0.4 Hz D  6.1                  
+DB_VARSUMMARY        10:47:03.240         MOOSDB_apples        0.2 Hz S  APPCAST              1...
+LOGGER_DIRECTORY     10:47:00.036         pLogger              0.0 Hz S  ./MOOSLog_25_6_2019___...
+LOGGER_RESTART       18:59:59.000         (write pending)      0.0 Hz ~  
+                   MOOS_DEBUG           18:59:59.000         (write pending)      0.0 Hz ~  
+                   MOOS_SYSTEM          18:59:59.000         (write pending)      0.0 Hz ~  
+                   PEARS                18:59:59.000         (write pending)      0.0 Hz ~  
+                   PEARS_ITER_HZ        18:59:59.000         (write pending)      0.0 Hz ~  
+                   PEARS_POST_HZ        18:59:59.000         (write pending)      0.0 Hz ~  
+                   PLOGGER_CMD          18:59:59.000         (write pending)      0.0 Hz ~  
+                   PLOGGER_STATUS       10:47:04.201         pLogger              0.4 Hz S  AppErrorFlag=false,Upt...
+PSHARE_CMD           18:59:59.000         (write pending)      0.0 Hz ~  
+                   PSHARE_INPUT_SUMMARY 10:47:04.734         pShare               0.9 Hz S  localhost:9200      
+PSHARE_OUTPUT_SUMMARY 10:47:04.734         pShare               0.9 Hz S  APPLES->APPLES:localho...
+PSHARE_STATUS        10:47:04.734         pShare               0.4 Hz S  AppErrorFlag=false,Upt...
+PXRELAY_APPLES_STATUS 10:47:04.495         pXRelay_APPLES       0.4 Hz S  AppErrorFlag=false,Upt...
+UXMS_629_ITER_GAP    10:47:05.243         uXMS_629             5.0 Hz D  1.0                  
+UXMS_629_ITER_LEN    10:47:05.243         uXMS_629             5.0 Hz D  0.0                  
+UXMS_629_STATUS      10:47:04.642         uXMS_629             0.4 Hz S  AppErrorFlag=false,Upt...
+ 
+5.904           DB_QOS               MOOSDB_apples   pLogger=0.248909:0.302076:0.248909:0.277996,pShare=0.216007:0.305176:0.216007:0.271034,pXRelay_APPLES=0.259876:0.301838:0.179052:0.239944,uXMS_629=0.255108:0.30303:0.168085:0.261402, 
+5.904           DB_RWSUMMARY         MOOSDB_apples   pShare=APPLES:PSHARE_CMD&PSHARE_INPUT_SUMMARY:PSHARE_OUTPUT_SUMMARY:PSHARE_STATUS,uXMS_629=APPCAST_REQ:APPLES:APPLES_ITER_HZ:APPLES_POST_HZ:DB_UPTIME:PEARS:PEARS_ITER_HZ:PEARS_POST_HZ&APPCAST:UXMS_629_ITER_GAP:UXMS_629_ITER_LEN:UXMS_629_STATUS,pXRelay_APPLES=PEARS&APPLES_ITER_HZ:PXRELAY_APPLES_STATUS,pLogger=APPCAST:APPCAST_REQ:APPLES:APPLES_ITER_HZ:APPLES_POST_HZ:DB_CLIENTS:DB_EVENT:DB_QOS:DB_RWSUMMARY:DB_TIME:DB_UPTIME:DB_VARSUMMARY:LOGGER_DIRECTORY:LOGGER_RESTART:MOOS_DEBUG:MOOS_SYSTEM:PEARS:PEARS_ITER_HZ:PEARS_POST_HZ:PLOGGER_CMD:PLOGGER_STATUS:PSHARE_CMD:PSHARE_INPUT_SUMMARY:PSHARE_OUTPUT_SUMMARY:PSHARE_STATUS:PXRELAY_APPLES_STATUS:UXMS_629_ITER_GAP:UXMS_629_ITER_LEN:UXMS_629_STATUS&LOGGER_DIRECTORY:PLOGGER_STATUS 
+5.906           APPLES_ITER_HZ       pXRelay_APPLES  4.20721      
+6.104           UXMS_629_ITER_GAP    uXMS_629        1.00182      
+6.104           UXMS_629_ITER_LEN    uXMS_629        0.00024      
+6.156           APPLES_ITER_HZ       pXRelay_APPLES  4.19675      
+6.304           UXMS_629_ITER_GAP    uXMS_629        1.00313      
+6.304           UXMS_629_ITER_LEN    uXMS_629        0.00019      
+6.402           PSHARE_OUTPUT_SUMMARY pShare          APPLES->APPLES:localhost:9201 
+6.402           PSHARE_INPUT_SUMMARY pShare          localhost:9200 
+6.407           APPLES_ITER_HZ       pXRelay_APPLES  4.18709      
+6.505           UXMS_629_ITER_GAP    uXMS_629        1.00112      
+6.505           UXMS_629_ITER_LEN    uXMS_629        0.00024      
+6.657           APPLES_ITER_HZ       pXRelay_APPLES  4.17840      
+6.705           UXMS_629_ITER_GAP    uXMS_629        1.00285      
+6.705           UXMS_629_ITER_LEN    uXMS_629        0.00021      
+6.866           PLOGGER_STATUS       pLogger         AppErrorFlag=false,Uptime=6.86571,cpuload=0.4027,memory_kb=4500,memory_max_kb=4500,MOOSName=pLogger,Publishing="LOGGER_DIRECTORY,PLOGGER_STATUS,",Subscribing="APPCAST,APPCAST_REQ,APPLES,APPLES_ITER_HZ,APPLES_POST_HZ,DB_CLIENTS,DB_EVENT,DB_QOS,DB_RWSUMMARY,DB_TIME,DB_UPTIME,DB_VARSUMMARY,LOGGER_DIRECTORY,LOGGER_RESTART,MOOS_DEBUG,MOOS_SYSTEM,PEARS,PEARS_ITER_HZ,PEARS_POST_HZ,PLOGGER_CMD,PLOGGER_STATUS,PSHARE_CMD,PSHARE_INPUT_SUMMARY,PSHARE_OUTPUT_SUMMARY,PSHARE_STATUS,PXRELAY_APPLES_STATUS,UXMS_629_ITER_GAP,UXMS_629_ITER_LEN,UXMS_629_STATUS,",LogAuxSrc=false 
+6.905           UXMS_629_ITER_GAP    uXMS_629        1.00130      
+6.905           UXMS_629_ITER_LEN    uXMS_629        0.00028      
+6.907           APPLES_ITER_HZ       pXRelay_APPLES  4.17052      
+7.106           UXMS_629_ITER_GAP    uXMS_629        1.00313      
+7.106           UXMS_629_ITER_LEN    uXMS_629        0.00021      
+7.158           PXRELAY_APPLES_STATUS pXRelay_APPLES  AppErrorFlag=false,Uptime=6.90592,cpuload=0.1765,memory_kb=2368,memory_max_kb=6932,MOOSName=pXRelay_APPLES,Publishing="APPLES_ITER_HZ,PXRELAY_APPLES_STATUS,",Subscribing="PEARS," 
+7.158           APPLES_ITER_HZ       pXRelay_APPLES  4.16317      
+7.306           UXMS_629_STATUS      uXMS_629        AppErrorFlag=false,Uptime=6.86439,cpuload=0.4512,memory_kb=2396,memory_max_kb=6860,MOOSName=uXMS_629,Publishing="APPCAST,UXMS_629_ITER_GAP,UXMS_629_ITER_LEN,UXMS_629_STATUS,",Subscribing="APPCAST_REQ,APPLES,APPLES_ITER_HZ,APPLES_POST_HZ,DB_UPTIME,PEARS,PEARS_ITER_HZ,PEARS_POST_HZ," 
+7.306           UXMS_629_ITER_GAP    uXMS_629        1.00198      
+7.306           UXMS_629_ITER_LEN    uXMS_629        0.00009      
+7.408           APPLES_ITER_HZ       pXRelay_APPLES  4.15657      
+7.411           PSHARE_STATUS        pShare          AppErrorFlag=false,Uptime=6.7197,cpuload=0.2741,memory_kb=2344,memory_max_kb=6984,MOOSName=pShare,Publishing="PSHARE_INPUT_SUMMARY,PSHARE_OUTPUT_SUMMARY,PSHARE_STATUS,",Subscribing="APPLES,PSHARE_CMD," 
+7.411           PSHARE_OUTPUT_SUMMARY pShare          APPLES->APPLES:localhost:9201 
+7.411           PSHARE_INPUT_SUMMARY pShare          localhost:9200 
+7.507           UXMS_629_ITER_GAP    uXMS_629        1.00279      
+7.507           UXMS_629_ITER_LEN    uXMS_629        0.00021      
+7.658           APPLES_ITER_HZ       pXRelay_APPLES  4.15038      
+7.707           UXMS_629_ITER_GAP    uXMS_629        1.00161      
+7.707           UXMS_629_ITER_LEN    uXMS_629        0.00023      
+7.908           UXMS_629_ITER_GAP    uXMS_629        1.00264      
+7.908           UXMS_629_ITER_LEN    uXMS_629        0.00021      
+7.908           APPLES_ITER_HZ       pXRelay_APPLES  4.14471      
+7.908           DB_TIME              MOOSDB_apples   1561474027.24809 
+7.908           DB_UPTIME            MOOSDB_apples   8.11071      
+7.908           DB_CLIENTS           MOOSDB_apples   pShare,uXMS_629,pXRelay_APPLES,pLogger, 
+7.909           DB_VARSUMMARY        MOOSDB_apples   APPCAST              10:47:00.634         uXMS_629             0.0 Hz S  proc=uXMS_629!@#iter=1...
+APPCAST_REQ          18:59:59.000         (write pending)      0.0 Hz ~  
+                   APPLES               18:59:59.000         (write pending)      0.0 Hz ~  
+                   APPLES_ITER_HZ       10:47:06.998         pXRelay_APPLES       4.0 Hz D  4.2                  
+APPLES_POST_HZ       18:59:59.000         (write pending)      0.0 Hz ~  
+                   DB_CLIENTS           10:47:07.248         MOOSDB_apples        0.4 Hz S  pShare,uXMS_629,pXRela...
+DB_EVENT             10:47:00.131         MOOSDB_apples        2.2 Hz S  connected=pShare    
+DB_QOS               10:47:05.243         MOOSDB_apples        0.4 Hz S  pLogger=0.248909:0.302...
+DB_RWSUMMARY         10:47:05.244         MOOSDB_apples        0.4 Hz S  pShare=APPLES:PSHARE_C...
+DB_TIME              10:47:07.248         MOOSDB_apples        0.4 Hz D  1561474027.2         
+DB_UPTIME            10:47:07.248         MOOSDB_apples        0.4 Hz D  8.1                  
+DB_VARSUMMARY        10:47:05.243         MOOSDB_apples        0.4 Hz S  APPCAST              1...
+LOGGER_DIRECTORY     10:47:00.036         pLogger              0.0 Hz S  ./MOOSLog_25_6_2019___...
+LOGGER_RESTART       18:59:59.000         (write pending)      0.0 Hz ~  
+                   MOOS_DEBUG           18:59:59.000         (write pending)      0.0 Hz ~  
+                   MOOS_SYSTEM          18:59:59.000         (write pending)      0.0 Hz ~  
+                   PEARS                18:59:59.000         (write pending)      0.0 Hz ~  
+                   PEARS_ITER_HZ        18:59:59.000         (write pending)      0.0 Hz ~  
+                   PEARS_POST_HZ        18:59:59.000         (write pending)      0.0 Hz ~  
+                   PLOGGER_CMD          18:59:59.000         (write pending)      0.0 Hz ~  
+                   PLOGGER_STATUS       10:47:06.205         pLogger              0.4 Hz S  AppErrorFlag=false,Upt...
+PSHARE_CMD           18:59:59.000         (write pending)      0.0 Hz ~  
+                   PSHARE_INPUT_SUMMARY 10:47:06.751         pShare               1.0 Hz S  localhost:9200      
+PSHARE_OUTPUT_SUMMARY 10:47:06.751         pShare               1.0 Hz S  APPLES->APPLES:localho...
+PSHARE_STATUS        10:47:06.751         pShare               0.4 Hz S  AppErrorFlag=false,Upt...
+PXRELAY_APPLES_STATUS 10:47:06.497         pXRelay_APPLES       0.4 Hz S  AppErrorFlag=false,Upt...
+UXMS_629_ITER_GAP    10:47:07.248         uXMS_629             5.0 Hz D  1.0                  
+UXMS_629_ITER_LEN    10:47:07.248         uXMS_629             5.0 Hz D  0.0                  
+UXMS_629_STATUS      10:47:06.646         uXMS_629             0.4 Hz S  AppErrorFlag=false,Upt...
+ 
+7.909           DB_QOS               MOOSDB_apples   pLogger=0.308037:0.308037:0.248909:0.289822,pShare=0.19908:0.32115:0.19908:0.267649,pXRelay_APPLES=0.262976:0.301838:0.179052:0.240564,uXMS_629=0.377178:0.377178:0.168085:0.285816, 
+7.909           DB_RWSUMMARY         MOOSDB_apples   pShare=APPLES:PSHARE_CMD&PSHARE_INPUT_SUMMARY:PSHARE_OUTPUT_SUMMARY:PSHARE_STATUS,uXMS_629=APPCAST_REQ:APPLES:APPLES_ITER_HZ:APPLES_POST_HZ:DB_UPTIME:PEARS:PEARS_ITER_HZ:PEARS_POST_HZ&APPCAST:UXMS_629_ITER_GAP:UXMS_629_ITER_LEN:UXMS_629_STATUS,pXRelay_APPLES=PEARS&APPLES_ITER_HZ:PXRELAY_APPLES_STATUS,pLogger=APPCAST:APPCAST_REQ:APPLES:APPLES_ITER_HZ:APPLES_POST_HZ:DB_CLIENTS:DB_EVENT:DB_QOS:DB_RWSUMMARY:DB_TIME:DB_UPTIME:DB_VARSUMMARY:LOGGER_DIRECTORY:LOGGER_RESTART:MOOS_DEBUG:MOOS_SYSTEM:PEARS:PEARS_ITER_HZ:PEARS_POST_HZ:PLOGGER_CMD:PLOGGER_STATUS:PSHARE_CMD:PSHARE_INPUT_SUMMARY:PSHARE_OUTPUT_SUMMARY:PSHARE_STATUS:PXRELAY_APPLES_STATUS:UXMS_629_ITER_GAP:UXMS_629_ITER_LEN:UXMS_629_STATUS&LOGGER_DIRECTORY:PLOGGER_STATUS 
+8.108           UXMS_629_ITER_GAP    uXMS_629        1.00135      
+8.108           UXMS_629_ITER_LEN    uXMS_629        0.00018      
+8.159           APPLES_ITER_HZ       pXRelay_APPLES  4.13936      
+8.309           UXMS_629_ITER_GAP    uXMS_629        1.00326      
+8.309           UXMS_629_ITER_LEN    uXMS_629        0.00022      
+8.409           APPLES_ITER_HZ       pXRelay_APPLES  4.13447      
+8.421           PSHARE_OUTPUT_SUMMARY pShare          APPLES->APPLES:localhost:9201 
+8.421           PSHARE_INPUT_SUMMARY pShare          localhost:9200 
+8.509           UXMS_629_ITER_GAP    uXMS_629        1.00106      
+8.509           UXMS_629_ITER_LEN    uXMS_629        0.00021      
+8.659           APPLES_ITER_HZ       pXRelay_APPLES  4.12982      
+8.710           UXMS_629_ITER_GAP    uXMS_629        1.00291      
+8.710           UXMS_629_ITER_LEN    uXMS_629        0.00018      
+8.818           PEARS                uPokeDB         1.00000      
+8.871           PLOGGER_STATUS       pLogger         AppErrorFlag=false,Uptime=8.87049,cpuload=0.463,memory_kb=4500,memory_max_kb=4500,MOOSName=pLogger,Publishing="LOGGER_DIRECTORY,PLOGGER_STATUS,",Subscribing="APPCAST,APPCAST_REQ,APPLES,APPLES_ITER_HZ,APPLES_POST_HZ,DB_CLIENTS,DB_EVENT,DB_QOS,DB_RWSUMMARY,DB_TIME,DB_UPTIME,DB_VARSUMMARY,LOGGER_DIRECTORY,LOGGER_RESTART,MOOS_DEBUG,MOOS_SYSTEM,PEARS,PEARS_ITER_HZ,PEARS_POST_HZ,PLOGGER_CMD,PLOGGER_STATUS,PSHARE_CMD,PSHARE_INPUT_SUMMARY,PSHARE_OUTPUT_SUMMARY,PSHARE_STATUS,PXRELAY_APPLES_STATUS,UXMS_629_ITER_GAP,UXMS_629_ITER_LEN,UXMS_629_STATUS,",LogAuxSrc=false 
+8.909           APPLES               pXRelay_APPLES  1.00000      
+8.909           APPLES_ITER_HZ       pXRelay_APPLES  4.12547      
+8.910           UXMS_629_ITER_GAP    uXMS_629        1.00114      
+8.910           UXMS_629_ITER_LEN    uXMS_629        0.00023      
+9.110           UXMS_629_ITER_GAP    uXMS_629        1.00340      
+9.111           UXMS_629_ITER_LEN    uXMS_629        0.00018      
+9.118           PEARS                pXRelay_PEARS   1.00000      
+9.159           PXRELAY_APPLES_STATUS pXRelay_APPLES  AppErrorFlag=false,Uptime=8.90776,cpuload=0.1737,memory_kb=2368,memory_max_kb=6932,MOOSName=pXRelay_APPLES,Publishing="APPLES,APPLES_ITER_HZ,PXRELAY_APPLES_STATUS,",Subscribing="PEARS," 
+9.159           APPLES               pXRelay_APPLES  2.00000      
+9.159           APPLES_ITER_HZ       pXRelay_APPLES  4.12146      
+9.159           APPLES_POST_HZ       pXRelay_APPLES  7.99453      
+9.311           UXMS_629_STATUS      uXMS_629        AppErrorFlag=false,Uptime=8.86876,cpuload=0.4875,memory_kb=2396,memory_max_kb=6860,MOOSName=uXMS_629,Publishing="APPCAST,UXMS_629_ITER_GAP,UXMS_629_ITER_LEN,UXMS_629_STATUS,",Subscribing="APPCAST_REQ,APPLES,APPLES_ITER_HZ,APPLES_POST_HZ,DB_UPTIME,PEARS,PEARS_ITER_HZ,PEARS_POST_HZ," 
+9.311           UXMS_629_ITER_GAP    uXMS_629        1.00170      
+9.311           UXMS_629_ITER_LEN    uXMS_629        0.00008      
+9.368           PEARS                pXRelay_PEARS   2.00000      
+9.410           APPLES               pXRelay_APPLES  3.00000      
+9.410           APPLES_ITER_HZ       pXRelay_APPLES  4.11769      
+9.410           APPLES_POST_HZ       pXRelay_APPLES  5.99565      
+9.436           PSHARE_STATUS        pShare          AppErrorFlag=false,Uptime=8.74453,cpuload=0.4868,memory_kb=2344,memory_max_kb=6984,MOOSName=pShare,Publishing="PSHARE_INPUT_SUMMARY,PSHARE_OUTPUT_SUMMARY,PSHARE_STATUS,",Subscribing="APPLES,PSHARE_CMD," 
+9.436           PSHARE_OUTPUT_SUMMARY pShare          APPLES->APPLES:localhost:9201 
+9.436           PSHARE_INPUT_SUMMARY pShare          localhost:9200 
+9.511           UXMS_629_ITER_GAP    uXMS_629        1.00288      
+9.511           UXMS_629_ITER_LEN    uXMS_629        0.00017      
+9.618           PEARS                pXRelay_PEARS   3.00000      
+9.660           APPLES               pXRelay_APPLES  4.00000      
+9.660           APPLES_ITER_HZ       pXRelay_APPLES  4.11416      
+9.660           APPLES_POST_HZ       pXRelay_APPLES  5.32967      
+9.712           UXMS_629_ITER_GAP    uXMS_629        1.00160      
+9.712           UXMS_629_ITER_LEN    uXMS_629        0.00019      
+9.869           PEARS                pXRelay_PEARS   4.00000      
+9.910           APPLES               pXRelay_APPLES  5.00000      
+9.910           APPLES_ITER_HZ       pXRelay_APPLES  4.11081      
+9.910           APPLES_POST_HZ       pXRelay_APPLES  4.99654      
+9.910           DB_TIME              MOOSDB_apples   1561474029.25020 
+9.910           DB_UPTIME            MOOSDB_apples   10.11282     
+9.910           DB_CLIENTS           MOOSDB_apples   pShare,uXMS_629,pXRelay_APPLES,pLogger, 
+9.911           DB_VARSUMMARY        MOOSDB_apples   APPCAST              10:47:00.634         uXMS_629             0.0 Hz S  proc=uXMS_629!@#iter=1...
+APPCAST_REQ          18:59:59.000         (write pending)      0.0 Hz ~  
+                   APPLES               10:47:09.250         pXRelay_APPLES       3.0 Hz D  5.0                  
+APPLES_ITER_HZ       10:47:09.250         pXRelay_APPLES       4.0 Hz D  4.1                  
+APPLES_POST_HZ       10:47:09.250         pXRelay_APPLES       2.0 Hz D  5.0                  
+DB_CLIENTS           10:47:09.250         MOOSDB_apples        0.5 Hz S  pShare,uXMS_629,pXRela...
+DB_EVENT             10:47:00.131         MOOSDB_apples        2.2 Hz S  connected=pShare    
+DB_QOS               10:47:07.248         MOOSDB_apples        0.4 Hz S  pLogger=0.308037:0.308...
+DB_RWSUMMARY         10:47:07.248         MOOSDB_apples        0.4 Hz S  pShare=APPLES:PSHARE_C...
+DB_TIME              10:47:09.250         MOOSDB_apples        0.5 Hz D  1561474029.3         
+DB_UPTIME            10:47:09.250         MOOSDB_apples        0.5 Hz D  10.1                 
+DB_VARSUMMARY        10:47:07.248         MOOSDB_apples        0.4 Hz S  APPCAST              1...
+LOGGER_DIRECTORY     10:47:00.036         pLogger              0.0 Hz S  ./MOOSLog_25_6_2019___...
+LOGGER_RESTART       18:59:59.000         (write pending)      0.0 Hz ~  
+                   MOOS_DEBUG           18:59:59.000         (write pending)      0.0 Hz ~  
+                   MOOS_SYSTEM          18:59:59.000         (write pending)      0.0 Hz ~  
+                   PEARS                10:47:09.228         pXRelay_PEARS        2.9 Hz D  4.0                  
+PEARS_ITER_HZ        18:59:59.000         (write pending)      0.0 Hz ~  
+                   PEARS_POST_HZ        18:59:59.000         (write pending)      0.0 Hz ~  
+                   PLOGGER_CMD          18:59:59.000         (write pending)      0.0 Hz ~  
+                   PLOGGER_STATUS       10:47:08.210         pLogger              0.5 Hz S  AppErrorFlag=false,Upt...
+PSHARE_CMD           18:59:59.000         (write pending)      0.0 Hz ~  
+                   PSHARE_INPUT_SUMMARY 10:47:08.775         pShare               1.0 Hz S  localhost:9200      
+PSHARE_OUTPUT_SUMMARY 10:47:08.775         pShare               1.0 Hz S  APPLES->APPLES:localho...
+PSHARE_STATUS        10:47:08.775         pShare               0.5 Hz S  AppErrorFlag=false,Upt...
+PXRELAY_APPLES_STATUS 10:47:08.499         pXRelay_APPLES       0.5 Hz S  AppErrorFlag=false,Upt...
+UXMS_629_ITER_GAP    10:47:09.051         uXMS_629             5.0 Hz D  1.0                  
+UXMS_629_ITER_LEN    10:47:09.051         uXMS_629             5.0 Hz D  0.0                  
+UXMS_629_STATUS      10:47:08.650         uXMS_629             0.5 Hz S  AppErrorFlag=false,Upt...
+ 
+9.911           DB_QOS               MOOSDB_apples   pLogger=0.256062:0.308037:0.248909:0.279427,pShare=0.281096:0.32115:0.19908:0.284052,pXRelay_APPLES=0.269175:0.676155:0.179052:0.241804,uXMS_629=0.290871:0.377178:0.168085:0.268555, 
+9.911           DB_RWSUMMARY         MOOSDB_apples   pShare=APPLES:PSHARE_CMD&PSHARE_INPUT_SUMMARY:PSHARE_OUTPUT_SUMMARY:PSHARE_STATUS,uXMS_629=APPCAST_REQ:APPLES:APPLES_ITER_HZ:APPLES_POST_HZ:DB_UPTIME:PEARS:PEARS_ITER_HZ:PEARS_POST_HZ&APPCAST:UXMS_629_ITER_GAP:UXMS_629_ITER_LEN:UXMS_629_STATUS,pXRelay_APPLES=PEARS&APPLES:APPLES_ITER_HZ:APPLES_POST_HZ:PXRELAY_APPLES_STATUS,pLogger=APPCAST:APPCAST_REQ:APPLES:APPLES_ITER_HZ:APPLES_POST_HZ:DB_CLIENTS:DB_EVENT:DB_QOS:DB_RWSUMMARY:DB_TIME:DB_UPTIME:DB_VARSUMMARY:LOGGER_DIRECTORY:LOGGER_RESTART:MOOS_DEBUG:MOOS_SYSTEM:PEARS:PEARS_ITER_HZ:PEARS_POST_HZ:PLOGGER_CMD:PLOGGER_STATUS:PSHARE_CMD:PSHARE_INPUT_SUMMARY:PSHARE_OUTPUT_SUMMARY:PSHARE_STATUS:PXRELAY_APPLES_STATUS:UXMS_629_ITER_GAP:UXMS_629_ITER_LEN:UXMS_629_STATUS&LOGGER_DIRECTORY:PLOGGER_STATUS 
+9.912           UXMS_629_ITER_GAP    uXMS_629        1.00227      
+9.912           UXMS_629_ITER_LEN    uXMS_629        0.00015      
+10.074          LOGGER_DIRECTORY     pLogger         ./MOOSLog_25_6_2019_____10_46_59 
+10.112          UXMS_629_ITER_GAP    uXMS_629        1.00093      
+10.112          UXMS_629_ITER_LEN    uXMS_629        0.00029      
+10.119          PEARS                pXRelay_PEARS   5.00000      
+10.160          APPLES               pXRelay_APPLES  6.00000      
+10.160          APPLES_ITER_HZ       pXRelay_APPLES  4.10755      
+10.160          APPLES_POST_HZ       pXRelay_APPLES  4.79574      
+10.313          UXMS_629_ITER_GAP    uXMS_629        1.00362      
+10.313          UXMS_629_ITER_LEN    uXMS_629        0.00023      
+10.369          PEARS                pXRelay_PEARS   6.00000      
+10.411          APPLES               pXRelay_APPLES  7.00000      
+10.411          APPLES_ITER_HZ       pXRelay_APPLES  4.10451      
+10.411          APPLES_POST_HZ       pXRelay_APPLES  4.66225      
+10.436          PSHARE_OUTPUT_SUMMARY pShare          APPLES->APPLES:localhost:9201 
+10.436          PSHARE_INPUT_SUMMARY pShare          localhost:9200 
+10.513          UXMS_629_ITER_GAP    uXMS_629        1.00140      
+10.513          UXMS_629_ITER_LEN    uXMS_629        0.00019      
+10.619          PEARS                pXRelay_PEARS   7.00000      
+10.661          APPLES               pXRelay_APPLES  8.00000      
+10.661          APPLES_ITER_HZ       pXRelay_APPLES  4.10169      
+10.661          APPLES_POST_HZ       pXRelay_APPLES  4.56730      
+10.714          UXMS_629_ITER_GAP    uXMS_629        1.00272      
+10.714          UXMS_629_ITER_LEN    uXMS_629        0.00008      
+10.870          PEARS                pXRelay_PEARS   8.00000      
+10.876          PLOGGER_STATUS       pLogger         AppErrorFlag=false,Uptime=10.8759,cpuload=0.4795,memory_kb=4500,memory_max_kb=4500,MOOSName=pLogger,Publishing="LOGGER_DIRECTORY,PLOGGER_STATUS,",Subscribing="APPCAST,APPCAST_REQ,APPLES,APPLES_ITER_HZ,APPLES_POST_HZ,DB_CLIENTS,DB_EVENT,DB_QOS,DB_RWSUMMARY,DB_TIME,DB_UPTIME,DB_VARSUMMARY,LOGGER_DIRECTORY,LOGGER_RESTART,MOOS_DEBUG,MOOS_SYSTEM,PEARS,PEARS_ITER_HZ,PEARS_POST_HZ,PLOGGER_CMD,PLOGGER_STATUS,PSHARE_CMD,PSHARE_INPUT_SUMMARY,PSHARE_OUTPUT_SUMMARY,PSHARE_STATUS,PXRELAY_APPLES_STATUS,UXMS_629_ITER_GAP,UXMS_629_ITER_LEN,UXMS_629_STATUS,",LogAuxSrc=false 
+10.911          APPLES               pXRelay_APPLES  9.00000      
+10.911          APPLES_ITER_HZ       pXRelay_APPLES  4.09901      
+10.911          APPLES_POST_HZ       pXRelay_APPLES  4.49607      
+10.914          UXMS_629_ITER_GAP    uXMS_629        1.00127      
+10.914          UXMS_629_ITER_LEN    uXMS_629        0.00017      
+11.115          UXMS_629_ITER_GAP    uXMS_629        1.00260      
+11.115          UXMS_629_ITER_LEN    uXMS_629        0.00031      
+11.120          PEARS                pXRelay_PEARS   9.00000      
+11.161          PXRELAY_APPLES_STATUS pXRelay_APPLES  AppErrorFlag=false,Uptime=10.9096,cpuload=0.168,memory_kb=2368,memory_max_kb=6932,MOOSName=pXRelay_APPLES,Publishing="APPLES,APPLES_ITER_HZ,APPLES_POST_HZ,PXRELAY_APPLES_STATUS,",Subscribing="PEARS," 
+11.161          APPLES               pXRelay_APPLES  10.00000     
+11.161          APPLES_ITER_HZ       pXRelay_APPLES  4.09643      
+11.161          APPLES_POST_HZ       pXRelay_APPLES  4.44045      
+11.315          UXMS_629_STATUS      uXMS_629        AppErrorFlag=false,Uptime=10.873,cpuload=0.4078,memory_kb=2396,memory_max_kb=6860,MOOSName=uXMS_629,Publishing="APPCAST,UXMS_629_ITER_GAP,UXMS_629_ITER_LEN,UXMS_629_STATUS,",Subscribing="APPCAST_REQ,APPLES,APPLES_ITER_HZ,APPLES_POST_HZ,DB_UPTIME,PEARS,PEARS_ITER_HZ,PEARS_POST_HZ," 
+11.315          UXMS_629_ITER_GAP    uXMS_629        1.00197      
+11.315          UXMS_629_ITER_LEN    uXMS_629        0.00009      
+11.370          PEARS                pXRelay_PEARS   10.00000     
+11.411          APPLES               pXRelay_APPLES  11.00000     
+11.411          APPLES_ITER_HZ       pXRelay_APPLES  4.09402      
+11.411          APPLES_POST_HZ       pXRelay_APPLES  4.39619      
+11.438          PSHARE_STATUS        pShare          AppErrorFlag=false,Uptime=10.7464,cpuload=0.4267,memory_kb=2344,memory_max_kb=6984,MOOSName=pShare,Publishing="PSHARE_INPUT_SUMMARY,PSHARE_OUTPUT_SUMMARY,PSHARE_STATUS,",Subscribing="APPLES,PSHARE_CMD," 
+11.438          PSHARE_OUTPUT_SUMMARY pShare          APPLES->APPLES:localhost:9201 
+11.438          PSHARE_INPUT_SUMMARY pShare          localhost:9200 
+11.516          UXMS_629_ITER_GAP    uXMS_629        1.00321      
+11.516          UXMS_629_ITER_LEN    uXMS_629        0.00018      
+11.621          PEARS                pXRelay_PEARS   11.00000     
+11.662          APPLES               pXRelay_APPLES  12.00000     
+11.662          APPLES_ITER_HZ       pXRelay_APPLES  4.09170      
+11.662          APPLES_POST_HZ       pXRelay_APPLES  4.35984      
+11.716          UXMS_629_ITER_GAP    uXMS_629        1.00175      
+11.716          UXMS_629_ITER_LEN    uXMS_629        0.00018      
+11.871          PEARS                pXRelay_PEARS   12.00000     
+11.912          APPLES               pXRelay_APPLES  13.00000     
+11.912          APPLES_ITER_HZ       pXRelay_APPLES  4.08952      
+11.912          APPLES_POST_HZ       pXRelay_APPLES  4.32969      
+11.912          DB_TIME              MOOSDB_apples   1561474031.25207 
+11.912          DB_UPTIME            MOOSDB_apples   12.11470     
+11.912          DB_CLIENTS           MOOSDB_apples   pShare,uXMS_629,pXRelay_APPLES,pLogger, 
+11.913          DB_VARSUMMARY        MOOSDB_apples   APPCAST              10:47:00.634         uXMS_629             0.0 Hz S  proc=uXMS_629!@#iter=1...
+APPCAST_REQ          18:59:59.000         (write pending)      0.0 Hz ~  
+                   APPLES               10:47:11.252         pXRelay_APPLES       3.9 Hz D  13.0                 
+APPLES_ITER_HZ       10:47:11.252         pXRelay_APPLES       4.0 Hz D  4.1                  
+APPLES_POST_HZ       10:47:11.252         pXRelay_APPLES       3.9 Hz D  4.3                  
+DB_CLIENTS           10:47:11.252         MOOSDB_apples        0.5 Hz S  pShare,uXMS_629,pXRela...
+DB_EVENT             10:47:00.131         MOOSDB_apples        2.2 Hz S  connected=pShare    
+DB_QOS               10:47:09.250         MOOSDB_apples        0.5 Hz S  pLogger=0.256062:0.308...
+DB_RWSUMMARY         10:47:09.250         MOOSDB_apples        0.5 Hz S  pShare=APPLES:PSHARE_C...
+DB_TIME              10:47:11.252         MOOSDB_apples        0.5 Hz D  1561474031.3         
+DB_UPTIME            10:47:11.252         MOOSDB_apples        0.5 Hz D  12.1                 
+DB_VARSUMMARY        10:47:09.250         MOOSDB_apples        0.5 Hz S  APPCAST              1...
+LOGGER_DIRECTORY     10:47:09.414         pLogger              0.1 Hz S  ./MOOSLog_25_6_2019___...
+LOGGER_RESTART       18:59:59.000         (write pending)      0.0 Hz ~  
+                   MOOS_DEBUG           18:59:59.000         (write pending)      0.0 Hz ~  
+                   MOOS_SYSTEM          18:59:59.000         (write pending)      0.0 Hz ~  
+                   PEARS                10:47:11.229         pXRelay_PEARS        3.9 Hz D  12.0                 
+PEARS_ITER_HZ        18:59:59.000         (write pending)      0.0 Hz ~  
+                   PEARS_POST_HZ        18:59:59.000         (write pending)      0.0 Hz ~  
+                   PLOGGER_CMD          18:59:59.000         (write pending)      0.0 Hz ~  
+                   PLOGGER_STATUS       10:47:10.216         pLogger              0.5 Hz S  AppErrorFlag=false,Upt...
+PSHARE_CMD           18:59:59.000         (write pending)      0.0 Hz ~  
+                   PSHARE_INPUT_SUMMARY 10:47:10.777         pShare               1.0 Hz S  localhost:9200      
+PSHARE_OUTPUT_SUMMARY 10:47:10.777         pShare               1.0 Hz S  APPLES->APPLES:localho...
+PSHARE_STATUS        10:47:10.777         pShare               0.5 Hz S  AppErrorFlag=false,Upt...
+PXRELAY_APPLES_STATUS 10:47:10.501         pXRelay_APPLES       0.5 Hz S  AppErrorFlag=false,Upt...
+UXMS_629_ITER_GAP    10:47:11.056         uXMS_629             5.0 Hz D  1.0                  
+UXMS_629_ITER_LEN    10:47:11.056         uXMS_629             5.0 Hz D  0.0                  
+UXMS_629_STATUS      10:47:10.655         uXMS_629             0.5 Hz S  AppErrorFlag=false,Upt...
+ 
+11.913          DB_QOS               MOOSDB_apples   pLogger=0.344992:0.344992:0.248909:0.297213,pShare=0.294924:0.32115:0.189066:0.286818,pXRelay_APPLES=0.298023:0.676155:0.179052:0.247574,uXMS_629=0.288963:0.377178:0.168085:0.268173, 
+11.913          DB_RWSUMMARY         MOOSDB_apples   pShare=APPLES:PSHARE_CMD&PSHARE_INPUT_SUMMARY:PSHARE_OUTPUT_SUMMARY:PSHARE_STATUS,uXMS_629=APPCAST_REQ:APPLES:APPLES_ITER_HZ:APPLES_POST_HZ:DB_UPTIME:PEARS:PEARS_ITER_HZ:PEARS_POST_HZ&APPCAST:UXMS_629_ITER_GAP:UXMS_629_ITER_LEN:UXMS_629_STATUS,pXRelay_APPLES=PEARS&APPLES:APPLES_ITER_HZ:APPLES_POST_HZ:PXRELAY_APPLES_STATUS,pLogger=APPCAST:APPCAST_REQ:APPLES:APPLES_ITER_HZ:APPLES_POST_HZ:DB_CLIENTS:DB_EVENT:DB_QOS:DB_RWSUMMARY:DB_TIME:DB_UPTIME:DB_VARSUMMARY:LOGGER_DIRECTORY:LOGGER_RESTART:MOOS_DEBUG:MOOS_SYSTEM:PEARS:PEARS_ITER_HZ:PEARS_POST_HZ:PLOGGER_CMD:PLOGGER_STATUS:PSHARE_CMD:PSHARE_INPUT_SUMMARY:PSHARE_OUTPUT_SUMMARY:PSHARE_STATUS:PXRELAY_APPLES_STATUS:UXMS_629_ITER_GAP:UXMS_629_ITER_LEN:UXMS_629_STATUS&LOGGER_DIRECTORY:PLOGGER_STATUS 
+11.917          UXMS_629_ITER_GAP    uXMS_629        1.00259      
+11.917          UXMS_629_ITER_LEN    uXMS_629        0.00016      
+12.117          UXMS_629_ITER_GAP    uXMS_629        1.00100      
+12.117          UXMS_629_ITER_LEN    uXMS_629        0.00031      
+12.121          PEARS                pXRelay_PEARS   13.00000     
+12.162          APPLES               pXRelay_APPLES  14.00000     
+12.162          APPLES_ITER_HZ       pXRelay_APPLES  4.08737      
+12.162          APPLES_POST_HZ       pXRelay_APPLES  4.30395      
+12.317          UXMS_629_ITER_GAP    uXMS_629        1.00320      
+12.317          UXMS_629_ITER_LEN    uXMS_629        0.00021      
+12.372          PEARS                pXRelay_PEARS   14.00000     
+12.412          APPLES               pXRelay_APPLES  15.00000     
+12.413          APPLES_ITER_HZ       pXRelay_APPLES  4.08529      
+12.413          APPLES_POST_HZ       pXRelay_APPLES  4.28178      
+12.438          PSHARE_OUTPUT_SUMMARY pShare          APPLES->APPLES:localhost:9201 
+12.438          PSHARE_INPUT_SUMMARY pShare          localhost:9200 
+12.518          UXMS_629_ITER_GAP    uXMS_629        1.00165      
+12.518          UXMS_629_ITER_LEN    uXMS_629        0.00019      
+12.622          PEARS                pXRelay_PEARS   15.00000     
+12.663          APPLES               pXRelay_APPLES  16.00000     
+12.663          APPLES_ITER_HZ       pXRelay_APPLES  4.08337      
+12.663          APPLES_POST_HZ       pXRelay_APPLES  4.26280      
+12.718          UXMS_629_ITER_GAP    uXMS_629        1.00262      
+12.718          UXMS_629_ITER_LEN    uXMS_629        0.00018      
+12.872          PEARS                pXRelay_PEARS   16.00000     
+12.882          PLOGGER_STATUS       pLogger         AppErrorFlag=false,Uptime=12.8815,cpuload=0.5524,memory_kb=4500,memory_max_kb=4500,MOOSName=pLogger,Publishing="LOGGER_DIRECTORY,PLOGGER_STATUS,",Subscribing="APPCAST,APPCAST_REQ,APPLES,APPLES_ITER_HZ,APPLES_POST_HZ,DB_CLIENTS,DB_EVENT,DB_QOS,DB_RWSUMMARY,DB_TIME,DB_UPTIME,DB_VARSUMMARY,LOGGER_DIRECTORY,LOGGER_RESTART,MOOS_DEBUG,MOOS_SYSTEM,PEARS,PEARS_ITER_HZ,PEARS_POST_HZ,PLOGGER_CMD,PLOGGER_STATUS,PSHARE_CMD,PSHARE_INPUT_SUMMARY,PSHARE_OUTPUT_SUMMARY,PSHARE_STATUS,PXRELAY_APPLES_STATUS,UXMS_629_ITER_GAP,UXMS_629_ITER_LEN,UXMS_629_STATUS,",LogAuxSrc=false 
+12.913          APPLES               pXRelay_APPLES  17.00000     
+12.913          APPLES_ITER_HZ       pXRelay_APPLES  4.08154      
+12.913          APPLES_POST_HZ       pXRelay_APPLES  4.24620      
+12.918          UXMS_629_ITER_GAP    uXMS_629        1.00097      
+12.919          UXMS_629_ITER_LEN    uXMS_629        0.00018      
+13.119          UXMS_629_ITER_GAP    uXMS_629        1.00199      
+13.119          UXMS_629_ITER_LEN    uXMS_629        0.00028      
+13.123          PEARS                pXRelay_PEARS   17.00000     
+13.163          PXRELAY_APPLES_STATUS pXRelay_APPLES  AppErrorFlag=false,Uptime=12.9115,cpuload=0.2264,memory_kb=2368,memory_max_kb=6932,MOOSName=pXRelay_APPLES,Publishing="APPLES,APPLES_ITER_HZ,APPLES_POST_HZ,PXRELAY_APPLES_STATUS,",Subscribing="PEARS," 
+13.163          APPLES               pXRelay_APPLES  18.00000     
+13.163          APPLES_ITER_HZ       pXRelay_APPLES  4.07970      
+13.163          APPLES_POST_HZ       pXRelay_APPLES  4.23133      
+13.319          UXMS_629_STATUS      uXMS_629        AppErrorFlag=false,Uptime=12.8772,cpuload=0.4734,memory_kb=2396,memory_max_kb=6860,MOOSName=uXMS_629,Publishing="APPCAST,UXMS_629_ITER_GAP,UXMS_629_ITER_LEN,UXMS_629_STATUS,",Subscribing="APPCAST_REQ,APPLES,APPLES_ITER_HZ,APPLES_POST_HZ,DB_UPTIME,PEARS,PEARS_ITER_HZ,PEARS_POST_HZ," 
+13.319          UXMS_629_ITER_GAP    uXMS_629        1.00214      
+13.319          UXMS_629_ITER_LEN    uXMS_629        0.00008      
+13.373          PEARS                pXRelay_PEARS   18.00000     
+13.413          APPLES               pXRelay_APPLES  19.00000     
+13.413          APPLES_ITER_HZ       pXRelay_APPLES  4.07803      
+13.413          APPLES_POST_HZ       pXRelay_APPLES  4.21836      
+13.439          PSHARE_STATUS        pShare          AppErrorFlag=false,Uptime=12.7481,cpuload=0.4394,memory_kb=2344,memory_max_kb=6984,MOOSName=pShare,Publishing="PSHARE_INPUT_SUMMARY,PSHARE_OUTPUT_SUMMARY,PSHARE_STATUS,",Subscribing="APPLES,PSHARE_CMD," 
+13.439          PSHARE_OUTPUT_SUMMARY pShare          APPLES->APPLES:localhost:9201 
+13.439          PSHARE_INPUT_SUMMARY pShare          localhost:9200 
+13.520          UXMS_629_ITER_GAP    uXMS_629        1.00278      
+13.520          UXMS_629_ITER_LEN    uXMS_629        0.00016      
+13.623          PEARS                pXRelay_PEARS   19.00000     
+13.664          APPLES               pXRelay_APPLES  20.00000     
+13.664          APPLES_ITER_HZ       pXRelay_APPLES  4.07640      
+13.664          APPLES_POST_HZ       pXRelay_APPLES  4.20669      
+13.720          UXMS_629_ITER_GAP    uXMS_629        1.00125      
+13.720          UXMS_629_ITER_LEN    uXMS_629        0.00021      
+13.873          PEARS                pXRelay_PEARS   20.00000     
+13.914          APPLES               pXRelay_APPLES  21.00000     
+13.914          APPLES_ITER_HZ       pXRelay_APPLES  4.07485      
+13.914          APPLES_POST_HZ       pXRelay_APPLES  4.19621      
+13.914          DB_TIME              MOOSDB_apples   1561474033.25407 
+13.914          DB_UPTIME            MOOSDB_apples   14.11669     
+13.914          DB_CLIENTS           MOOSDB_apples   pShare,uXMS_629,pXRelay_APPLES,pLogger, 
+13.915          DB_VARSUMMARY        MOOSDB_apples   APPCAST              10:47:00.634         uXMS_629             0.0 Hz S  proc=uXMS_629!@#iter=1...
+APPCAST_REQ          18:59:59.000         (write pending)      0.0 Hz ~  
+                   APPLES               10:47:13.254         pXRelay_APPLES       4.0 Hz D  21.0                 
+APPLES_ITER_HZ       10:47:13.254         pXRelay_APPLES       4.0 Hz D  4.1                  
+APPLES_POST_HZ       10:47:13.254         pXRelay_APPLES       4.0 Hz D  4.2                  
+DB_CLIENTS           10:47:13.254         MOOSDB_apples        0.5 Hz S  pShare,uXMS_629,pXRela...
+DB_EVENT             10:47:00.131         MOOSDB_apples        2.2 Hz S  connected=pShare    
+DB_QOS               10:47:11.252         MOOSDB_apples        0.5 Hz S  pLogger=0.344992:0.344...
+DB_RWSUMMARY         10:47:11.252         MOOSDB_apples        0.5 Hz S  pShare=APPLES:PSHARE_C...
+DB_TIME              10:47:13.254         MOOSDB_apples        0.5 Hz D  1561474033.3         
+DB_UPTIME            10:47:13.254         MOOSDB_apples        0.5 Hz D  14.1                 
+DB_VARSUMMARY        10:47:11.252         MOOSDB_apples        0.5 Hz S  APPCAST              1...
+LOGGER_DIRECTORY     10:47:09.414         pLogger              0.1 Hz S  ./MOOSLog_25_6_2019___...
+LOGGER_RESTART       18:59:59.000         (write pending)      0.0 Hz ~  
+                   MOOS_DEBUG           18:59:59.000         (write pending)      0.0 Hz ~  
+                   MOOS_SYSTEM          18:59:59.000         (write pending)      0.0 Hz ~  
+                   PEARS                10:47:13.231         pXRelay_PEARS        4.0 Hz D  20.0                 
+PEARS_ITER_HZ        18:59:59.000         (write pending)      0.0 Hz ~  
+                   PEARS_POST_HZ        18:59:59.000         (write pending)      0.0 Hz ~  
+                   PLOGGER_CMD          18:59:59.000         (write pending)      0.0 Hz ~  
+                   PLOGGER_STATUS       10:47:12.221         pLogger              0.5 Hz S  AppErrorFlag=false,Upt...
+PSHARE_CMD           18:59:59.000         (write pending)      0.0 Hz ~  
+                   PSHARE_INPUT_SUMMARY 10:47:12.779         pShare               1.0 Hz S  localhost:9200      
+PSHARE_OUTPUT_SUMMARY 10:47:12.779         pShare               1.0 Hz S  APPLES->APPLES:localho...
+PSHARE_STATUS        10:47:12.779         pShare               0.5 Hz S  AppErrorFlag=false,Upt...
+PXRELAY_APPLES_STATUS 10:47:12.503         pXRelay_APPLES       0.5 Hz S  AppErrorFlag=false,Upt...
+UXMS_629_ITER_GAP    10:47:13.060         uXMS_629             5.0 Hz D  1.0                  
+UXMS_629_ITER_LEN    10:47:13.060         uXMS_629             5.0 Hz D  0.0                  
+UXMS_629_STATUS      10:47:12.659         uXMS_629             0.5 Hz S  AppErrorFlag=false,Upt...
+ 
+13.915          DB_QOS               MOOSDB_apples   pLogger=0.294209:0.344992:0.248909:0.287056,pShare=0.264883:0.32115:0.189066:0.280809,pXRelay_APPLES=0.313044:0.676155:0.179052:0.250578,uXMS_629=0.339985:0.377178:0.168085:0.278378, 
+13.915          DB_RWSUMMARY         MOOSDB_apples   pShare=APPLES:PSHARE_CMD&PSHARE_INPUT_SUMMARY:PSHARE_OUTPUT_SUMMARY:PSHARE_STATUS,uXMS_629=APPCAST_REQ:APPLES:APPLES_ITER_HZ:APPLES_POST_HZ:DB_UPTIME:PEARS:PEARS_ITER_HZ:PEARS_POST_HZ&APPCAST:UXMS_629_ITER_GAP:UXMS_629_ITER_LEN:UXMS_629_STATUS,pXRelay_APPLES=PEARS&APPLES:APPLES_ITER_HZ:APPLES_POST_HZ:PXRELAY_APPLES_STATUS,pLogger=APPCAST:APPCAST_REQ:APPLES:APPLES_ITER_HZ:APPLES_POST_HZ:DB_CLIENTS:DB_EVENT:DB_QOS:DB_RWSUMMARY:DB_TIME:DB_UPTIME:DB_VARSUMMARY:LOGGER_DIRECTORY:LOGGER_RESTART:MOOS_DEBUG:MOOS_SYSTEM:PEARS:PEARS_ITER_HZ:PEARS_POST_HZ:PLOGGER_CMD:PLOGGER_STATUS:PSHARE_CMD:PSHARE_INPUT_SUMMARY:PSHARE_OUTPUT_SUMMARY:PSHARE_STATUS:PXRELAY_APPLES_STATUS:UXMS_629_ITER_GAP:UXMS_629_ITER_LEN:UXMS_629_STATUS&LOGGER_DIRECTORY:PLOGGER_STATUS 
+13.921          UXMS_629_ITER_GAP    uXMS_629        1.00268      
+13.921          UXMS_629_ITER_LEN    uXMS_629        0.00016      
+14.121          UXMS_629_ITER_GAP    uXMS_629        1.00073      
+14.121          UXMS_629_ITER_LEN    uXMS_629        0.00039      
+14.124          PEARS                pXRelay_PEARS   21.00000     
+14.164          APPLES               pXRelay_APPLES  22.00000     
+14.164          APPLES_ITER_HZ       pXRelay_APPLES  4.07335      
+14.164          APPLES_POST_HZ       pXRelay_APPLES  4.18673      
+14.321          UXMS_629_ITER_GAP    uXMS_629        1.00345      
+14.322          UXMS_629_ITER_LEN    uXMS_629        0.00020      
+14.374          PEARS                pXRelay_PEARS   22.00000     
+14.414          APPLES               pXRelay_APPLES  23.00000     
+14.414          APPLES_ITER_HZ       pXRelay_APPLES  4.07193      
+14.414          APPLES_POST_HZ       pXRelay_APPLES  4.17814      
+14.440          PSHARE_OUTPUT_SUMMARY pShare          APPLES->APPLES:localhost:9201 
+14.440          PSHARE_INPUT_SUMMARY pShare          localhost:9200 
+14.522          UXMS_629_ITER_GAP    uXMS_629        1.00153      
+14.522          UXMS_629_ITER_LEN    uXMS_629        0.00017      
+14.624          PEARS                pXRelay_PEARS   23.00000     
+14.664          APPLES               pXRelay_APPLES  24.00000     
+14.664          APPLES_ITER_HZ       pXRelay_APPLES  4.07054      
+14.664          APPLES_POST_HZ       pXRelay_APPLES  4.17025      
+14.722          UXMS_629_ITER_GAP    uXMS_629        1.00313      
+14.722          UXMS_629_ITER_LEN    uXMS_629        0.00018      
+14.874          PEARS                pXRelay_PEARS   24.00000     
+14.887          PLOGGER_STATUS       pLogger         AppErrorFlag=false,Uptime=14.8868,cpuload=0.5407,memory_kb=4500,memory_max_kb=4500,MOOSName=pLogger,Publishing="LOGGER_DIRECTORY,PLOGGER_STATUS,",Subscribing="APPCAST,APPCAST_REQ,APPLES,APPLES_ITER_HZ,APPLES_POST_HZ,DB_CLIENTS,DB_EVENT,DB_QOS,DB_RWSUMMARY,DB_TIME,DB_UPTIME,DB_VARSUMMARY,LOGGER_DIRECTORY,LOGGER_RESTART,MOOS_DEBUG,MOOS_SYSTEM,PEARS,PEARS_ITER_HZ,PEARS_POST_HZ,PLOGGER_CMD,PLOGGER_STATUS,PSHARE_CMD,PSHARE_INPUT_SUMMARY,PSHARE_OUTPUT_SUMMARY,PSHARE_STATUS,PXRELAY_APPLES_STATUS,UXMS_629_ITER_GAP,UXMS_629_ITER_LEN,UXMS_629_STATUS,",LogAuxSrc=false 
+14.914          APPLES               pXRelay_APPLES  25.00000     
+14.914          APPLES_ITER_HZ       pXRelay_APPLES  4.06921      
+14.915          APPLES_POST_HZ       pXRelay_APPLES  4.16307      
+14.923          UXMS_629_ITER_GAP    uXMS_629        1.00129      
+14.923          UXMS_629_ITER_LEN    uXMS_629        0.00017      
+15.123          UXMS_629_ITER_GAP    uXMS_629        1.00243      
+15.123          UXMS_629_ITER_LEN    uXMS_629        0.00027      
+15.124          PEARS                pXRelay_PEARS   25.00000     
+15.165          PXRELAY_APPLES_STATUS pXRelay_APPLES  AppErrorFlag=false,Uptime=14.913,cpuload=0.2022,memory_kb=4704,memory_max_kb=6932,MOOSName=pXRelay_APPLES,Publishing="APPLES,APPLES_ITER_HZ,APPLES_POST_HZ,PXRELAY_APPLES_STATUS,",Subscribing="PEARS," 
+15.165          APPLES               pXRelay_APPLES  26.00000     
+15.165          APPLES_ITER_HZ       pXRelay_APPLES  4.06790      
+15.165          APPLES_POST_HZ       pXRelay_APPLES  4.15638      
+15.323          UXMS_629_STATUS      uXMS_629        AppErrorFlag=false,Uptime=14.8814,cpuload=0.4696,memory_kb=2396,memory_max_kb=6860,MOOSName=uXMS_629,Publishing="APPCAST,UXMS_629_ITER_GAP,UXMS_629_ITER_LEN,UXMS_629_STATUS,",Subscribing="APPCAST_REQ,APPLES,APPLES_ITER_HZ,APPLES_POST_HZ,DB_UPTIME,PEARS,PEARS_ITER_HZ,PEARS_POST_HZ," 
+15.323          UXMS_629_ITER_GAP    uXMS_629        1.00167      
+15.324          UXMS_629_ITER_LEN    uXMS_629        0.00008      
+15.374          PEARS                pXRelay_PEARS   26.00000     
+15.415          APPLES               pXRelay_APPLES  27.00000     
+15.415          APPLES_ITER_HZ       pXRelay_APPLES  4.06666      
+15.415          APPLES_POST_HZ       pXRelay_APPLES  4.15026      
+15.441          PSHARE_STATUS        pShare          AppErrorFlag=false,Uptime=14.7498,cpuload=0.4046,memory_kb=2344,memory_max_kb=6984,MOOSName=pShare,Publishing="PSHARE_INPUT_SUMMARY,PSHARE_OUTPUT_SUMMARY,PSHARE_STATUS,",Subscribing="APPLES,PSHARE_CMD," 
+15.441          PSHARE_OUTPUT_SUMMARY pShare          APPLES->APPLES:localhost:9201 
+15.441          PSHARE_INPUT_SUMMARY pShare          localhost:9200 
+15.524          UXMS_629_ITER_GAP    uXMS_629        1.00321      
+15.524          UXMS_629_ITER_LEN    uXMS_629        0.00019      
+15.625          PEARS                pXRelay_PEARS   27.00000     
+15.665          APPLES               pXRelay_APPLES  28.00000     
+15.665          APPLES_ITER_HZ       pXRelay_APPLES  4.06546      
+15.665          APPLES_POST_HZ       pXRelay_APPLES  4.14458      
+15.724          UXMS_629_ITER_GAP    uXMS_629        1.00159      
+15.724          UXMS_629_ITER_LEN    uXMS_629        0.00019      
+15.875          PEARS                pXRelay_PEARS   28.00000     
+15.915          APPLES               pXRelay_APPLES  29.00000     
+15.915          APPLES_ITER_HZ       pXRelay_APPLES  4.06430      
+15.915          APPLES_POST_HZ       pXRelay_APPLES  4.13932      
+15.916          DB_TIME              MOOSDB_apples   1561474035.25555 
+15.916          DB_UPTIME            MOOSDB_apples   16.11818     
+15.916          DB_CLIENTS           MOOSDB_apples   pShare,uXMS_629,pXRelay_APPLES,pLogger, 
+15.916          DB_VARSUMMARY        MOOSDB_apples   APPCAST              10:47:00.634         uXMS_629             0.0 Hz S  proc=uXMS_629!@#iter=1...
+APPCAST_REQ          18:59:59.000         (write pending)      0.0 Hz ~  
+                   APPLES               10:47:15.255         pXRelay_APPLES       4.0 Hz D  29.0                 
+APPLES_ITER_HZ       10:47:15.255         pXRelay_APPLES       4.0 Hz D  4.1                  
+APPLES_POST_HZ       10:47:15.255         pXRelay_APPLES       4.0 Hz D  4.1                  
+DB_CLIENTS           10:47:15.255         MOOSDB_apples        0.5 Hz S  pShare,uXMS_629,pXRela...
+DB_EVENT             10:47:00.131         MOOSDB_apples        2.2 Hz S  connected=pShare    
+DB_QOS               10:47:13.254         MOOSDB_apples        0.5 Hz S  pLogger=0.294209:0.344...
+DB_RWSUMMARY         10:47:13.254         MOOSDB_apples        0.5 Hz S  pShare=APPLES:PSHARE_C...
+DB_TIME              10:47:15.255         MOOSDB_apples        0.5 Hz D  1561474035.3         
+DB_UPTIME            10:47:15.255         MOOSDB_apples        0.5 Hz D  16.1                 
+DB_VARSUMMARY        10:47:13.254         MOOSDB_apples        0.5 Hz S  APPCAST              1...
+LOGGER_DIRECTORY     10:47:09.414         pLogger              0.1 Hz S  ./MOOSLog_25_6_2019___...
+LOGGER_RESTART       18:59:59.000         (write pending)      0.0 Hz ~  
+                   MOOS_DEBUG           18:59:59.000         (write pending)      0.0 Hz ~  
+                   MOOS_SYSTEM          18:59:59.000         (write pending)      0.0 Hz ~  
+                   PEARS                10:47:15.232         pXRelay_PEARS        4.0 Hz D  28.0                 
+PEARS_ITER_HZ        18:59:59.000         (write pending)      0.0 Hz ~  
+                   PEARS_POST_HZ        18:59:59.000         (write pending)      0.0 Hz ~  
+                   PLOGGER_CMD          18:59:59.000         (write pending)      0.0 Hz ~  
+                   PLOGGER_STATUS       10:47:14.227         pLogger              0.5 Hz S  AppErrorFlag=false,Upt...
+PSHARE_CMD           18:59:59.000         (write pending)      0.0 Hz ~  
+                   PSHARE_INPUT_SUMMARY 10:47:14.781         pShare               1.0 Hz S  localhost:9200      
+PSHARE_OUTPUT_SUMMARY 10:47:14.781         pShare               1.0 Hz S  APPLES->APPLES:localho...
+PSHARE_STATUS        10:47:14.781         pShare               0.5 Hz S  AppErrorFlag=false,Upt...
+PXRELAY_APPLES_STATUS 10:47:14.504         pXRelay_APPLES       0.5 Hz S  AppErrorFlag=false,Upt...
+UXMS_629_ITER_GAP    10:47:15.064         uXMS_629             5.0 Hz D  1.0                  
+UXMS_629_ITER_LEN    10:47:15.064         uXMS_629             5.0 Hz D  0.0                  
+UXMS_629_STATUS      10:47:14.663         uXMS_629             0.5 Hz S  AppErrorFlag=false,Upt...
+ 
+15.916          DB_QOS               MOOSDB_apples   pLogger=0.301123:0.344992:0.248909:0.288439,pShare=0.273943:0.32115:0.189066:0.282621,pXRelay_APPLES=0.325918:0.676155:0.179052:0.253153,uXMS_629=0.295877:0.377178:0.168085:0.269556, 
+15.917          DB_RWSUMMARY         MOOSDB_apples   pShare=APPLES:PSHARE_CMD&PSHARE_INPUT_SUMMARY:PSHARE_OUTPUT_SUMMARY:PSHARE_STATUS,uXMS_629=APPCAST_REQ:APPLES:APPLES_ITER_HZ:APPLES_POST_HZ:DB_UPTIME:PEARS:PEARS_ITER_HZ:PEARS_POST_HZ&APPCAST:UXMS_629_ITER_GAP:UXMS_629_ITER_LEN:UXMS_629_STATUS,pXRelay_APPLES=PEARS&APPLES:APPLES_ITER_HZ:APPLES_POST_HZ:PXRELAY_APPLES_STATUS,pLogger=APPCAST:APPCAST_REQ:APPLES:APPLES_ITER_HZ:APPLES_POST_HZ:DB_CLIENTS:DB_EVENT:DB_QOS:DB_RWSUMMARY:DB_TIME:DB_UPTIME:DB_VARSUMMARY:LOGGER_DIRECTORY:LOGGER_RESTART:MOOS_DEBUG:MOOS_SYSTEM:PEARS:PEARS_ITER_HZ:PEARS_POST_HZ:PLOGGER_CMD:PLOGGER_STATUS:PSHARE_CMD:PSHARE_INPUT_SUMMARY:PSHARE_OUTPUT_SUMMARY:PSHARE_STATUS:PXRELAY_APPLES_STATUS:UXMS_629_ITER_GAP:UXMS_629_ITER_LEN:UXMS_629_STATUS&LOGGER_DIRECTORY:PLOGGER_STATUS 
+15.925          UXMS_629_ITER_GAP    uXMS_629        1.00261      
+15.925          UXMS_629_ITER_LEN    uXMS_629        0.00018      
+16.125          PEARS                pXRelay_PEARS   29.00000     
+16.125          UXMS_629_ITER_GAP    uXMS_629        1.00116      
+16.125          UXMS_629_ITER_LEN    uXMS_629        0.00030      
+16.165          APPLES               pXRelay_APPLES  30.00000     
+16.165          APPLES_ITER_HZ       pXRelay_APPLES  4.06319      
+16.165          APPLES_POST_HZ       pXRelay_APPLES  4.13442      
+16.326          UXMS_629_ITER_GAP    uXMS_629        1.00417      
+16.326          UXMS_629_ITER_LEN    uXMS_629        0.00020      
+16.375          PEARS                pXRelay_PEARS   30.00000     
+16.416          APPLES               pXRelay_APPLES  31.00000     
+16.416          APPLES_ITER_HZ       pXRelay_APPLES  4.06210      
+16.416          APPLES_POST_HZ       pXRelay_APPLES  4.12985      
+16.442          PSHARE_OUTPUT_SUMMARY pShare          APPLES->APPLES:localhost:9201 
+16.442          PSHARE_INPUT_SUMMARY pShare          localhost:9200 
+16.526          UXMS_629_ITER_GAP    uXMS_629        1.00127      
+16.526          UXMS_629_ITER_LEN    uXMS_629        0.00019      
+16.626          PEARS                pXRelay_PEARS   31.00000     
+16.666          APPLES               pXRelay_APPLES  32.00000     
+16.666          APPLES_ITER_HZ       pXRelay_APPLES  4.06106      
+16.666          APPLES_POST_HZ       pXRelay_APPLES  4.12557      
+16.727          UXMS_629_ITER_GAP    uXMS_629        1.00335      
+16.727          UXMS_629_ITER_LEN    uXMS_629        0.00016      
+16.876          PEARS                pXRelay_PEARS   32.00000     
+16.892          PLOGGER_STATUS       pLogger         AppErrorFlag=false,Uptime=16.8915,cpuload=0.5257,memory_kb=4500,memory_max_kb=4500,MOOSName=pLogger,Publishing="LOGGER_DIRECTORY,PLOGGER_STATUS,",Subscribing="APPCAST,APPCAST_REQ,APPLES,APPLES_ITER_HZ,APPLES_POST_HZ,DB_CLIENTS,DB_EVENT,DB_QOS,DB_RWSUMMARY,DB_TIME,DB_UPTIME,DB_VARSUMMARY,LOGGER_DIRECTORY,LOGGER_RESTART,MOOS_DEBUG,MOOS_SYSTEM,PEARS,PEARS_ITER_HZ,PEARS_POST_HZ,PLOGGER_CMD,PLOGGER_STATUS,PSHARE_CMD,PSHARE_INPUT_SUMMARY,PSHARE_OUTPUT_SUMMARY,PSHARE_STATUS,PXRELAY_APPLES_STATUS,UXMS_629_ITER_GAP,UXMS_629_ITER_LEN,UXMS_629_STATUS,",LogAuxSrc=false 
+16.916          APPLES               pXRelay_APPLES  33.00000     
+16.916          APPLES_ITER_HZ       pXRelay_APPLES  4.06004      
+16.916          APPLES_POST_HZ       pXRelay_APPLES  4.12156      
+16.927          UXMS_629_ITER_GAP    uXMS_629        1.00110      
+16.927          UXMS_629_ITER_LEN    uXMS_629        0.00018      
+17.126          PEARS                pXRelay_PEARS   33.00000     
+17.128          UXMS_629_ITER_GAP    uXMS_629        1.00242      
+17.128          UXMS_629_ITER_LEN    uXMS_629        0.00023      
+17.166          PXRELAY_APPLES_STATUS pXRelay_APPLES  AppErrorFlag=false,Uptime=16.9145,cpuload=0.2055,memory_kb=4704,memory_max_kb=6932,MOOSName=pXRelay_APPLES,Publishing="APPLES,APPLES_ITER_HZ,APPLES_POST_HZ,PXRELAY_APPLES_STATUS,",Subscribing="PEARS," 
+17.166          APPLES               pXRelay_APPLES  34.00000     
+17.166          APPLES_ITER_HZ       pXRelay_APPLES  4.05904      
+17.166          APPLES_POST_HZ       pXRelay_APPLES  4.11774      
+17.328          UXMS_629_STATUS      uXMS_629        AppErrorFlag=false,Uptime=16.886,cpuload=0.4786,memory_kb=2396,memory_max_kb=6860,MOOSName=uXMS_629,Publishing="APPCAST,UXMS_629_ITER_GAP,UXMS_629_ITER_LEN,UXMS_629_STATUS,",Subscribing="APPCAST_REQ,APPLES,APPLES_ITER_HZ,APPLES_POST_HZ,DB_UPTIME,PEARS,PEARS_ITER_HZ,PEARS_POST_HZ," 
+17.328          UXMS_629_ITER_GAP    uXMS_629        1.00188      
+17.328          UXMS_629_ITER_LEN    uXMS_629        0.00008      
+17.376          PEARS                pXRelay_PEARS   34.00000     
+17.416          APPLES               pXRelay_APPLES  35.00000     
+17.416          APPLES_ITER_HZ       pXRelay_APPLES  4.05809      
+17.416          APPLES_POST_HZ       pXRelay_APPLES  4.11420      
+17.442          PSHARE_STATUS        pShare          AppErrorFlag=false,Uptime=16.7512,cpuload=0.424,memory_kb=2344,memory_max_kb=6984,MOOSName=pShare,Publishing="PSHARE_INPUT_SUMMARY,PSHARE_OUTPUT_SUMMARY,PSHARE_STATUS,",Subscribing="APPLES,PSHARE_CMD," 
+17.442          PSHARE_OUTPUT_SUMMARY pShare          APPLES->APPLES:localhost:9201 
+17.442          PSHARE_INPUT_SUMMARY pShare          localhost:9200 
+17.529          UXMS_629_ITER_GAP    uXMS_629        1.00289      
+17.529          UXMS_629_ITER_LEN    uXMS_629        0.00018      
+17.626          PEARS                pXRelay_PEARS   35.00000     
+17.667          APPLES               pXRelay_APPLES  36.00000     
+17.667          APPLES_ITER_HZ       pXRelay_APPLES  4.05718      
+17.667          APPLES_POST_HZ       pXRelay_APPLES  4.11089      
+17.729          UXMS_629_ITER_GAP    uXMS_629        1.00166      
+17.729          UXMS_629_ITER_LEN    uXMS_629        0.00018      
+17.877          PEARS                pXRelay_PEARS   36.00000     
+17.917          APPLES               pXRelay_APPLES  37.00000     
+17.917          APPLES_ITER_HZ       pXRelay_APPLES  4.05630      
+17.917          APPLES_POST_HZ       pXRelay_APPLES  4.10775      
+17.917          DB_TIME              MOOSDB_apples   1561474037.25695 
+17.917          DB_UPTIME            MOOSDB_apples   18.11957     
+17.917          DB_CLIENTS           MOOSDB_apples   pShare,uXMS_629,pXRelay_APPLES,pLogger, 
+17.918          DB_VARSUMMARY        MOOSDB_apples   APPCAST              10:47:00.634         uXMS_629             0.0 Hz S  proc=uXMS_629!@#iter=1...
+APPCAST_REQ          18:59:59.000         (write pending)      0.0 Hz ~  
+                   APPLES               10:47:17.256         pXRelay_APPLES       4.0 Hz D  37.0                 
+APPLES_ITER_HZ       10:47:17.256         pXRelay_APPLES       4.0 Hz D  4.1                  
+APPLES_POST_HZ       10:47:17.256         pXRelay_APPLES       4.0 Hz D  4.1                  
+DB_CLIENTS           10:47:17.256         MOOSDB_apples        0.5 Hz S  pShare,uXMS_629,pXRela...
+DB_EVENT             10:47:00.131         MOOSDB_apples        2.2 Hz S  connected=pShare    
+DB_QOS               10:47:15.256         MOOSDB_apples        0.5 Hz S  pLogger=0.301123:0.344...
+DB_RWSUMMARY         10:47:15.256         MOOSDB_apples        0.5 Hz S  pShare=APPLES:PSHARE_C...
+DB_TIME              10:47:17.256         MOOSDB_apples        0.5 Hz D  1561474037.3         
+DB_UPTIME            10:47:17.256         MOOSDB_apples        0.5 Hz D  18.1                 
+DB_VARSUMMARY        10:47:15.256         MOOSDB_apples        0.5 Hz S  APPCAST              1...
+LOGGER_DIRECTORY     10:47:09.414         pLogger              0.1 Hz S  ./MOOSLog_25_6_2019___...
+LOGGER_RESTART       18:59:59.000         (write pending)      0.0 Hz ~  
+                   MOOS_DEBUG           18:59:59.000         (write pending)      0.0 Hz ~  
+                   MOOS_SYSTEM          18:59:59.000         (write pending)      0.0 Hz ~  
+                   PEARS                10:47:17.234         pXRelay_PEARS        4.0 Hz D  36.0                 
+PEARS_ITER_HZ        18:59:59.000         (write pending)      0.0 Hz ~  
+                   PEARS_POST_HZ        18:59:59.000         (write pending)      0.0 Hz ~  
+                   PLOGGER_CMD          18:59:59.000         (write pending)      0.0 Hz ~  
+                   PLOGGER_STATUS       10:47:16.231         pLogger              0.5 Hz S  AppErrorFlag=false,Upt...
+PSHARE_CMD           18:59:59.000         (write pending)      0.0 Hz ~  
+                   PSHARE_INPUT_SUMMARY 10:47:16.782         pShare               1.0 Hz S  localhost:9200      
+PSHARE_OUTPUT_SUMMARY 10:47:16.782         pShare               1.0 Hz S  APPLES->APPLES:localho...
+PSHARE_STATUS        10:47:16.782         pShare               0.5 Hz S  AppErrorFlag=false,Upt...
+PXRELAY_APPLES_STATUS 10:47:16.506         pXRelay_APPLES       0.5 Hz S  AppErrorFlag=false,Upt...
+UXMS_629_ITER_GAP    10:47:17.069         uXMS_629             5.0 Hz D  1.0                  
+UXMS_629_ITER_LEN    10:47:17.069         uXMS_629             5.0 Hz D  0.0                  
+UXMS_629_STATUS      10:47:16.668         uXMS_629             0.5 Hz S  AppErrorFlag=false,Upt...
+ 
+17.918          DB_QOS               MOOSDB_apples   pLogger=0.348091:0.348091:0.248909:0.297832,pShare=0.28801:0.32115:0.189066:0.285435,pXRelay_APPLES=0.328064:0.676155:0.179052:0.253582,uXMS_629=0.311852:0.377178:0.168085:0.272751, 
+17.918          DB_RWSUMMARY         MOOSDB_apples   pShare=APPLES:PSHARE_CMD&PSHARE_INPUT_SUMMARY:PSHARE_OUTPUT_SUMMARY:PSHARE_STATUS,uXMS_629=APPCAST_REQ:APPLES:APPLES_ITER_HZ:APPLES_POST_HZ:DB_UPTIME:PEARS:PEARS_ITER_HZ:PEARS_POST_HZ&APPCAST:UXMS_629_ITER_GAP:UXMS_629_ITER_LEN:UXMS_629_STATUS,pXRelay_APPLES=PEARS&APPLES:APPLES_ITER_HZ:APPLES_POST_HZ:PXRELAY_APPLES_STATUS,pLogger=APPCAST:APPCAST_REQ:APPLES:APPLES_ITER_HZ:APPLES_POST_HZ:DB_CLIENTS:DB_EVENT:DB_QOS:DB_RWSUMMARY:DB_TIME:DB_UPTIME:DB_VARSUMMARY:LOGGER_DIRECTORY:LOGGER_RESTART:MOOS_DEBUG:MOOS_SYSTEM:PEARS:PEARS_ITER_HZ:PEARS_POST_HZ:PLOGGER_CMD:PLOGGER_STATUS:PSHARE_CMD:PSHARE_INPUT_SUMMARY:PSHARE_OUTPUT_SUMMARY:PSHARE_STATUS:PXRELAY_APPLES_STATUS:UXMS_629_ITER_GAP:UXMS_629_ITER_LEN:UXMS_629_STATUS&LOGGER_DIRECTORY:PLOGGER_STATUS 
+17.930          UXMS_629_ITER_GAP    uXMS_629        1.00302      
+17.930          UXMS_629_ITER_LEN    uXMS_629        0.00015      
+18.127          PEARS                pXRelay_PEARS   37.00000     
+18.130          UXMS_629_ITER_GAP    uXMS_629        1.00085      
+18.130          UXMS_629_ITER_LEN    uXMS_629        0.00012      
+18.167          APPLES               pXRelay_APPLES  38.00000     
+18.167          APPLES_ITER_HZ       pXRelay_APPLES  4.05541      
+18.167          APPLES_POST_HZ       pXRelay_APPLES  4.10474      
+18.330          UXMS_629_ITER_GAP    uXMS_629        1.00211      
+18.330          UXMS_629_ITER_LEN    uXMS_629        0.00020      
+18.377          PEARS                pXRelay_PEARS   38.00000     
+18.417          APPLES               pXRelay_APPLES  39.00000     
+18.417          APPLES_ITER_HZ       pXRelay_APPLES  4.05458      
+18.417          APPLES_POST_HZ       pXRelay_APPLES  4.10192      
+18.443          PSHARE_OUTPUT_SUMMARY pShare          APPLES->APPLES:localhost:9201 
+18.443          PSHARE_INPUT_SUMMARY pShare          localhost:9200 
+18.530          UXMS_629_ITER_GAP    uXMS_629        1.00134      
+18.530          UXMS_629_ITER_LEN    uXMS_629        0.00018      
+18.627          PEARS                pXRelay_PEARS   39.00000     
+18.667          APPLES               pXRelay_APPLES  40.00000     
+18.667          APPLES_ITER_HZ       pXRelay_APPLES  4.05377      
+18.667          APPLES_POST_HZ       pXRelay_APPLES  4.09925      
+18.731          UXMS_629_ITER_GAP    uXMS_629        1.00266      
+18.731          UXMS_629_ITER_LEN    uXMS_629        0.00016      
+18.877          PEARS                pXRelay_PEARS   40.00000     
+18.895          PLOGGER_STATUS       pLogger         AppErrorFlag=false,Uptime=18.8954,cpuload=0.4634,memory_kb=4500,memory_max_kb=4500,MOOSName=pLogger,Publishing="LOGGER_DIRECTORY,PLOGGER_STATUS,",Subscribing="APPCAST,APPCAST_REQ,APPLES,APPLES_ITER_HZ,APPLES_POST_HZ,DB_CLIENTS,DB_EVENT,DB_QOS,DB_RWSUMMARY,DB_TIME,DB_UPTIME,DB_VARSUMMARY,LOGGER_DIRECTORY,LOGGER_RESTART,MOOS_DEBUG,MOOS_SYSTEM,PEARS,PEARS_ITER_HZ,PEARS_POST_HZ,PLOGGER_CMD,PLOGGER_STATUS,PSHARE_CMD,PSHARE_INPUT_SUMMARY,PSHARE_OUTPUT_SUMMARY,PSHARE_STATUS,PXRELAY_APPLES_STATUS,UXMS_629_ITER_GAP,UXMS_629_ITER_LEN,UXMS_629_STATUS,",LogAuxSrc=false 
+18.917          APPLES               pXRelay_APPLES  41.00000     
+18.917          APPLES_ITER_HZ       pXRelay_APPLES  4.05297      
+18.917          APPLES_POST_HZ       pXRelay_APPLES  4.09669      
+18.931          UXMS_629_ITER_GAP    uXMS_629        1.00123      
+18.931          UXMS_629_ITER_LEN    uXMS_629        0.00016      
+19.127          PEARS                pXRelay_PEARS   41.00000     
+19.132          UXMS_629_ITER_GAP    uXMS_629        1.00309      
+19.132          UXMS_629_ITER_LEN    uXMS_629        0.00026      
+19.168          PXRELAY_APPLES_STATUS pXRelay_APPLES  AppErrorFlag=false,Uptime=18.9159,cpuload=0.2555,memory_kb=4704,memory_max_kb=6932,MOOSName=pXRelay_APPLES,Publishing="APPLES,APPLES_ITER_HZ,APPLES_POST_HZ,PXRELAY_APPLES_STATUS,",Subscribing="PEARS," 
+19.168          APPLES               pXRelay_APPLES  42.00000     
+19.168          APPLES_ITER_HZ       pXRelay_APPLES  4.05218      
+19.168          APPLES_POST_HZ       pXRelay_APPLES  4.09424      
+19.332          UXMS_629_STATUS      uXMS_629        AppErrorFlag=false,Uptime=18.8903,cpuload=0.4754,memory_kb=2396,memory_max_kb=6860,MOOSName=uXMS_629,Publishing="APPCAST,UXMS_629_ITER_GAP,UXMS_629_ITER_LEN,UXMS_629_STATUS,",Subscribing="APPCAST_REQ,APPLES,APPLES_ITER_HZ,APPLES_POST_HZ,DB_UPTIME,PEARS,PEARS_ITER_HZ,PEARS_POST_HZ," 
+19.332          UXMS_629_ITER_GAP    uXMS_629        1.00254      
+19.332          UXMS_629_ITER_LEN    uXMS_629        0.00023      
+19.378          PEARS                pXRelay_PEARS   42.00000     
+19.418          APPLES               pXRelay_APPLES  43.00000     
+19.418          APPLES_ITER_HZ       pXRelay_APPLES  4.05143      
+19.418          APPLES_POST_HZ       pXRelay_APPLES  4.09195      
+19.444          PSHARE_STATUS        pShare          AppErrorFlag=false,Uptime=18.7524,cpuload=0.4548,memory_kb=2344,memory_max_kb=6984,MOOSName=pShare,Publishing="PSHARE_INPUT_SUMMARY,PSHARE_OUTPUT_SUMMARY,PSHARE_STATUS,",Subscribing="APPLES,PSHARE_CMD," 
+19.444          PSHARE_OUTPUT_SUMMARY pShare          APPLES->APPLES:localhost:9201 
+19.444          PSHARE_INPUT_SUMMARY pShare          localhost:9200 
+19.533          UXMS_629_ITER_GAP    uXMS_629        1.00292      
+19.533          UXMS_629_ITER_LEN    uXMS_629        0.00018      
+19.628          PEARS                pXRelay_PEARS   43.00000     
+19.668          APPLES               pXRelay_APPLES  44.00000     
+19.668          APPLES_ITER_HZ       pXRelay_APPLES  4.05070      
+19.668          APPLES_POST_HZ       pXRelay_APPLES  4.08974      
+19.733          UXMS_629_ITER_GAP    uXMS_629        1.00130      
+19.733          UXMS_629_ITER_LEN    uXMS_629        0.00023      
+19.878          PEARS                pXRelay_PEARS   44.00000     
+19.918          APPLES               pXRelay_APPLES  45.00000     
+19.918          APPLES_ITER_HZ       pXRelay_APPLES  4.04996      
+19.918          APPLES_POST_HZ       pXRelay_APPLES  4.08759      
+19.919          DB_TIME              MOOSDB_apples   1561474039.25840 
+19.919          DB_UPTIME            MOOSDB_apples   20.12102     
+19.919          DB_CLIENTS           MOOSDB_apples   pShare,uXMS_629,pXRelay_APPLES,pLogger, 
+19.919          DB_VARSUMMARY        MOOSDB_apples   APPCAST              10:47:00.634         uXMS_629             0.0 Hz S  proc=uXMS_629!@#iter=1...
+APPCAST_REQ          18:59:59.000         (write pending)      0.0 Hz ~  
+                   APPLES               10:47:19.258         pXRelay_APPLES       4.0 Hz D  45.0                 
+APPLES_ITER_HZ       10:47:19.258         pXRelay_APPLES       4.0 Hz D  4.0                  
+APPLES_POST_HZ       10:47:19.258         pXRelay_APPLES       4.0 Hz D  4.1                  
+DB_CLIENTS           10:47:19.258         MOOSDB_apples        0.5 Hz S  pShare,uXMS_629,pXRela...
+DB_EVENT             10:47:00.131         MOOSDB_apples        2.2 Hz S  connected=pShare    
+DB_QOS               10:47:17.257         MOOSDB_apples        0.5 Hz S  pLogger=0.348091:0.348...
+DB_RWSUMMARY         10:47:17.257         MOOSDB_apples        0.5 Hz S  pShare=APPLES:PSHARE_C...
+DB_TIME              10:47:19.258         MOOSDB_apples        0.5 Hz D  1561474039.3         
+DB_UPTIME            10:47:19.258         MOOSDB_apples        0.5 Hz D  20.1                 
+DB_VARSUMMARY        10:47:17.257         MOOSDB_apples        0.5 Hz S  APPCAST              1...
+LOGGER_DIRECTORY     10:47:09.414         pLogger              0.1 Hz S  ./MOOSLog_25_6_2019___...
+LOGGER_RESTART       18:59:59.000         (write pending)      0.0 Hz ~  
+                   MOOS_DEBUG           18:59:59.000         (write pending)      0.0 Hz ~  
+                   MOOS_SYSTEM          18:59:59.000         (write pending)      0.0 Hz ~  
+                   PEARS                10:47:19.235         pXRelay_PEARS        4.0 Hz D  44.0                 
+PEARS_ITER_HZ        18:59:59.000         (write pending)      0.0 Hz ~  
+                   PEARS_POST_HZ        18:59:59.000         (write pending)      0.0 Hz ~  
+                   PLOGGER_CMD          18:59:59.000         (write pending)      0.0 Hz ~  
+                   PLOGGER_STATUS       10:47:18.235         pLogger              0.5 Hz S  AppErrorFlag=false,Upt...
+PSHARE_CMD           18:59:59.000         (write pending)      0.0 Hz ~  
+                   PSHARE_INPUT_SUMMARY 10:47:18.783         pShare               1.0 Hz S  localhost:9200      
+PSHARE_OUTPUT_SUMMARY 10:47:18.783         pShare               1.0 Hz S  APPLES->APPLES:localho...
+PSHARE_STATUS        10:47:18.783         pShare               0.5 Hz S  AppErrorFlag=false,Upt...
+PXRELAY_APPLES_STATUS 10:47:18.507         pXRelay_APPLES       0.5 Hz S  AppErrorFlag=false,Upt...
+UXMS_629_ITER_GAP    10:47:19.073         uXMS_629             5.0 Hz D  1.0                  
+UXMS_629_ITER_LEN    10:47:19.073         uXMS_629             4.8 Hz D  0.0                  
+UXMS_629_STATUS      10:47:18.672         uXMS_629             0.5 Hz S  AppErrorFlag=false,Upt...
+ 
+19.919          DB_QOS               MOOSDB_apples   pLogger=0.196934:0.348091:0.196934:0.267601,pShare=0.190973:0.324965:0.189066:0.266027,pXRelay_APPLES=0.27895:0.676155:0.179052:0.243759,uXMS_629=0.262022:0.377178:0.168085:0.262785, 
+19.919          DB_RWSUMMARY         MOOSDB_apples   pShare=APPLES:PSHARE_CMD&PSHARE_INPUT_SUMMARY:PSHARE_OUTPUT_SUMMARY:PSHARE_STATUS,uXMS_629=APPCAST_REQ:APPLES:APPLES_ITER_HZ:APPLES_POST_HZ:DB_UPTIME:PEARS:PEARS_ITER_HZ:PEARS_POST_HZ&APPCAST:UXMS_629_ITER_GAP:UXMS_629_ITER_LEN:UXMS_629_STATUS,pXRelay_APPLES=PEARS&APPLES:APPLES_ITER_HZ:APPLES_POST_HZ:PXRELAY_APPLES_STATUS,pLogger=APPCAST:APPCAST_REQ:APPLES:APPLES_ITER_HZ:APPLES_POST_HZ:DB_CLIENTS:DB_EVENT:DB_QOS:DB_RWSUMMARY:DB_TIME:DB_UPTIME:DB_VARSUMMARY:LOGGER_DIRECTORY:LOGGER_RESTART:MOOS_DEBUG:MOOS_SYSTEM:PEARS:PEARS_ITER_HZ:PEARS_POST_HZ:PLOGGER_CMD:PLOGGER_STATUS:PSHARE_CMD:PSHARE_INPUT_SUMMARY:PSHARE_OUTPUT_SUMMARY:PSHARE_STATUS:PXRELAY_APPLES_STATUS:UXMS_629_ITER_GAP:UXMS_629_ITER_LEN:UXMS_629_STATUS&LOGGER_DIRECTORY:PLOGGER_STATUS 
+19.934          UXMS_629_ITER_GAP    uXMS_629        1.00322      
+19.934          UXMS_629_ITER_LEN    uXMS_629        0.00046      
+20.098          LOGGER_DIRECTORY     pLogger         ./MOOSLog_25_6_2019_____10_46_59 
+20.128          PEARS                pXRelay_PEARS   45.00000     
+20.134          UXMS_629_ITER_GAP    uXMS_629        1.00137      
+20.134          UXMS_629_ITER_LEN    uXMS_629        0.00025      
+20.168          APPLES               pXRelay_APPLES  46.00000     
+20.168          APPLES_ITER_HZ       pXRelay_APPLES  4.04927      
+20.168          APPLES_POST_HZ       pXRelay_APPLES  4.08559      
+20.335          UXMS_629_ITER_GAP    uXMS_629        1.00360      
+20.335          UXMS_629_ITER_LEN    uXMS_629        0.00024      
+20.378          PEARS                pXRelay_PEARS   46.00000     
+20.419          APPLES               pXRelay_APPLES  47.00000     
+20.419          APPLES_ITER_HZ       pXRelay_APPLES  4.04858      
+20.419          APPLES_POST_HZ       pXRelay_APPLES  4.08365      
+20.444          PSHARE_OUTPUT_SUMMARY pShare          APPLES->APPLES:localhost:9201 
+20.444          PSHARE_INPUT_SUMMARY pShare          localhost:9200 
+20.535          UXMS_629_ITER_GAP    uXMS_629        1.00145      
+20.535          UXMS_629_ITER_LEN    uXMS_629        0.00025      
+20.629          PEARS                pXRelay_PEARS   47.00000     
+20.669          APPLES               pXRelay_APPLES  48.00000     
+20.669          APPLES_ITER_HZ       pXRelay_APPLES  4.04793      
+20.669          APPLES_POST_HZ       pXRelay_APPLES  4.08182      
+20.736          UXMS_629_ITER_GAP    uXMS_629        1.00412      
+20.736          UXMS_629_ITER_LEN    uXMS_629        0.00021      
+20.879          PEARS                pXRelay_PEARS   48.00000     
+20.900          PLOGGER_STATUS       pLogger         AppErrorFlag=false,Uptime=20.9,cpuload=0.5512,memory_kb=4500,memory_max_kb=4500,MOOSName=pLogger,Publishing="LOGGER_DIRECTORY,PLOGGER_STATUS,",Subscribing="APPCAST,APPCAST_REQ,APPLES,APPLES_ITER_HZ,APPLES_POST_HZ,DB_CLIENTS,DB_EVENT,DB_QOS,DB_RWSUMMARY,DB_TIME,DB_UPTIME,DB_VARSUMMARY,LOGGER_DIRECTORY,LOGGER_RESTART,MOOS_DEBUG,MOOS_SYSTEM,PEARS,PEARS_ITER_HZ,PEARS_POST_HZ,PLOGGER_CMD,PLOGGER_STATUS,PSHARE_CMD,PSHARE_INPUT_SUMMARY,PSHARE_OUTPUT_SUMMARY,PSHARE_STATUS,PXRELAY_APPLES_STATUS,UXMS_629_ITER_GAP,UXMS_629_ITER_LEN,UXMS_629_STATUS,",LogAuxSrc=false 
+20.919          APPLES               pXRelay_APPLES  49.00000     
+20.919          APPLES_ITER_HZ       pXRelay_APPLES  4.04729      
+20.919          APPLES_POST_HZ       pXRelay_APPLES  4.08006      
+20.936          UXMS_629_ITER_GAP    uXMS_629        1.00266      
+20.936          UXMS_629_ITER_LEN    uXMS_629        0.00018      
+21.129          PEARS                pXRelay_PEARS   49.00000     
+21.137          UXMS_629_ITER_GAP    uXMS_629        1.00281      
+21.137          UXMS_629_ITER_LEN    uXMS_629        0.00029      
+21.169          PXRELAY_APPLES_STATUS pXRelay_APPLES  AppErrorFlag=false,Uptime=20.9174,cpuload=0.1775,memory_kb=4704,memory_max_kb=6932,MOOSName=pXRelay_APPLES,Publishing="APPLES,APPLES_ITER_HZ,APPLES_POST_HZ,PXRELAY_APPLES_STATUS,",Subscribing="PEARS," 
+21.169          APPLES               pXRelay_APPLES  50.00000     
+21.169          APPLES_ITER_HZ       pXRelay_APPLES  4.04665      
+21.169          APPLES_POST_HZ       pXRelay_APPLES  4.07835      
+21.337          UXMS_629_STATUS      uXMS_629        AppErrorFlag=false,Uptime=20.8952,cpuload=0.514,memory_kb=2396,memory_max_kb=6860,MOOSName=uXMS_629,Publishing="APPCAST,UXMS_629_ITER_GAP,UXMS_629_ITER_LEN,UXMS_629_STATUS,",Subscribing="APPCAST_REQ,APPLES,APPLES_ITER_HZ,APPLES_POST_HZ,DB_UPTIME,PEARS,PEARS_ITER_HZ,PEARS_POST_HZ," 
+21.337          UXMS_629_ITER_GAP    uXMS_629        1.00130      
+21.337          UXMS_629_ITER_LEN    uXMS_629        0.00006      
+21.419          APPLES_ITER_HZ       pXRelay_APPLES  4.04606      
+21.447          PSHARE_STATUS        pShare          AppErrorFlag=false,Uptime=20.7555,cpuload=0.4908,memory_kb=2344,memory_max_kb=6984,MOOSName=pShare,Publishing="PSHARE_INPUT_SUMMARY,PSHARE_OUTPUT_SUMMARY,PSHARE_STATUS,",Subscribing="APPLES,PSHARE_CMD," 
+21.447          PSHARE_OUTPUT_SUMMARY pShare          APPLES->APPLES:localhost:9201 
+21.447          PSHARE_INPUT_SUMMARY pShare          localhost:9200 
+21.538          UXMS_629_ITER_GAP    uXMS_629        1.00188      
+21.538          UXMS_629_ITER_LEN    uXMS_629        0.00018      
+21.670          APPLES_ITER_HZ       pXRelay_APPLES  4.04545      
+21.738          UXMS_629_ITER_GAP    uXMS_629        1.00116      
+21.738          UXMS_629_ITER_LEN    uXMS_629        0.00019      
+21.920          APPLES_ITER_HZ       pXRelay_APPLES  4.04487      
+21.920          DB_TIME              MOOSDB_apples   1561474041.25996 
+21.920          DB_UPTIME            MOOSDB_apples   22.12259     
+21.920          DB_CLIENTS           MOOSDB_apples   pShare,uXMS_629,pXRelay_APPLES,pLogger, 
+21.921          DB_VARSUMMARY        MOOSDB_apples   APPCAST              10:47:00.634         uXMS_629             0.0 Hz S  proc=uXMS_629!@#iter=1...
+APPCAST_REQ          18:59:59.000         (write pending)      0.0 Hz ~  
+                   APPLES               10:47:20.509         pXRelay_APPLES       4.0 Hz D  50.0                 
+APPLES_ITER_HZ       10:47:21.259         pXRelay_APPLES       4.0 Hz D  4.0                  
+APPLES_POST_HZ       10:47:20.509         pXRelay_APPLES       4.0 Hz D  4.1                  
+DB_CLIENTS           10:47:21.259         MOOSDB_apples        0.5 Hz S  pShare,uXMS_629,pXRela...
+DB_EVENT             10:47:00.131         MOOSDB_apples        2.2 Hz S  connected=pShare    
+DB_QOS               10:47:19.258         MOOSDB_apples        0.5 Hz S  pLogger=0.196934:0.348...
+DB_RWSUMMARY         10:47:19.259         MOOSDB_apples        0.5 Hz S  pShare=APPLES:PSHARE_C...
+DB_TIME              10:47:21.259         MOOSDB_apples        0.5 Hz D  1561474041.3         
+DB_UPTIME            10:47:21.259         MOOSDB_apples        0.5 Hz D  22.1                 
+DB_VARSUMMARY        10:47:19.258         MOOSDB_apples        0.5 Hz S  APPCAST              1...
+LOGGER_DIRECTORY     10:47:19.438         pLogger              0.0 Hz S  ./MOOSLog_25_6_2019___...
+LOGGER_RESTART       18:59:59.000         (write pending)      0.0 Hz ~  
+                   MOOS_DEBUG           18:59:59.000         (write pending)      0.0 Hz ~  
+                   MOOS_SYSTEM          18:59:59.000         (write pending)      0.0 Hz ~  
+                   PEARS                10:47:20.487         pXRelay_PEARS        4.0 Hz D  49.0                 
+PEARS_ITER_HZ        18:59:59.000         (write pending)      0.0 Hz ~  
+                   PEARS_POST_HZ        18:59:59.000         (write pending)      0.0 Hz ~  
+                   PLOGGER_CMD          18:59:59.000         (write pending)      0.0 Hz ~  
+                   PLOGGER_STATUS       10:47:20.240         pLogger              0.5 Hz S  AppErrorFlag=false,Upt...
+PSHARE_CMD           18:59:59.000         (write pending)      0.0 Hz ~  
+                   PSHARE_INPUT_SUMMARY 10:47:20.786         pShare               1.0 Hz S  localhost:9200      
+PSHARE_OUTPUT_SUMMARY 10:47:20.786         pShare               1.0 Hz S  APPLES->APPLES:localho...
+PSHARE_STATUS        10:47:20.786         pShare               0.5 Hz S  AppErrorFlag=false,Upt...
+PXRELAY_APPLES_STATUS 10:47:20.509         pXRelay_APPLES       0.5 Hz S  AppErrorFlag=false,Upt...
+UXMS_629_ITER_GAP    10:47:21.078         uXMS_629             5.0 Hz D  1.0                  
+UXMS_629_ITER_LEN    10:47:21.078         uXMS_629             5.0 Hz D  0.0                  
+UXMS_629_STATUS      10:47:20.677         uXMS_629             0.5 Hz S  AppErrorFlag=false,Upt...
+ 
+21.921          DB_QOS               MOOSDB_apples   pLogger=0.294924:0.348091:0.144958:0.287199,pShare=0.257015:0.324965:0.160933:0.279236,pXRelay_APPLES=0.344038:0.676155:0.179052:0.256777,uXMS_629=0.296831:0.377178:0.168085:0.269747, 
+21.921          DB_RWSUMMARY         MOOSDB_apples   pShare=APPLES:PSHARE_CMD&PSHARE_INPUT_SUMMARY:PSHARE_OUTPUT_SUMMARY:PSHARE_STATUS,uXMS_629=APPCAST_REQ:APPLES:APPLES_ITER_HZ:APPLES_POST_HZ:DB_UPTIME:PEARS:PEARS_ITER_HZ:PEARS_POST_HZ&APPCAST:UXMS_629_ITER_GAP:UXMS_629_ITER_LEN:UXMS_629_STATUS,pXRelay_APPLES=PEARS&APPLES:APPLES_ITER_HZ:APPLES_POST_HZ:PXRELAY_APPLES_STATUS,pLogger=APPCAST:APPCAST_REQ:APPLES:APPLES_ITER_HZ:APPLES_POST_HZ:DB_CLIENTS:DB_EVENT:DB_QOS:DB_RWSUMMARY:DB_TIME:DB_UPTIME:DB_VARSUMMARY:LOGGER_DIRECTORY:LOGGER_RESTART:MOOS_DEBUG:MOOS_SYSTEM:PEARS:PEARS_ITER_HZ:PEARS_POST_HZ:PLOGGER_CMD:PLOGGER_STATUS:PSHARE_CMD:PSHARE_INPUT_SUMMARY:PSHARE_OUTPUT_SUMMARY:PSHARE_STATUS:PXRELAY_APPLES_STATUS:UXMS_629_ITER_GAP:UXMS_629_ITER_LEN:UXMS_629_STATUS&LOGGER_DIRECTORY:PLOGGER_STATUS 
+21.939          UXMS_629_ITER_GAP    uXMS_629        1.00326      
+21.939          UXMS_629_ITER_LEN    uXMS_629        0.00019      
+22.139          UXMS_629_ITER_GAP    uXMS_629        1.00105      
+22.139          UXMS_629_ITER_LEN    uXMS_629        0.00025      
+22.170          APPLES_ITER_HZ       pXRelay_APPLES  4.04430      
+22.339          UXMS_629_ITER_GAP    uXMS_629        1.00258      
+22.339          UXMS_629_ITER_LEN    uXMS_629        0.00023      
+22.420          APPLES_ITER_HZ       pXRelay_APPLES  4.04375      
+22.456          PSHARE_OUTPUT_SUMMARY pShare          APPLES->APPLES:localhost:9201 
+22.456          PSHARE_INPUT_SUMMARY pShare          localhost:9200 
+22.539          UXMS_629_ITER_GAP    uXMS_629        1.00103      
+22.539          UXMS_629_ITER_LEN    uXMS_629        0.00014      
+22.670          APPLES_ITER_HZ       pXRelay_APPLES  4.04318      
+22.740          UXMS_629_ITER_GAP    uXMS_629        1.00235      
+22.740          UXMS_629_ITER_LEN    uXMS_629        0.00018      
+22.904          PLOGGER_STATUS       pLogger         AppErrorFlag=false,Uptime=22.9038,cpuload=0.3818,memory_kb=4500,memory_max_kb=4500,MOOSName=pLogger,Publishing="LOGGER_DIRECTORY,PLOGGER_STATUS,",Subscribing="APPCAST,APPCAST_REQ,APPLES,APPLES_ITER_HZ,APPLES_POST_HZ,DB_CLIENTS,DB_EVENT,DB_QOS,DB_RWSUMMARY,DB_TIME,DB_UPTIME,DB_VARSUMMARY,LOGGER_DIRECTORY,LOGGER_RESTART,MOOS_DEBUG,MOOS_SYSTEM,PEARS,PEARS_ITER_HZ,PEARS_POST_HZ,PLOGGER_CMD,PLOGGER_STATUS,PSHARE_CMD,PSHARE_INPUT_SUMMARY,PSHARE_OUTPUT_SUMMARY,PSHARE_STATUS,PXRELAY_APPLES_STATUS,UXMS_629_ITER_GAP,UXMS_629_ITER_LEN,UXMS_629_STATUS,",LogAuxSrc=false 
+22.920          APPLES_ITER_HZ       pXRelay_APPLES  4.04266      
+22.940          UXMS_629_ITER_GAP    uXMS_629        1.00066      
+22.940          UXMS_629_ITER_LEN    uXMS_629        0.00007      
+23.140          UXMS_629_ITER_GAP    uXMS_629        1.00102      
+23.140          UXMS_629_ITER_LEN    uXMS_629        0.00023      
+23.171          PXRELAY_APPLES_STATUS pXRelay_APPLES  AppErrorFlag=false,Uptime=22.9189,cpuload=0.1771,memory_kb=4704,memory_max_kb=6932,MOOSName=pXRelay_APPLES,Publishing="APPLES,APPLES_ITER_HZ,APPLES_POST_HZ,PXRELAY_APPLES_STATUS,",Subscribing="PEARS," 
+23.171          APPLES_ITER_HZ       pXRelay_APPLES  4.04213      
+23.341          UXMS_629_STATUS      uXMS_629        AppErrorFlag=false,Uptime=22.8985,cpuload=0.3133,memory_kb=2396,memory_max_kb=6860,MOOSName=uXMS_629,Publishing="APPCAST,UXMS_629_ITER_GAP,UXMS_629_ITER_LEN,UXMS_629_STATUS,",Subscribing="APPCAST_REQ,APPLES,APPLES_ITER_HZ,APPLES_POST_HZ,DB_UPTIME,PEARS,PEARS_ITER_HZ,PEARS_POST_HZ," 
+23.341          UXMS_629_ITER_GAP    uXMS_629        1.00158      
+23.341          UXMS_629_ITER_LEN    uXMS_629        0.00009      
+23.421          APPLES_ITER_HZ       pXRelay_APPLES  4.04164      
+23.460          PSHARE_STATUS        pShare          AppErrorFlag=false,Uptime=22.7693,cpuload=0.2717,memory_kb=2344,memory_max_kb=6984,MOOSName=pShare,Publishing="PSHARE_INPUT_SUMMARY,PSHARE_OUTPUT_SUMMARY,PSHARE_STATUS,",Subscribing="APPLES,PSHARE_CMD," 
+23.460          PSHARE_OUTPUT_SUMMARY pShare          APPLES->APPLES:localhost:9201 
+23.460          PSHARE_INPUT_SUMMARY pShare          localhost:9200 
+23.541          UXMS_629_ITER_GAP    uXMS_629        1.00249      
+23.541          UXMS_629_ITER_LEN    uXMS_629        0.00018      
+23.671          APPLES_ITER_HZ       pXRelay_APPLES  4.04115      
+23.741          UXMS_629_ITER_GAP    uXMS_629        1.00089      
+23.741          UXMS_629_ITER_LEN    uXMS_629        0.00018      
+23.921          APPLES_ITER_HZ       pXRelay_APPLES  4.04067      
+23.921          DB_TIME              MOOSDB_apples   1561474043.26132 
+23.921          DB_UPTIME            MOOSDB_apples   24.12394     
+23.921          DB_CLIENTS           MOOSDB_apples   pShare,uXMS_629,pXRelay_APPLES,pLogger, 
+23.922          DB_VARSUMMARY        MOOSDB_apples   APPCAST              10:47:00.634         uXMS_629             0.0 Hz S  proc=uXMS_629!@#iter=1...
+APPCAST_REQ          18:59:59.000         (write pending)      0.0 Hz ~  
+                   APPLES               10:47:20.509         pXRelay_APPLES       4.0 Hz D  50.0                 
+APPLES_ITER_HZ       10:47:23.261         pXRelay_APPLES       4.0 Hz D  4.0                  
+APPLES_POST_HZ       10:47:20.509         pXRelay_APPLES       4.0 Hz D  4.1                  
+DB_CLIENTS           10:47:23.261         MOOSDB_apples        0.5 Hz S  pShare,uXMS_629,pXRela...
+DB_EVENT             10:47:00.131         MOOSDB_apples        2.2 Hz S  connected=pShare    
+DB_QOS               10:47:21.260         MOOSDB_apples        0.5 Hz S  pLogger=0.294924:0.348...
+DB_RWSUMMARY         10:47:21.260         MOOSDB_apples        0.5 Hz S  pShare=APPLES:PSHARE_C...
+DB_TIME              10:47:23.261         MOOSDB_apples        0.5 Hz D  1561474043.3         
+DB_UPTIME            10:47:23.261         MOOSDB_apples        0.5 Hz D  24.1                 
+DB_VARSUMMARY        10:47:21.260         MOOSDB_apples        0.5 Hz S  APPCAST              1...
+LOGGER_DIRECTORY     10:47:19.438         pLogger              0.0 Hz S  ./MOOSLog_25_6_2019___...
+LOGGER_RESTART       18:59:59.000         (write pending)      0.0 Hz ~  
+                   MOOS_DEBUG           18:59:59.000         (write pending)      0.0 Hz ~  
+                   MOOS_SYSTEM          18:59:59.000         (write pending)      0.0 Hz ~  
+                   PEARS                10:47:20.487         pXRelay_PEARS        4.0 Hz D  49.0                 
+PEARS_ITER_HZ        18:59:59.000         (write pending)      0.0 Hz ~  
+                   PEARS_POST_HZ        18:59:59.000         (write pending)      0.0 Hz ~  
+                   PLOGGER_CMD          18:59:59.000         (write pending)      0.0 Hz ~  
+                   PLOGGER_STATUS       10:47:22.243         pLogger              0.5 Hz S  AppErrorFlag=false,Upt...
+PSHARE_CMD           18:59:59.000         (write pending)      0.0 Hz ~  
+                   PSHARE_INPUT_SUMMARY 10:47:22.800         pShare               1.0 Hz S  localhost:9200      
+PSHARE_OUTPUT_SUMMARY 10:47:22.800         pShare               1.0 Hz S  APPLES->APPLES:localho...
+PSHARE_STATUS        10:47:22.800         pShare               0.5 Hz S  AppErrorFlag=false,Upt...
+PXRELAY_APPLES_STATUS 10:47:22.510         pXRelay_APPLES       0.5 Hz S  AppErrorFlag=false,Upt...
+UXMS_629_ITER_GAP    10:47:23.081         uXMS_629             5.0 Hz D  1.0                  
+UXMS_629_ITER_LEN    10:47:23.081         uXMS_629             5.0 Hz D  0.0                  
+UXMS_629_STATUS      10:47:22.680         uXMS_629             0.5 Hz S  AppErrorFlag=false,Upt...
+ 
+23.922          DB_QOS               MOOSDB_apples   pLogger=0.242949:0.348091:0.144958:0.276804,pShare=0.206947:0.324965:0.160933:0.269222,pXRelay_APPLES=0.268936:0.676155:0.11301:0.241756,uXMS_629=0.265121:0.377178:0.168085:0.263405, 
+23.922          DB_RWSUMMARY         MOOSDB_apples   pShare=APPLES:PSHARE_CMD&PSHARE_INPUT_SUMMARY:PSHARE_OUTPUT_SUMMARY:PSHARE_STATUS,uXMS_629=APPCAST_REQ:APPLES:APPLES_ITER_HZ:APPLES_POST_HZ:DB_UPTIME:PEARS:PEARS_ITER_HZ:PEARS_POST_HZ&APPCAST:UXMS_629_ITER_GAP:UXMS_629_ITER_LEN:UXMS_629_STATUS,pXRelay_APPLES=PEARS&APPLES:APPLES_ITER_HZ:APPLES_POST_HZ:PXRELAY_APPLES_STATUS,pLogger=APPCAST:APPCAST_REQ:APPLES:APPLES_ITER_HZ:APPLES_POST_HZ:DB_CLIENTS:DB_EVENT:DB_QOS:DB_RWSUMMARY:DB_TIME:DB_UPTIME:DB_VARSUMMARY:LOGGER_DIRECTORY:LOGGER_RESTART:MOOS_DEBUG:MOOS_SYSTEM:PEARS:PEARS_ITER_HZ:PEARS_POST_HZ:PLOGGER_CMD:PLOGGER_STATUS:PSHARE_CMD:PSHARE_INPUT_SUMMARY:PSHARE_OUTPUT_SUMMARY:PSHARE_STATUS:PXRELAY_APPLES_STATUS:UXMS_629_ITER_GAP:UXMS_629_ITER_LEN:UXMS_629_STATUS&LOGGER_DIRECTORY:PLOGGER_STATUS 
+23.942          UXMS_629_ITER_GAP    uXMS_629        1.00259      
+23.942          UXMS_629_ITER_LEN    uXMS_629        0.00015      
+24.142          UXMS_629_ITER_GAP    uXMS_629        1.00153      
+24.142          UXMS_629_ITER_LEN    uXMS_629        0.00027      
+24.171          APPLES_ITER_HZ       pXRelay_APPLES  4.04017      
