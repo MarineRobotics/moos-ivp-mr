@@ -5,7 +5,7 @@
 
 ServerHost   = localhost
 ServerPort   = 9000
-Community    = alpha_robocat
+Community    = needwood_robocat
 MOOSTimeWarp = 1
 
 //Lake Needwood, MOOSDB
@@ -129,7 +129,7 @@ ProcessConfig = pHelmIvP
 
   bhv_dir_not_found_ok = true
 
-  behaviors  = alpha.bhv
+  behaviors  = needwood.bhv
   domain     = course:0:359:360
   domain     = speed:0:4:41
 }
