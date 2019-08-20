@@ -1,0 +1,432 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="IVP_EXTEND"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\moos-ivp\;CMake Files\..\moos-ivp\build\;CMake Files\..\moos-ivp\build\MOOS\;CMake Files\..\moos-ivp\build\MOOS\MOOSCore\;CMake Files\src\;CMake Files\src\lib_behaviors-test\;CMake Files\src\pXRelayTest\;CMake Files\src\pExampleApp\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/vincent/moos-ivp-mr/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/vincent/moos-ivp-mr/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/vincent/moos-ivp-mr/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/vincent/moos-ivp-mr/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/vincent/moos-ivp-mr/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/vincent/moos-ivp-mr/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/vincent/moos-ivp-mr/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/vincent/moos-ivp-mr/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/vincent/moos-ivp-mr/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/vincent/moos-ivp-mr/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/vincent/moos-ivp-mr/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/vincent/moos-ivp-mr/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/vincent/moos-ivp-mr/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/vincent/moos-ivp-mr/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/vincent/moos-ivp-mr/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="BHV_SimpleWaypoint">
+				<Option output="/home/vincent/moos-ivp-mr/lib/libBHV_SimpleWaypoint.so" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/vincent/moos-ivp-mr/cmake-build-debug/src/lib_behaviors-test"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/vincent/moos-ivp/MOOS/MOOSCore/Core/libMOOS/include"/>
+					<Add directory="/home/vincent/moos-ivp/MOOS/MOOSCore/Core/libMOOS/App/include"/>
+					<Add directory="/home/vincent/moos-ivp/MOOS/MOOSCore/Core/libMOOS/Comms/include"/>
+					<Add directory="/home/vincent/moos-ivp/MOOS/MOOSCore/Core/libMOOS/DB/include"/>
+					<Add directory="/home/vincent/moos-ivp/MOOS/MOOSCore/Core/libMOOS/Utils/include"/>
+					<Add directory="/home/vincent/moos-ivp/MOOS/MOOSCore/Core/libMOOS/Thirdparty/PocoBits/include"/>
+					<Add directory="/home/vincent/moos-ivp/MOOS/MOOSCore/Core/libMOOS/Thirdparty/getpot/include"/>
+					<Add directory="/home/vincent/moos-ivp/MOOS/MOOSCore/Core/libMOOS/Thirdparty/AppCasting/include"/>
+					<Add directory="/home/vincent/moos-ivp/ivp/src/lib_apputil"/>
+					<Add directory="/home/vincent/moos-ivp/ivp/src/lib_behaviors"/>
+					<Add directory="/home/vincent/moos-ivp/ivp/src/lib_behaviors-colregs"/>
+					<Add directory="/home/vincent/moos-ivp/ivp/src/lib_behaviors-marine"/>
+					<Add directory="/home/vincent/moos-ivp/ivp/src/lib_bhvutil"/>
+					<Add directory="/home/vincent/moos-ivp/ivp/src/lib_contacts"/>
+					<Add directory="/home/vincent/moos-ivp/ivp/src/lib_encounters"/>
+					<Add directory="/home/vincent/moos-ivp/ivp/src/lib_genutil"/>
+					<Add directory="/home/vincent/moos-ivp/ivp/src/lib_geometry"/>
+					<Add directory="/home/vincent/moos-ivp/ivp/src/lib_helmivp"/>
+					<Add directory="/home/vincent/moos-ivp/ivp/src/lib_henrik_anneal"/>
+					<Add directory="/home/vincent/moos-ivp/ivp/src/lib_ipfview"/>
+					<Add directory="/home/vincent/moos-ivp/ivp/src/lib_ivpbuild"/>
+					<Add directory="/home/vincent/moos-ivp/ivp/src/lib_ivpcore"/>
+					<Add directory="/home/vincent/moos-ivp/ivp/src/lib_ivpsolve"/>
+					<Add directory="/home/vincent/moos-ivp/ivp/src/lib_logic"/>
+					<Add directory="/home/vincent/moos-ivp/ivp/src/lib_logutils"/>
+					<Add directory="/home/vincent/moos-ivp/ivp/src/lib_manifest"/>
+					<Add directory="/home/vincent/moos-ivp/ivp/src/lib_marineview"/>
+					<Add directory="/home/vincent/moos-ivp/ivp/src/lib_mbutil"/>
+					<Add directory="/home/vincent/moos-ivp/ivp/src/lib_ucommand"/>
+					<Add directory="/home/vincent/moos-ivp/ivp/src/lib_ufield"/>
+					<Add directory="/home/vincent/moos-ivp/ivp/src/lib_ufld_hazards"/>
+					<Add directory="/home/vincent/moos-ivp/ivp/src/lib_zaicview"/>
+					<Add directory="/home/vincent/moos-ivp-mr/src/./lib_behaviors-test"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/vincent/moos-ivp-mr/cmake-build-debug/src/lib_behaviors-test/Makefile&quot;  VERBOSE=1 BHV_SimpleWaypoint"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/vincent/moos-ivp-mr/cmake-build-debug/src/lib_behaviors-test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/vincent/moos-ivp-mr/cmake-build-debug/src/lib_behaviors-test/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/vincent/moos-ivp-mr/cmake-build-debug/src/lib_behaviors-test/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="BHV_SimpleWaypoint/fast">
+				<Option output="/home/vincent/moos-ivp-mr/lib/libBHV_SimpleWaypoint.so" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/vincent/moos-ivp-mr/cmake-build-debug/src/lib_behaviors-test"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/vincent/moos-ivp/MOOS/MOOSCore/Core/libMOOS/include"/>
+					<Add directory="/home/vincent/moos-ivp/MOOS/MOOSCore/Core/libMOOS/App/include"/>
+					<Add directory="/home/vincent/moos-ivp/MOOS/MOOSCore/Core/libMOOS/Comms/include"/>
+					<Add directory="/home/vincent/moos-ivp/MOOS/MOOSCore/Core/libMOOS/DB/include"/>
+					<Add directory="/home/vincent/moos-ivp/MOOS/MOOSCore/Core/libMOOS/Utils/include"/>
+					<Add directory="/home/vincent/moos-ivp/MOOS/MOOSCore/Core/libMOOS/Thirdparty/PocoBits/include"/>
+					<Add directory="/home/vincent/moos-ivp/MOOS/MOOSCore/Core/libMOOS/Thirdparty/getpot/include"/>
+					<Add directory="/home/vincent/moos-ivp/MOOS/MOOSCore/Core/libMOOS/Thirdparty/AppCasting/include"/>
+					<Add directory="/home/vincent/moos-ivp/ivp/src/lib_apputil"/>
+					<Add directory="/home/vincent/moos-ivp/ivp/src/lib_behaviors"/>
+					<Add directory="/home/vincent/moos-ivp/ivp/src/lib_behaviors-colregs"/>
+					<Add directory="/home/vincent/moos-ivp/ivp/src/lib_behaviors-marine"/>
+					<Add directory="/home/vincent/moos-ivp/ivp/src/lib_bhvutil"/>
+					<Add directory="/home/vincent/moos-ivp/ivp/src/lib_contacts"/>
+					<Add directory="/home/vincent/moos-ivp/ivp/src/lib_encounters"/>
+					<Add directory="/home/vincent/moos-ivp/ivp/src/lib_genutil"/>
+					<Add directory="/home/vincent/moos-ivp/ivp/src/lib_geometry"/>
+					<Add directory="/home/vincent/moos-ivp/ivp/src/lib_helmivp"/>
+					<Add directory="/home/vincent/moos-ivp/ivp/src/lib_henrik_anneal"/>
+					<Add directory="/home/vincent/moos-ivp/ivp/src/lib_ipfview"/>
+					<Add directory="/home/vincent/moos-ivp/ivp/src/lib_ivpbuild"/>
+					<Add directory="/home/vincent/moos-ivp/ivp/src/lib_ivpcore"/>
+					<Add directory="/home/vincent/moos-ivp/ivp/src/lib_ivpsolve"/>
+					<Add directory="/home/vincent/moos-ivp/ivp/src/lib_logic"/>
+					<Add directory="/home/vincent/moos-ivp/ivp/src/lib_logutils"/>
+					<Add directory="/home/vincent/moos-ivp/ivp/src/lib_manifest"/>
+					<Add directory="/home/vincent/moos-ivp/ivp/src/lib_marineview"/>
+					<Add directory="/home/vincent/moos-ivp/ivp/src/lib_mbutil"/>
+					<Add directory="/home/vincent/moos-ivp/ivp/src/lib_ucommand"/>
+					<Add directory="/home/vincent/moos-ivp/ivp/src/lib_ufield"/>
+					<Add directory="/home/vincent/moos-ivp/ivp/src/lib_ufld_hazards"/>
+					<Add directory="/home/vincent/moos-ivp/ivp/src/lib_zaicview"/>
+					<Add directory="/home/vincent/moos-ivp-mr/src/./lib_behaviors-test"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/vincent/moos-ivp-mr/cmake-build-debug/src/lib_behaviors-test/Makefile&quot;  VERBOSE=1 BHV_SimpleWaypoint/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/vincent/moos-ivp-mr/cmake-build-debug/src/lib_behaviors-test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/vincent/moos-ivp-mr/cmake-build-debug/src/lib_behaviors-test/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/vincent/moos-ivp-mr/cmake-build-debug/src/lib_behaviors-test/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="pXRelayTest">
+				<Option output="/home/vincent/moos-ivp-mr/bin/pXRelayTest" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/vincent/moos-ivp-mr/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/vincent/moos-ivp/MOOS/MOOSCore/Core/libMOOS/include"/>
+					<Add directory="/home/vincent/moos-ivp/MOOS/MOOSCore/Core/libMOOS/App/include"/>
+					<Add directory="/home/vincent/moos-ivp/MOOS/MOOSCore/Core/libMOOS/Comms/include"/>
+					<Add directory="/home/vincent/moos-ivp/MOOS/MOOSCore/Core/libMOOS/DB/include"/>
+					<Add directory="/home/vincent/moos-ivp/MOOS/MOOSCore/Core/libMOOS/Utils/include"/>
+					<Add directory="/home/vincent/moos-ivp/MOOS/MOOSCore/Core/libMOOS/Thirdparty/PocoBits/include"/>
+					<Add directory="/home/vincent/moos-ivp/MOOS/MOOSCore/Core/libMOOS/Thirdparty/getpot/include"/>
+					<Add directory="/home/vincent/moos-ivp/MOOS/MOOSCore/Core/libMOOS/Thirdparty/AppCasting/include"/>
+					<Add directory="/home/vincent/moos-ivp/ivp/src/lib_apputil"/>
+					<Add directory="/home/vincent/moos-ivp/ivp/src/lib_behaviors"/>
+					<Add directory="/home/vincent/moos-ivp/ivp/src/lib_behaviors-colregs"/>
+					<Add directory="/home/vincent/moos-ivp/ivp/src/lib_behaviors-marine"/>
+					<Add directory="/home/vincent/moos-ivp/ivp/src/lib_bhvutil"/>
+					<Add directory="/home/vincent/moos-ivp/ivp/src/lib_contacts"/>
+					<Add directory="/home/vincent/moos-ivp/ivp/src/lib_encounters"/>
+					<Add directory="/home/vincent/moos-ivp/ivp/src/lib_genutil"/>
+					<Add directory="/home/vincent/moos-ivp/ivp/src/lib_geometry"/>
+					<Add directory="/home/vincent/moos-ivp/ivp/src/lib_helmivp"/>
+					<Add directory="/home/vincent/moos-ivp/ivp/src/lib_henrik_anneal"/>
+					<Add directory="/home/vincent/moos-ivp/ivp/src/lib_ipfview"/>
+					<Add directory="/home/vincent/moos-ivp/ivp/src/lib_ivpbuild"/>
+					<Add directory="/home/vincent/moos-ivp/ivp/src/lib_ivpcore"/>
+					<Add directory="/home/vincent/moos-ivp/ivp/src/lib_ivpsolve"/>
+					<Add directory="/home/vincent/moos-ivp/ivp/src/lib_logic"/>
+					<Add directory="/home/vincent/moos-ivp/ivp/src/lib_logutils"/>
+					<Add directory="/home/vincent/moos-ivp/ivp/src/lib_manifest"/>
+					<Add directory="/home/vincent/moos-ivp/ivp/src/lib_marineview"/>
+					<Add directory="/home/vincent/moos-ivp/ivp/src/lib_mbutil"/>
+					<Add directory="/home/vincent/moos-ivp/ivp/src/lib_ucommand"/>
+					<Add directory="/home/vincent/moos-ivp/ivp/src/lib_ufield"/>
+					<Add directory="/home/vincent/moos-ivp/ivp/src/lib_ufld_hazards"/>
+					<Add directory="/home/vincent/moos-ivp/ivp/src/lib_zaicview"/>
+					<Add directory="/home/vincent/moos-ivp-mr/src/./lib_behaviors-test"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/vincent/moos-ivp-mr/cmake-build-debug/src/pXRelayTest/Makefile&quot;  VERBOSE=1 pXRelayTest"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/vincent/moos-ivp-mr/cmake-build-debug/src/pXRelayTest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/vincent/moos-ivp-mr/cmake-build-debug/src/pXRelayTest/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/vincent/moos-ivp-mr/cmake-build-debug/src/pXRelayTest/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="pXRelayTest/fast">
+				<Option output="/home/vincent/moos-ivp-mr/bin/pXRelayTest" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/vincent/moos-ivp-mr/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/vincent/moos-ivp/MOOS/MOOSCore/Core/libMOOS/include"/>
+					<Add directory="/home/vincent/moos-ivp/MOOS/MOOSCore/Core/libMOOS/App/include"/>
+					<Add directory="/home/vincent/moos-ivp/MOOS/MOOSCore/Core/libMOOS/Comms/include"/>
+					<Add directory="/home/vincent/moos-ivp/MOOS/MOOSCore/Core/libMOOS/DB/include"/>
+					<Add directory="/home/vincent/moos-ivp/MOOS/MOOSCore/Core/libMOOS/Utils/include"/>
+					<Add directory="/home/vincent/moos-ivp/MOOS/MOOSCore/Core/libMOOS/Thirdparty/PocoBits/include"/>
+					<Add directory="/home/vincent/moos-ivp/MOOS/MOOSCore/Core/libMOOS/Thirdparty/getpot/include"/>
+					<Add directory="/home/vincent/moos-ivp/MOOS/MOOSCore/Core/libMOOS/Thirdparty/AppCasting/include"/>
+					<Add directory="/home/vincent/moos-ivp/ivp/src/lib_apputil"/>
+					<Add directory="/home/vincent/moos-ivp/ivp/src/lib_behaviors"/>
+					<Add directory="/home/vincent/moos-ivp/ivp/src/lib_behaviors-colregs"/>
+					<Add directory="/home/vincent/moos-ivp/ivp/src/lib_behaviors-marine"/>
+					<Add directory="/home/vincent/moos-ivp/ivp/src/lib_bhvutil"/>
+					<Add directory="/home/vincent/moos-ivp/ivp/src/lib_contacts"/>
+					<Add directory="/home/vincent/moos-ivp/ivp/src/lib_encounters"/>
+					<Add directory="/home/vincent/moos-ivp/ivp/src/lib_genutil"/>
+					<Add directory="/home/vincent/moos-ivp/ivp/src/lib_geometry"/>
+					<Add directory="/home/vincent/moos-ivp/ivp/src/lib_helmivp"/>
+					<Add directory="/home/vincent/moos-ivp/ivp/src/lib_henrik_anneal"/>
+					<Add directory="/home/vincent/moos-ivp/ivp/src/lib_ipfview"/>
+					<Add directory="/home/vincent/moos-ivp/ivp/src/lib_ivpbuild"/>
+					<Add directory="/home/vincent/moos-ivp/ivp/src/lib_ivpcore"/>
+					<Add directory="/home/vincent/moos-ivp/ivp/src/lib_ivpsolve"/>
+					<Add directory="/home/vincent/moos-ivp/ivp/src/lib_logic"/>
+					<Add directory="/home/vincent/moos-ivp/ivp/src/lib_logutils"/>
+					<Add directory="/home/vincent/moos-ivp/ivp/src/lib_manifest"/>
+					<Add directory="/home/vincent/moos-ivp/ivp/src/lib_marineview"/>
+					<Add directory="/home/vincent/moos-ivp/ivp/src/lib_mbutil"/>
+					<Add directory="/home/vincent/moos-ivp/ivp/src/lib_ucommand"/>
+					<Add directory="/home/vincent/moos-ivp/ivp/src/lib_ufield"/>
+					<Add directory="/home/vincent/moos-ivp/ivp/src/lib_ufld_hazards"/>
+					<Add directory="/home/vincent/moos-ivp/ivp/src/lib_zaicview"/>
+					<Add directory="/home/vincent/moos-ivp-mr/src/./lib_behaviors-test"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/vincent/moos-ivp-mr/cmake-build-debug/src/pXRelayTest/Makefile&quot;  VERBOSE=1 pXRelayTest/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/vincent/moos-ivp-mr/cmake-build-debug/src/pXRelayTest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/vincent/moos-ivp-mr/cmake-build-debug/src/pXRelayTest/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/vincent/moos-ivp-mr/cmake-build-debug/src/pXRelayTest/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="pExampleApp">
+				<Option output="/home/vincent/moos-ivp-mr/bin/pExampleApp" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/vincent/moos-ivp-mr/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/vincent/moos-ivp/MOOS/MOOSCore/Core/libMOOS/include"/>
+					<Add directory="/home/vincent/moos-ivp/MOOS/MOOSCore/Core/libMOOS/App/include"/>
+					<Add directory="/home/vincent/moos-ivp/MOOS/MOOSCore/Core/libMOOS/Comms/include"/>
+					<Add directory="/home/vincent/moos-ivp/MOOS/MOOSCore/Core/libMOOS/DB/include"/>
+					<Add directory="/home/vincent/moos-ivp/MOOS/MOOSCore/Core/libMOOS/Utils/include"/>
+					<Add directory="/home/vincent/moos-ivp/MOOS/MOOSCore/Core/libMOOS/Thirdparty/PocoBits/include"/>
+					<Add directory="/home/vincent/moos-ivp/MOOS/MOOSCore/Core/libMOOS/Thirdparty/getpot/include"/>
+					<Add directory="/home/vincent/moos-ivp/MOOS/MOOSCore/Core/libMOOS/Thirdparty/AppCasting/include"/>
+					<Add directory="/home/vincent/moos-ivp/ivp/src/lib_apputil"/>
+					<Add directory="/home/vincent/moos-ivp/ivp/src/lib_behaviors"/>
+					<Add directory="/home/vincent/moos-ivp/ivp/src/lib_behaviors-colregs"/>
+					<Add directory="/home/vincent/moos-ivp/ivp/src/lib_behaviors-marine"/>
+					<Add directory="/home/vincent/moos-ivp/ivp/src/lib_bhvutil"/>
+					<Add directory="/home/vincent/moos-ivp/ivp/src/lib_contacts"/>
+					<Add directory="/home/vincent/moos-ivp/ivp/src/lib_encounters"/>
+					<Add directory="/home/vincent/moos-ivp/ivp/src/lib_genutil"/>
+					<Add directory="/home/vincent/moos-ivp/ivp/src/lib_geometry"/>
+					<Add directory="/home/vincent/moos-ivp/ivp/src/lib_helmivp"/>
+					<Add directory="/home/vincent/moos-ivp/ivp/src/lib_henrik_anneal"/>
+					<Add directory="/home/vincent/moos-ivp/ivp/src/lib_ipfview"/>
+					<Add directory="/home/vincent/moos-ivp/ivp/src/lib_ivpbuild"/>
+					<Add directory="/home/vincent/moos-ivp/ivp/src/lib_ivpcore"/>
+					<Add directory="/home/vincent/moos-ivp/ivp/src/lib_ivpsolve"/>
+					<Add directory="/home/vincent/moos-ivp/ivp/src/lib_logic"/>
+					<Add directory="/home/vincent/moos-ivp/ivp/src/lib_logutils"/>
+					<Add directory="/home/vincent/moos-ivp/ivp/src/lib_manifest"/>
+					<Add directory="/home/vincent/moos-ivp/ivp/src/lib_marineview"/>
+					<Add directory="/home/vincent/moos-ivp/ivp/src/lib_mbutil"/>
+					<Add directory="/home/vincent/moos-ivp/ivp/src/lib_ucommand"/>
+					<Add directory="/home/vincent/moos-ivp/ivp/src/lib_ufield"/>
+					<Add directory="/home/vincent/moos-ivp/ivp/src/lib_ufld_hazards"/>
+					<Add directory="/home/vincent/moos-ivp/ivp/src/lib_zaicview"/>
+					<Add directory="/home/vincent/moos-ivp-mr/src/./lib_behaviors-test"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/vincent/moos-ivp-mr/cmake-build-debug/src/pExampleApp/Makefile&quot;  VERBOSE=1 pExampleApp"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/vincent/moos-ivp-mr/cmake-build-debug/src/pExampleApp/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/vincent/moos-ivp-mr/cmake-build-debug/src/pExampleApp/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/vincent/moos-ivp-mr/cmake-build-debug/src/pExampleApp/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="pExampleApp/fast">
+				<Option output="/home/vincent/moos-ivp-mr/bin/pExampleApp" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/vincent/moos-ivp-mr/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/vincent/moos-ivp/MOOS/MOOSCore/Core/libMOOS/include"/>
+					<Add directory="/home/vincent/moos-ivp/MOOS/MOOSCore/Core/libMOOS/App/include"/>
+					<Add directory="/home/vincent/moos-ivp/MOOS/MOOSCore/Core/libMOOS/Comms/include"/>
+					<Add directory="/home/vincent/moos-ivp/MOOS/MOOSCore/Core/libMOOS/DB/include"/>
+					<Add directory="/home/vincent/moos-ivp/MOOS/MOOSCore/Core/libMOOS/Utils/include"/>
+					<Add directory="/home/vincent/moos-ivp/MOOS/MOOSCore/Core/libMOOS/Thirdparty/PocoBits/include"/>
+					<Add directory="/home/vincent/moos-ivp/MOOS/MOOSCore/Core/libMOOS/Thirdparty/getpot/include"/>
+					<Add directory="/home/vincent/moos-ivp/MOOS/MOOSCore/Core/libMOOS/Thirdparty/AppCasting/include"/>
+					<Add directory="/home/vincent/moos-ivp/ivp/src/lib_apputil"/>
+					<Add directory="/home/vincent/moos-ivp/ivp/src/lib_behaviors"/>
+					<Add directory="/home/vincent/moos-ivp/ivp/src/lib_behaviors-colregs"/>
+					<Add directory="/home/vincent/moos-ivp/ivp/src/lib_behaviors-marine"/>
+					<Add directory="/home/vincent/moos-ivp/ivp/src/lib_bhvutil"/>
+					<Add directory="/home/vincent/moos-ivp/ivp/src/lib_contacts"/>
+					<Add directory="/home/vincent/moos-ivp/ivp/src/lib_encounters"/>
+					<Add directory="/home/vincent/moos-ivp/ivp/src/lib_genutil"/>
+					<Add directory="/home/vincent/moos-ivp/ivp/src/lib_geometry"/>
+					<Add directory="/home/vincent/moos-ivp/ivp/src/lib_helmivp"/>
+					<Add directory="/home/vincent/moos-ivp/ivp/src/lib_henrik_anneal"/>
+					<Add directory="/home/vincent/moos-ivp/ivp/src/lib_ipfview"/>
+					<Add directory="/home/vincent/moos-ivp/ivp/src/lib_ivpbuild"/>
+					<Add directory="/home/vincent/moos-ivp/ivp/src/lib_ivpcore"/>
+					<Add directory="/home/vincent/moos-ivp/ivp/src/lib_ivpsolve"/>
+					<Add directory="/home/vincent/moos-ivp/ivp/src/lib_logic"/>
+					<Add directory="/home/vincent/moos-ivp/ivp/src/lib_logutils"/>
+					<Add directory="/home/vincent/moos-ivp/ivp/src/lib_manifest"/>
+					<Add directory="/home/vincent/moos-ivp/ivp/src/lib_marineview"/>
+					<Add directory="/home/vincent/moos-ivp/ivp/src/lib_mbutil"/>
+					<Add directory="/home/vincent/moos-ivp/ivp/src/lib_ucommand"/>
+					<Add directory="/home/vincent/moos-ivp/ivp/src/lib_ufield"/>
+					<Add directory="/home/vincent/moos-ivp/ivp/src/lib_ufld_hazards"/>
+					<Add directory="/home/vincent/moos-ivp/ivp/src/lib_zaicview"/>
+					<Add directory="/home/vincent/moos-ivp-mr/src/./lib_behaviors-test"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/vincent/moos-ivp-mr/cmake-build-debug/src/pExampleApp/Makefile&quot;  VERBOSE=1 pExampleApp/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/vincent/moos-ivp-mr/cmake-build-debug/src/pExampleApp/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/vincent/moos-ivp-mr/cmake-build-debug/src/pExampleApp/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/vincent/moos-ivp-mr/cmake-build-debug/src/pExampleApp/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/vincent/moos-ivp-mr/src/lib_behaviors-test/AOF_SimpleWaypoint.cpp">
+			<Option target="BHV_SimpleWaypoint"/>
+		</Unit>
+		<Unit filename="/home/vincent/moos-ivp-mr/src/lib_behaviors-test/AOF_SimpleWaypoint.h">
+			<Option target="BHV_SimpleWaypoint"/>
+		</Unit>
+		<Unit filename="/home/vincent/moos-ivp-mr/src/lib_behaviors-test/BHV_SimpleWaypoint.cpp">
+			<Option target="BHV_SimpleWaypoint"/>
+		</Unit>
+		<Unit filename="/home/vincent/moos-ivp-mr/src/lib_behaviors-test/BHV_SimpleWaypoint.h">
+			<Option target="BHV_SimpleWaypoint"/>
+		</Unit>
+		<Unit filename="/home/vincent/moos-ivp-mr/src/pExampleApp/main.cpp">
+			<Option target="pExampleApp"/>
+		</Unit>
+		<Unit filename="/home/vincent/moos-ivp-mr/src/pXRelayTest/Relayer.cpp">
+			<Option target="pXRelayTest"/>
+		</Unit>
+		<Unit filename="/home/vincent/moos-ivp-mr/src/pXRelayTest/Relayer.h">
+			<Option target="pXRelayTest"/>
+		</Unit>
+		<Unit filename="/home/vincent/moos-ivp-mr/src/pXRelayTest/Relayer_Info.cpp">
+			<Option target="pXRelayTest"/>
+		</Unit>
+		<Unit filename="/home/vincent/moos-ivp-mr/src/pXRelayTest/Relayer_Info.h">
+			<Option target="pXRelayTest"/>
+		</Unit>
+		<Unit filename="/home/vincent/moos-ivp-mr/src/pXRelayTest/main.cpp">
+			<Option target="pXRelayTest"/>
+		</Unit>
+		<Unit filename="/home/vincent/moos-ivp-mr/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/home/vincent/moos-ivp-mr/../moos-ivp/build/MOOS/MOOSCore/MOOSConfig.cmake">
+			<Option virtualFolder="CMake Files\..\moos-ivp\build\MOOS\MOOSCore\"/>
+		</Unit>
+		<Unit filename="/home/vincent/moos-ivp-mr/../moos-ivp/build/MOOS/MOOSCore/MOOSConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\moos-ivp\build\MOOS\MOOSCore\"/>
+		</Unit>
+		<Unit filename="/home/vincent/moos-ivp-mr/../moos-ivp/build/MOOS/MOOSCore/UseMOOS.cmake">
+			<Option virtualFolder="CMake Files\..\moos-ivp\build\MOOS\MOOSCore\"/>
+		</Unit>
+		<Unit filename="/home/vincent/moos-ivp-mr/src/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\src\"/>
+		</Unit>
+		<Unit filename="/home/vincent/moos-ivp-mr/src/lib_behaviors-test/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\src\lib_behaviors-test\"/>
+		</Unit>
+		<Unit filename="/home/vincent/moos-ivp-mr/src/pXRelayTest/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\src\pXRelayTest\"/>
+		</Unit>
+		<Unit filename="/home/vincent/moos-ivp-mr/src/pExampleApp/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\src\pExampleApp\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

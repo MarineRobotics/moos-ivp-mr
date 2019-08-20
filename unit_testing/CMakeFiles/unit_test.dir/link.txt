@@ -1,0 +1,1 @@
+/usr/bin/c++    -std=c++11   CMakeFiles/unit_test.dir/main-test.cpp.o CMakeFiles/unit_test.dir/factorialTest/factorial-test.cpp.o  -o unit_test 
