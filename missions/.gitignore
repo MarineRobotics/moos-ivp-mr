@@ -1,0 +1,5 @@
+MOOSLog*
+.LastOpenedMOOSLogDirectory
+*.moos++
+.mem_info*
+.vscode
