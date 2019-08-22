@@ -20,7 +20,7 @@ Behavior = BHV_Waypoint
                 lead = 8
          lead_damper = 1
        lead_to_start = true
-               speed = 12   // meters per second
+               speed = 10   // meters per second
         capture_line = true
       capture_radius = 5.0
          slip_radius = 15.0
@@ -54,7 +54,7 @@ Behavior = BHV_Waypoint
                 lead = 8
          lead_damper = 1
        lead_to_start = true
-               speed = 12   // meters per second
+               speed = 10   // meters per second
         capture_line = true
       capture_radius = 5.0
          slip_radius = 15.0
@@ -75,17 +75,17 @@ Behavior = BHV_Waypoint
 //----------------------------------------------
 Behavior=BHV_Waypoint
 {
-  name       = waypt_return
-  pwt        = 100
-  condition  = RETURN = true
-  condition  = DEPLOY = true
+  name       = stop
+  pwt        = 10
+  condition  = RETURN = false
+  condition  = DEPLOY = false
   perpetual  = true
   updates    = RETURN_UPDATE
   endflag    = RETURN = false
   endflag    = DEPLOY = false
   endflag    = MISSION = complete
 	
-           speed = 2.0
+           speed = 0
   capture_radius = 2.0
      slip_radius = 8.0
           points = 0,60
