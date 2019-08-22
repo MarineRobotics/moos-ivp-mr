@@ -72,24 +72,24 @@ Behavior = BHV_Waypoint
 //    visual_hints = vertex_size=5, edge_size=1
 //}
 //
-////----------------------------------------------
-//Behavior=BHV_Waypoint
-//{
-//  name       = stop
-//  pwt        = 10
-//  condition  = RETURN = false
-//  condition  = DEPLOY = false
-//  perpetual  = true
-//  updates    = RETURN_UPDATE
-//  endflag    = RETURN = false
-//  endflag    = DEPLOY = false
-//  endflag    = MISSION = complete
-//	
-//           speed = 0
-//  capture_radius = 2.0
-//     slip_radius = 8.0
-//          points = 0,60
-// }
+//----------------------------------------------
+Behavior=BHV_Waypoint
+{
+  name       = stop
+  pwt        = 10
+  condition  = RETURN = false
+  condition  = DEPLOY = false
+  perpetual  = true
+  updates    = RETURN_UPDATE
+  endflag    = RETURN = false
+  endflag    = DEPLOY = false
+  endflag    = MISSION = complete
+	
+           speed = 0
+  capture_radius = 2.0
+     slip_radius = 8.0
+          points = 0,60
+ }
 //
 ////----------------------------------------------
 //Behavior=BHV_ConstantSpeed
