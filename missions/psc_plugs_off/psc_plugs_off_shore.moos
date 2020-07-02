@@ -120,7 +120,7 @@ ProcessConfig = pMarineViewer
 
   button_one = SHAKEOUT # DEPLOY=true # MOOS_MANUAL_OVERRIDE=false # RETURN=false # SURVEY = shakeout
   button_two = ISLAND_SURVEY # DEPLOY=true # MOOS_MANUAL_OVERRIDE=false # RETURN=false # SURVEY = island
-  button_three = STOP # DEPLOY=false # RETURN=false
+  button_three = PARK # MOOS_MANUAL_OVERRIDE=true
   
   action  = MENU_KEY=deploy # DEPLOY = true # RETURN = false
   action+ = MENU_KEY=deploy # MOOS_MANUAL_OVERRIDE=false
