@@ -1,4 +1,4 @@
-# Install script for directory: /home/vincent/moos-ivp-mr/src
+# Install script for directory: /home/mr-jp/moos-ivp-mr/src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,9 +39,9 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/vincent/moos-ivp-mr/src/lib_behaviors-test/cmake_install.cmake")
-  include("/home/vincent/moos-ivp-mr/src/pXRelayTest/cmake_install.cmake")
-  include("/home/vincent/moos-ivp-mr/src/pExampleApp/cmake_install.cmake")
+  include("/home/mr-jp/moos-ivp-mr/src/lib_behaviors-test/cmake_install.cmake")
+  include("/home/mr-jp/moos-ivp-mr/src/pXRelayTest/cmake_install.cmake")
+  include("/home/mr-jp/moos-ivp-mr/src/pExampleApp/cmake_install.cmake")
 
 endif()
 

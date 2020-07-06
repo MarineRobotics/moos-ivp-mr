@@ -1,4 +1,4 @@
-# Install script for directory: /home/vincent/moos-ivp-mr/src/pExampleApp
+# Install script for directory: /home/mr-jp/moos-ivp-mr/src/pExampleApp
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

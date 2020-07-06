@@ -29,7 +29,7 @@ ProcessConfig = ANTLER
   Run = MOOSDB          @ NewConsole = false
   Run = pMarineViewer	  @ NewConsole = false
   Run = uProcessWatch	  @ NewConsole = false
-  Run = pShare       	  @ NewConsole = false
+  Run = pShare          @ NewConsole = false
 }
 
 ProcessConfig = pShare
@@ -37,12 +37,12 @@ ProcessConfig = pShare
   AppTick = 4
   CommsTick = 4
 
-  input = route = 10.42.0.13:9200
+  input = route = 10.0.0.19:9200
 
-  output = src_name=RETURN, route=10.42.0.1:9201
-  output = src_name=DEPLOY, route=10.42.0.1:9201
-  output = src_name=SURVEY, route=10.42.0.1:9201
-  output = src_name=MOOS_MANUAL_OVERRIDE, route=10.42.0.1:9201
+  output = src_name=RETURN, route=10.0.0.54:9201
+  output = src_name=DEPLOY, route=10.0.0.54:9201
+  output = src_name=SURVEY, route=10.0.0.54:9201
+  output = src_name=MOOS_MANUAL_OVERRIDE, route=10.0.0.54:9201
 }
 
 //------------------------------------------
