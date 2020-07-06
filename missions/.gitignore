@@ -3,3 +3,6 @@ MOOSLog*
 *.moos++
 .mem_info*
 .vscode
+bin
+build/*
+bin/*
