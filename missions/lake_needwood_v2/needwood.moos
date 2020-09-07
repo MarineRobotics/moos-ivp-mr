@@ -9,10 +9,8 @@ Community    = alpha
 MOOSTimeWarp = 1
 
 //Lake Needwood, MOOSDB
-//LatOrigin = 39.120282
-//LongOrigin = −77.129620
-LatOrigin = 39.12083333
-LongOrigin = -77.12916667
+LatOrigin = 39.120282
+LongOrigin = -77.129620
 
 // Forest Lake
 // LatOrigin  = 43.825300 
@@ -96,8 +94,8 @@ ProcessConfig = uSimMarine
   AppTick  	= 4
   CommsTick	= 4
 
-  start_x       = 0
-  start_y       = 80
+  start_x       = 150
+  start_y       = 130
   start_heading = 180
   start_speed   = 0
 
