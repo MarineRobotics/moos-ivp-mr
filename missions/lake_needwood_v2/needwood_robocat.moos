@@ -9,8 +9,8 @@ Community    = needwood_robocat
 MOOSTimeWarp = 1
 
 //Lake Needwood, MOOSDB
-LatOrigin = 39.12083333
-LongOrigin = -77.12916667
+LatOrigin = 39.120282
+LongOrigin = -77.129620
 
 // Forest Lake
 // LatOrigin  = 43.825300 
