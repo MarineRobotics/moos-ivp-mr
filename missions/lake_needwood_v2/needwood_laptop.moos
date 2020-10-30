@@ -36,7 +36,7 @@ ProcessConfig = ANTLER
   Run = uProcessWatch	@ NewConsole = false
   Run = pNodeReporter	@ NewConsole = false
   Run = uMemWatch       @ NewConsole = false
-  Run = iFrontSeat	@ NewConsole = true
+  # Run = iFrontSeat	@ NewConsole = true
   Run = pShare		@ NewConsole = false
 }
 
@@ -208,9 +208,12 @@ ProcessConfig = pMarineViewer
   scope  = MVIEWER_RCLICK
 
   button_one = SHAKEOUT # DEPLOY=true # MOOS_MANUAL_OVERRIDE=false # RETURN=false # SURVEY = shakeout
-  button_two = ISLAND_SURVEY # DEPLOY=true # MOOS_MANUAL_OVERRIDE=false # RETURN=false # SURVEY = island
-  button_three = PARK # MOOS_MANUAL_OVERRIDE=true  
-
+  button_two = DEPLOY_SELECTED # DEPLOY=true # MOOS_MANUAL_OVERRIDE=false # RETURN=false
+  button_three = PARK # MOOS_MANUAL_OVERRIDE=true      
+  action  = MENU_KEY=island # SURVEY = island
+  action  = MENU_KEY=island_zigzag # SURVEY = island_zigzag
+  action  = MENU_KEY=shakeout_zigzag # SURVEY = shakeout_zigzag
+  action  = MENU_KEY=large_zigzag # SURVEY = large_zigzag
   action  = MENU_KEY=deploy # DEPLOY = true # RETURN = false
   action+ = MENU_KEY=deploy # MOOS_MANUAL_OVERRIDE=false
   action  = RETURN=true

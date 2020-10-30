@@ -73,6 +73,108 @@ Behavior = BHV_Waypoint
 }
 
 //----------------------------------------------
+Behavior = BHV_Waypoint
+{ 
+  name      = zigzag_island_survey
+  pwt       = 100  // priority
+  condition = RETURN = false
+  condition = DEPLOY = true
+  condition = SURVEY = island_zigzag
+  endflag   = RETURN = true
+
+  updates    = WPT_UPDATE
+  perpetual  = true  // allows behavior to run again after being completed
+
+                lead = 8
+         lead_damper = 1
+       lead_to_start = true
+               speed = 10   // meters per second
+        capture_line = false
+      capture_radius = 5.0
+         slip_radius = 15.0
+	efficiency_measure = all
+
+             polygon = 128, 101 : 88, 104 : 102, 133 : 35, 127 : 0, 53 : 1, -49 : 46, -47 : 118, 33 : 88, 36 : 157, 119
+
+               order = normal
+             repeat  = 100000
+
+    visual_hints = nextpt_color=yellow
+    visual_hints = nextpt_vertex_size=8
+    visual_hints = nextpt_lcolor=gray70
+    visual_hints = vertex_color=dodger_blue, edge_color=white
+    visual_hints = vertex_size=5, edge_size=1
+}
+
+//----------------------------------------------
+Behavior = BHV_Waypoint
+{ 
+  name      = zigzag_shakeout
+  pwt       = 100  // priority
+  condition = RETURN = false
+  condition = DEPLOY = true
+  condition = SURVEY = shakeout_zigzag
+  endflag   = RETURN = true
+
+  updates    = WPT_UPDATE
+  perpetual  = true  // allows behavior to run again after being completed
+
+                lead = 8
+         lead_damper = 1
+       lead_to_start = true
+               speed = 10   // meters per second
+        capture_line = false
+      capture_radius = 5.0
+         slip_radius = 15.0
+	efficiency_measure = all
+
+             polygon = 136, 73 : 101, 75 : 123, 121 : 83, 123
+
+               order = normal
+             repeat  = 100000
+
+    visual_hints = nextpt_color=yellow
+    visual_hints = nextpt_vertex_size=8
+    visual_hints = nextpt_lcolor=gray70
+    visual_hints = vertex_color=dodger_blue, edge_color=white
+    visual_hints = vertex_size=5, edge_size=1
+}
+
+//----------------------------------------------
+Behavior = BHV_Waypoint
+{ 
+  name      = large_zigzag
+  pwt       = 100  // priority
+  condition = RETURN = false
+  condition = DEPLOY = true
+  condition = SURVEY = large_zigzag
+  endflag   = RETURN = true
+
+  updates    = WPT_UPDATE
+  perpetual  = true  // allows behavior to run again after being completed
+
+                lead = 8
+         lead_damper = 1
+       lead_to_start = true
+               speed = 10   // meters per second
+        capture_line = false
+      capture_radius = 5.0
+         slip_radius = 15.0
+	efficiency_measure = all
+
+             polygon = 136, 73 : 101, 75 : 123, 121 : 83, 123 : 106, 164 : 43, 165 : 77, 207 : 108, 105
+
+               order = normal
+             repeat  = 100000
+
+    visual_hints = nextpt_color=yellow
+    visual_hints = nextpt_vertex_size=8
+    visual_hints = nextpt_lcolor=gray70
+    visual_hints = vertex_color=dodger_blue, edge_color=white
+    visual_hints = vertex_size=5, edge_size=1
+}
+
+//----------------------------------------------
 Behavior=BHV_Waypoint
 {
   name       = stop
