@@ -121,6 +121,7 @@ ProcessConfig = pMarineViewer
   action  = MENU_KEY=island_zigzag # SURVEY = island_zigzag
   action  = MENU_KEY=shakeout_zigzag # SURVEY = shakeout_zigzag
   action  = MENU_KEY=large_zigzag # SURVEY = large_zigzag
+  action =  MENU_KEY=largest_zigzag # SURVEY = largest_zigzag
   action  = MENU_KEY=deploy # DEPLOY = true # RETURN = false
   action+ = MENU_KEY=deploy # MOOS_MANUAL_OVERRIDE=false
   action  = RETURN=true
