@@ -1,7 +1,7 @@
 ##############################################################################
-# FILE:        moos-ivp-extend/src/CMakeLists.txt
-# DATE:        2010/09/07
-# DESCRIPTION: CMakeLists.txt file for the moos-ivp-extend source directory
+# FILE:        moos-ivp-mr/src/CMakeLists.txt
+# DATE:        2021/09/02
+# DESCRIPTION: CMakeLists.txt file for the moos-ivp-mr source directory
 ##############################################################################
 
 
@@ -14,14 +14,16 @@ INCLUDE_DIRECTORIES(${LOCAL_LIBRARY_DIRS})
 # List the subdirectories to build...
 #============================================================================
 ADD_SUBDIRECTORY(lib_behaviors-test)
+ADD_SUBDIRECTORY(lib_sock_utils)
 ADD_SUBDIRECTORY(pXRelayTest)
 ADD_SUBDIRECTORY(pExampleApp)
+ADD_SUBDIRECTORY(iEcoCat)
 
 #ADD_SUBDIRECTORY(pPrimeFactor)
 #ADD_SUBDIRECTORY(pFoobar)
 #ADD_SUBDIRECTORY(pOdometry)
 
-#ADD_SUBDIRECTORY(pPrimeFactor)
+#ADD_SUBDIRECTORY(pPrimeFact or)
 #ADD_SUBDIRECTORY(pFoobar)
 #ADD_SUBDIRECTORY(pOdometry)
 

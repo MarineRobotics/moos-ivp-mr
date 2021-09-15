@@ -4,8 +4,8 @@ MOOSLog*
 .mem_info*
 .vscode
 bin
-build/*
-bin/*
+build/
+bin/
 lib/
 CMakeCache.txt
 cmake_install.cmake
