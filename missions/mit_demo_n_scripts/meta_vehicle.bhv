@@ -1,0 +1,64 @@
+//*******************************************************
+// Vehicle behavior configuration file
+
+initialize   DEPLOY = false
+initialize   RETURN = false
+initialize   STATION_KEEP = false
+
+//----------------------------------------------
+Behavior = BHV_Waypoint
+{
+  name      = octagon
+  pwt       = 100
+  condition = RETURN = false
+  condition = DEPLOY = true
+  condition = SURVEY = octagon
+  endflag   = RETURN = true
+
+  updates   = OCT_UPDATE
+  perpetual = true
+
+                lead = 40
+         lead_damper = 4
+       lead_to_start = true
+               speed = $(SPEED)  // meters per second
+	      
+        capture_line = true
+      capture_radius = 10
+         slip_radius = 15
+	efficiency_measure = all
+
+	// Bigger home plate
+  // polygon = pts={-17,-26:52,1:69,-40:41,-67:1,-68} 
+
+	// Smaller home plate
+  polygon = pts={-2,-21:44,-2:56,-29:37,-48:10,-49}
+
+           order = normal
+          repeat = 10000
+
+    visual_hints = nextpt_color=yellow
+    visual_hints = nextpt_vertex_size=8
+    visual_hints = nextpt_lcolor=gray70
+    visual_hints = vertex_color=dodger_blue, edge_color=white
+    visual_hints = vertex_size=5, edge_size=1
+}
+
+//----------------------------------------------
+Behavior=BHV_Waypoint
+{
+  name       = waypt_return
+  pwt        = 100
+  condition  = RETURN = true
+  condition  = DEPLOY = true
+  perpetual  = true
+  updates    = RETURN_UPDATE
+  endflag    = RETURN = false
+  endflag    = DEPLOY = false
+  endflag    = MISSION = complete
+
+	   speed = $(SPEED)
+  capture_radius = 2.0
+     slip_radius = 8.0
+          points = 0,-10
+ }

@@ -1,0 +1,18 @@
+//--------------------------------------------------------
+// uProcessWatch Config Block
+	
+ProcessConfig = uProcessWatch
+{
+  AppTick   = 2
+  CommsTick = 2
+
+  allow_retractions = true
+
+  watch_all = true // default is true
+
+  nowatch = uMAC*
+  nowatch = uXMS*
+  nowatch = uPokeDB*
+
+  summary_wait  = 12
+}

@@ -1,0 +1,15 @@
+//------------------------------------------
+// iFrontSeat config block
+
+ProcessConfig = iFrontSeat
+{
+  common {
+    log: true
+    log_verbosity: DEBUG2
+    verbosity: DEBUG2
+  }
+  [mr_config] { # (optional)
+    tcp_address: $(FSEAT_IP)
+    tcp_port: 54321
+  }
+}
