@@ -5,11 +5,19 @@
 /*    DATE: 01 APRIL 2020                                   */
 /************************************************************/
 
+/************************************************************/
+/*    EDITED BY: Vincent Vandyck                            */
+/*    ORGN: Marine Robotics                                 */
+/*    FILE: main.cpp                                        */
+/*    DATE: 1 Nov 2021                                      */
+/************************************************************/
+
+
 #include <string>
 #include "MBUtils.h"
 #include "ColorParse.h"
-#include "M300.h"
-#include "M300_Info.h"
+#include "SailBoat.h"
+#include "SailBoat_Info.h"
 
 using namespace std;
 
@@ -40,12 +48,12 @@ int main(int argc, char *argv[])
     showHelpAndExit();
 
   cout << termColor("green");
-  cout << "iM300 launching as " << run_command << endl;
+  cout << "iSailBoat launching as " << run_command << endl;
   cout << termColor() << endl;
 
-  M300 M300;
+  SailBoat SailBoat;
 
-  M300.Run(run_command.c_str(), mission_file.c_str());
+  SailBoat.Run(run_command.c_str(), mission_file.c_str());
   
   return(0);
 }

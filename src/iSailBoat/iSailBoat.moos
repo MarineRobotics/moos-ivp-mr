@@ -1,7 +1,7 @@
 //------------------------------------------------
-// iM300 config block
+// iSailBoat config block
 
-ProcessConfig = iM300
+ProcessConfig = iSailBoat
 {
   AppTick   = 10
   CommsTick = 10

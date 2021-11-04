@@ -5,9 +5,16 @@
 /*    DATE: 01 APRIL 2020                                   */
 /************************************************************/
 
+/************************************************************/
+/*    EDITED BY: Vincent Vandyck                            */
+/*    ORGN: Marine Robotics                                 */
+/*    FILE: SailBoat_Info.cpp                               */
+/*    DATE: 1 Nov 2021                                      */
+/************************************************************/
+
 #include <cstdlib>
 #include <iostream>
-#include "M300_Info.h"
+#include "SailBoat_Info.h"
 #include "ColorParse.h"
 #include "ReleaseInfo.h"
 
@@ -20,14 +27,14 @@ void showSynopsis()
 {
   blk("SYNOPSIS:                                                       ");
   blk("------------------------------------                            ");
-  blk("  The iM300 application serves as an intermediary between       ");
+  blk("  The iSailBoat application serves as an intermediary between       ");
   blk("  a MOOS community (backseat) and a vehicle (frontseat).        ");
   blk("                                                                ");
-  blk("  iM300 performs two essential tasks:                           ");
+  blk("  iSailBoat performs two essential tasks:                           ");
   blk("                                                                ");
   blk("    1) CONNECT: [FRONTSEAT] <-(IP:TCP)-> [BACKSEAT]             ");
   blk("                                                                ");
-  blk("    2) TRANSLATE: [NMEA MESSAGES] <-(iM300)-> [MOOS MESSAGES]   ");
+  blk("    2) TRANSLATE: [NMEA MESSAGES] <-(iSailBoat)-> [MOOS MESSAGES]   ");
   blk("                                                                ");
 }
 
@@ -38,15 +45,15 @@ void showHelpAndExit()
 {
   blk("                                                                ");
   blu("=============================================================== ");
-  blu("Usage: iM300 file.moos [OPTIONS]                   ");
+  blu("Usage: iSailBoat file.moos [OPTIONS]                   ");
   blu("=============================================================== ");
   blk("                                                                ");
   showSynopsis();
   blk("                                                                ");
   blk("Options:                                                        ");
   mag("  --alias","=<ProcessName>                                      ");
-  blk("      Launch iM300 with the given process name                  ");
-  blk("      rather than iM300.                                        ");
+  blk("      Launch iSailBoat with the given process name                  ");
+  blk("      rather than iSailBoat.                                        ");
   mag("  --example, -e                                                 ");
   blk("      Display example MOOS configuration block.                 ");
   mag("  --help, -h                                                    ");
@@ -54,7 +61,7 @@ void showHelpAndExit()
   mag("  --interface, -i                                               ");
   blk("      Display MOOS publications and subscriptions.              ");
   mag("  --version,-v                                                  ");
-  blk("      Display the release version of iM300.                     ");
+  blk("      Display the release version of iSailBoat.                     ");
   blk("                                                                ");
   blk("Note: If argv[2] does not otherwise match a known option,       ");
   blk("      then it will be interpreted as a run alias. This is       ");
@@ -70,10 +77,10 @@ void showExampleConfigAndExit()
 {
   blk("                                                                ");
   blu("=============================================================== ");
-  blu("iM300 Example MOOS Configuration                   ");
+  blu("iSailBoat Example MOOS Configuration                   ");
   blu("=============================================================== ");
   blk("                                                                ");
-  blk("ProcessConfig = iM300                              ");
+  blk("ProcessConfig = iSailBoat                              ");
   blk("{                                                               ");
   blk("  AppTick   = 10                                                ");
   blk("  CommsTick = 10                                                ");
@@ -103,7 +110,7 @@ void showInterfaceAndExit()
 {
   blk("                                                                ");
   blu("=============================================================== ");
-  blu("iM300 INTERFACE                                    ");
+  blu("iSailBoat INTERFACE                                             ");
   blu("=============================================================== ");
   blk("                                                                ");
   showSynopsis();
@@ -126,10 +133,10 @@ void showInterfaceAndExit()
   blk("  IMU_PITCH             (double)  Pitch                    [deg]");
   blk("  IMU_YAW               (double)  Yaw (Heading)            [deg]");
   blk("                                                                ");
-  blk("  M300_BATT_VOLTAGE     (double)  Vehicle battery voltage  [V]  ");
-  blk("  M300_RAW_NMEA         (string)  Raw NMEA sentences       []   ");
-  blk("  M300_THRUST_L         (double)  Motor thrust (left)      [?]  ");
-  blk("  M300_THRUST_R         (double)  Motor thrust (right)     [?]  ");
+  blk("  SailBoat_BATT_VOLTAGE     (double)  Vehicle battery voltage  [V]  ");
+  blk("  SailBoat_RAW_NMEA         (string)  Raw NMEA sentences       []   ");
+  blk("  SailBoat_THRUST_L         (double)  Motor thrust (left)      [?]  ");
+  blk("  SailBoat_THRUST_R         (double)  Motor thrust (right)     [?]  ");
   blk("                                                                ");
   exit(0);
 }
@@ -139,6 +146,6 @@ void showInterfaceAndExit()
 
 void showReleaseInfoAndExit()
 {
-  showReleaseInfo("iM300", "gpl");
+  showReleaseInfo("iSailBoat", "gpl");
   exit(0);
 }

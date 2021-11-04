@@ -5,8 +5,15 @@
 /*    DATE: 01 APRIL 2020                                   */
 /************************************************************/
 
-#ifndef M300_INFO_HEADER
-#define M300_INFO_HEADER
+/************************************************************/
+/*    EDITED BY: Vincent Vandyck                            */
+/*    ORGN: Marine Robotics                                 */
+/*    FILE: SailBoat_Info.h                                 */
+/*    DATE: 1 Nov 2021                                      */
+/************************************************************/
+
+#ifndef SailBoat_INFO_HEADER
+#define SailBoat_INFO_HEADER
 
 void showSynopsis();
 void showHelpAndExit();
@@ -15,4 +22,3 @@ void showInterfaceAndExit();
 void showReleaseInfoAndExit();
 
 #endif
-

@@ -5,20 +5,26 @@
 /*    DATE: 01 APRIL 2020                                   */
 /************************************************************/
 
-#ifndef M300_HEADER
-#define M300_HEADER
+/************************************************************/
+/*    EDITED BY: Vincent Vandyck                            */
+/*    ORGN: Marine Robotics                                 */
+/*    FILE: SailBoat.h                                      */
+/*    DATE: 1 Nov 2021                                      */
+/************************************************************/
+
+#ifndef SailBoat_HEADER
+#define SailBoat_HEADER
 
 #include <string>
 #include "SockNinja.h"
-#include "Thruster.h"
 #include "MOOS/libMOOSGeodesy/MOOSGeodesy.h"
 #include "MOOS/libMOOS/Thirdparty/AppCasting/AppCastingMOOSApp.h"
 
-class M300 : public AppCastingMOOSApp
+class SailBoat : public AppCastingMOOSApp
 {
 public:
-  M300();
-  ~M300();
+  SailBoat();
+  ~SailBoat();
 
 protected: // Standard public MOOSApp functions
   bool OnNewMail(MOOSMSG_LIST &NewMail);
@@ -35,14 +41,8 @@ protected: // App Specific functions
   void sendMessagesToSocket();
   void readMessagesFromSocket();
 
-  // Original iM300 message handlers
+  // Original iSailBoat message handlers
   bool handleConfigIgnoreMsg(std::string);
-  bool handleMsgGPRMC(std::string);
-  bool handleMsgGPGGA(std::string);
-  bool handleMsgCPNVG(std::string);
-  bool handleMsgCPNVG_heading(std::string);
-  bool handleMsgCPRBS(std::string);
-  bool handleConfigUseImuHdg(std::string);
 
   // New Marine Robotics message handlers
   bool handleMsgMRINF(std::string);
@@ -58,14 +58,9 @@ protected: // App Specific functions
   // New Marine Robotics
   void checkFrontSeatState();
 
-  bool diffThrust(double des_rudder, double des_thrust,
-		  double &des_thrustL, double &des_thrustR);
-
 private: // Config variables
-  double       m_max_rudder;       // MAX_RUDDER
-  double       m_max_thrust;       // MAX_THRUST
+  double       m_max_speed;        // MAX_SPEED m/s
   std::string  m_drive_mode;       // DRIVE_MODE
-  bool         use_imu_heading;
 
 
   std::set<std::string> m_ignore_msgs;
@@ -73,7 +68,9 @@ private: // Config variables
 private: // State variables
   CMOOSGeodesy m_geodesy;
   SockNinja    m_ninja;
-  Thruster     m_thrust;
+
+  //TODO: remove this from the cpp file
+  //Thruster     m_thrust;
 
   //Marine Robotics
   double       m_des_heading;
@@ -87,15 +84,11 @@ private: // State variables
   bool         m_stale_mode;
   double       m_stale_threshold;
   unsigned int m_count_stale;
-  double       m_tstamp_des_rudder;
-  double       m_tstamp_des_thrust;
-
+  
   // MR Stale Message Detection
   double       m_tstamp_des_heading;
   double       m_tstamp_des_speed;
-
-  unsigned int m_num_satellites;
-  double       m_batt_voltage;
+  
   double       m_nav_x;
   double       m_nav_y;
   double       m_nav_hdg;
