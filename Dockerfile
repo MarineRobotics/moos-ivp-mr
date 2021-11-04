@@ -5,12 +5,22 @@
 # To be able to use the graphical UI features of this image,
 # make sure to run it with the following command, which should enable the
 # Docker container to use the system's display invironment
-# docker run -ti --net=host --ipc=host -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix -v $XAUTHORITY:/tmp/.XAuthority -e XAUTHORITY=/tmp/.XAuthority --env="QT_X11_NO_MITSHM=1" <name>:<version>
+# docker run -ti \
+# --net=host --ipc=host \
+# -e DISPLAY=$DISPLAY \
+# -v /tmp/.X11-unix:/tmp/.X11-unix \
+# -v $XAUTHORITY:/tmp/.XAuthority \
+# -e XAUTHORITY=/tmp/.XAuthority 
+# --env="QT_X11_NO_MITSHM=1" 
+# <name>:<version>
+
+# optional: -v /home/hostuser/moos-ivp-mr:/home/mruser/moos-ivp-dev
+# This allows you to mount the tree on your host for dev purposes.
 
 
 
 # Import the Marine Robotics frontseat docker container
-FROM mrobotics/mr-frontseat-sim:1.1
+FROM mrobotics/mr-frontseat-sim:1.2
 
 # Change user to root and install all necessary dependencies
 USER root
