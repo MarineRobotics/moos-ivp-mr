@@ -37,12 +37,14 @@ ProcessConfig = pShare
   AppTick = 4
   CommsTick = 4
 
-  input = route = 192.168.1.109:9200
+  input = route = 192.168.1.249:9200
 
-  output = src_name=RETURN, route=192.168.1.10:9201
-  output = src_name=DEPLOY, route=192.168.1.10:9201
-  output = src_name=SURVEY, route=192.168.1.10:9201
-  output = src_name=MOOS_MANUAL_OVERRIDE, route=192.168.1.10:9201
+  output = src_name=RETURN, route=192.168.1.160:9201
+  output = src_name=DEPLOY, route=192.168.1.160:9201
+  output = src_name=SURVEY, route=192.168.1.160:9201
+  output = src_name=OCT_UPDATE, route=192.168.1.160:9201
+  output = src_name=MOOS_MANUAL_OVERRIDE, route=192.168.1.160:9201
+
 }
 
 //------------------------------------------
@@ -66,13 +68,13 @@ ProcessConfig = pMarineViewer
   AppTick    = 4
   CommsTick  = 4
 
-  //tiff_file            = lake-needwood-highres.tif
   tiff_file            = MIT_SP.tif
 
-    set_pan_x            = 0
+  set_pan_x            = 0
   set_pan_y            = 0
   zoom                 = 0.65
-  vehicle_shape_scale  = 5
+  vehicle_shape_scale  = 1.5
+
   hash_delta           = 50
   hash_shade           = 0.22
   hash_viewable        = true
@@ -115,16 +117,14 @@ ProcessConfig = pMarineViewer
   scope  = MVIEWER_LCLICK
   scope  = MVIEWER_RCLICK
 
-  button_one = SHAKEOUT # DEPLOY=true # MOOS_MANUAL_OVERRIDE=false # RETURN=false # SURVEY = shakeout
-  button_two = OCTAGON # DEPLOY=true # MOOS_MANUAL_OVERRIDE=false # RETURN=false # SURVEY = octagon
+  button_one = SQUARE # DEPLOY=true # MOOS_MANUAL_OVERRIDE=false # RETURN=false # SURVEY = octagon
+  button_two = NOPROP # DEPLOY=true # MOOS_MANUAL_OVERRIDE=false # RETURN=false # SURVEY = noprop
   // button_two = DEPLOY_SELECTED # DEPLOY=true # MOOS_MANUAL_OVERRIDE=false # RETURN=false
   button_three = PARK # MOOS_MANUAL_OVERRIDE=true      
 
-  action  = MENU_KEY=island # SURVEY = island
-  action  = MENU_KEY=island_zigzag # SURVEY = island_zigzag
-  action  = MENU_KEY=shakeout_zigzag # SURVEY = shakeout_zigzag
-  action  = MENU_KEY=large_zigzag # SURVEY = large_zigzag
-  action =  MENU_KEY=largest_zigzag # SURVEY = largest_zigzag
+  action  = OCT_UPDATE=speed=10
+  action  = OCT_UPDATE=speed=0
+
   action  = MENU_KEY=deploy # DEPLOY = true # RETURN = false
   action+ = MENU_KEY=deploy # MOOS_MANUAL_OVERRIDE=false
   action  = RETURN=true

@@ -93,6 +93,7 @@ Behavior = BHV_Waypoint
                speed = 10   // meters per second
         capture_line = true
       capture_radius = 10.0
+
          slip_radius = 20.0
 	efficiency_measure = all
 

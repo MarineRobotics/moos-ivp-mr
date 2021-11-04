@@ -214,9 +214,13 @@ ProcessConfig = pMarineViewer
 
   button_one = SHAKEOUT # DEPLOY=true # MOOS_MANUAL_OVERRIDE=false # RETURN=false # SURVEY = shakeout
   button_two = OCTAGON # DEPLOY=true # MOOS_MANUAL_OVERRIDE=false # RETURN=false # SURVEY = octagon
+  button_three = OCT-NO-PROP # DEPLOY=true # MOOS_MANUAL_OVERRIDE=false # RETURN=false # SURVEY = noprop
   
   action  = MENU_KEY=deploy # DEPLOY = true # RETURN = false
   action+ = MENU_KEY=deploy # MOOS_MANUAL_OVERRIDE=false
+  action  = MENU_KEY=propON # OCT_UPDATE=speed=10
+  action  = MENU_KEY=propOFF # OCT_UPDATE=speed=0
+
   action  = RETURN=true
   action  = UPDATES_RETURN=speed=1.4
 }
