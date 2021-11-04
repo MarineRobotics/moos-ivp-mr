@@ -93,11 +93,10 @@ Behavior = BHV_Waypoint
                speed = 10   // meters per second
         capture_line = true
       capture_radius = 10.0
-
          slip_radius = 20.0
 	efficiency_measure = all
 
-             polygon = 117,2 : 157,-117 : 73,-81 : 44,-32
+             polygon = 117,2 : 157,-117 : 56,-99 : 44,-32
 
                order = normal
              repeat  = 100000

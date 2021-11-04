@@ -220,6 +220,7 @@ ProcessConfig = pMarineViewer
   action+ = MENU_KEY=deploy # MOOS_MANUAL_OVERRIDE=false
   action  = MENU_KEY=propON # OCT_UPDATE=speed=10
   action  = MENU_KEY=propOFF # OCT_UPDATE=speed=0
+
   action  = RETURN=true
   action  = UPDATES_RETURN=speed=1.4
 }
