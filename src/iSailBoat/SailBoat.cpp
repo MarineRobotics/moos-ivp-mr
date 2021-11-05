@@ -90,6 +90,8 @@ bool SailBoat::OnStartUp()
       handled = m_ninja.setCommsType(value);
     else if(param == "stale_thresh")
       handled = setPosDoubleOnString(m_stale_threshold, value);
+    else if(param == "max_speed")
+      handled = setPosDoubleOnString(m_max_speed, value);
     // TODO: should we use something similar to drive mode
     //       to set the sailing mode, therefore set in mission file
     //else if(param == "drive_mode")
