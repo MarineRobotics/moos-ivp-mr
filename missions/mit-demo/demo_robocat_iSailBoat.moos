@@ -1,0 +1,171 @@
+/-------------------------------------------------
+// NAME: M. Benjamin, MIT CSAIL
+// FILE: alpha.moos
+//-------------------------------------------------
+
+ServerHost   = localhost
+ServerPort   = 9000
+Community    = demo_robocat
+MOOSTimeWarp = 1
+
+// Lake Needwood, MOOSDB
+// LatOrigin = 39.120282
+// LongOrigin = -77.129620
+
+// Forest Lake
+// LatOrigin  = 43.825300 
+// LongOrigin = -70.330400 
+
+// MIT Sailing Pavilion (use this one)
+LatOrigin  = 42.358456 
+LongOrigin = -71.087589
+
+//------------------------------------------
+// Antler configuration  block
+ProcessConfig = ANTLER
+{
+  MSBetweenLaunches = 200
+
+  Run = MOOSDB          @ NewConsole = false
+  Run = pLogger         @ NewConsole = false
+  Run = pHelmIvP        @ NewConsole = false
+  Run = uProcessWatch	  @ NewConsole = false
+  Run = pNodeReporter	  @ NewConsole = false
+  Run = uMemWatch       @ NewConsole = false
+  Run = iSailBoat  	    @ NewConsole = false
+  Run = pShare		      @ NewConsole = false
+}
+
+//------------------------------------------
+// iSailBoat config block
+
+ProcessConfig = iSailBoat
+{
+  AppTick    = 4
+  CommsTick  = 4
+
+	//comms_type = $(COMMS_TYPE)
+  //port       = $(PORT)
+	//ip_addr    = $(IP_ADDR)
+
+  comms_type = client
+  port       = 54321
+	ip_addr    = 127.0.0.1
+
+	stale_thresh = 15
+	
+	max_speed  = 2
+}
+
+//------------------------------------------
+// iFrontSeat config block
+
+ProcessConfig = iFrontSeat
+{
+  common {
+    log: true
+    log_verbosity: DEBUG2
+    verbosity: DEBUG2
+  }
+  [mr_config] { # (optional)
+    tcp_address: "localhost"
+    tcp_port: 54321
+  }
+}
+
+
+//------------------------------------------
+// pShare config block
+
+ProcessConfig = pShare
+{
+  AppTick = 4
+  CommsTick = 4
+
+  input = route = 192.168.1.160:9201
+
+  output = src_name=NODE_REPORT_LOCAL, dest_name=NODE_REPORT, route=192.168.1.249:9200
+  output = src_name=VIEW_SEGLIST, dest_name=VIEW_SEGLIST, route=192.168.1.249:9200
+  output = src_name=VIEW_POINT, dest_name=VIEW_POINT,  route=192.168.1.249:9200
+
+}
+
+
+//------------------------------------------
+// uMemWatch config block
+
+ProcessConfig = uMemWatch                                       
+{                                                               
+  AppTick   = 4                                                 
+  CommsTick = 4                                                 
+                                                                
+  absolute_time_gap = 1   // In Seconds, Default is 1.          
+                                                                
+  watch_only = pHelmIvP,pMarineViewer
+}                                  
+
+
+//------------------------------------------
+// pLogger config block
+
+ProcessConfig = pLogger
+{
+  AppTick   = 8
+  CommsTick = 8
+
+  AsyncLog = true
+
+  // For variables that are published in a bundle on their first post,
+  // explicitly declare their logging request
+  Log = IVPHELM_LIFE_EVENT @ 0 NOSYNC
+  Log = REPORT @ 0 NOSYNC
+
+  LogAuxSrc = true
+  WildCardLogging = true
+  WildCardOmitPattern = *_STATUS
+  WildCardOmitPattern = DB_VARSUMMARY
+  WildCardOmitPattern = DB_RWSUMMARY
+  WildCardExclusionLog = true
+}
+
+//------------------------------------------
+// uProcessWatch
+
+ProcessConfig = uProcessWatch
+{
+  AppTick   = 4
+  CommsTick = 4
+
+  watch_all = true
+	nowatch   = uPokeDB*
+	nowatch   = uXMS*
+}
+
+//------------------------------------------
+// pHelmIvP config block
+
+ProcessConfig = pHelmIvP
+{
+  AppTick    = 4
+  CommsTick  = 4
+
+  bhv_dir_not_found_ok = true
+
+  behaviors  = demo.bhv
+  domain     = course:0:359:360
+  domain     = speed:0:1:41
+}
+
+//------------------------------------------
+// pNodeReporter config block
+
+ProcessConfig = pNodeReporter
+{
+  AppTick    = 2
+  CommsTick	 = 2
+
+  platform_type   = kayak
+  platform_color  = yellow
+  platform_length = 4
+}
+
