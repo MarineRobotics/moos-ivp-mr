@@ -75,9 +75,7 @@ ProcessConfig = iSailBoat
 
 	stale_thresh = 15
 	
-	max_rudder  = 100
-	max_thrust  = 100
-	drive_mode  = normal
+	max_speed  = 2
 }
 
 
