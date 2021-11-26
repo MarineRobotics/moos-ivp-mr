@@ -15,18 +15,7 @@ INCLUDE_DIRECTORIES(${LOCAL_LIBRARY_DIRS})
 #============================================================================
 ADD_SUBDIRECTORY(lib_behaviors-test)
 ADD_SUBDIRECTORY(lib_sock_utils)
-ADD_SUBDIRECTORY(pXRelayTest)
-ADD_SUBDIRECTORY(pExampleApp)
 ADD_SUBDIRECTORY(iSailBoat)
-
-#ADD_SUBDIRECTORY(pPrimeFactor)
-#ADD_SUBDIRECTORY(pFoobar)
-#ADD_SUBDIRECTORY(pOdometry)
-
-#ADD_SUBDIRECTORY(pPrimeFact or)
-#ADD_SUBDIRECTORY(pFoobar)
-#ADD_SUBDIRECTORY(pOdometry)
-
 
 ##############################################################################
 #                           END of CMakeLists.txt
