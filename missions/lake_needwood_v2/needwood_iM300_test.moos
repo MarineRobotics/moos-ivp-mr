@@ -58,7 +58,7 @@ ProcessConfig = iFrontSeat
 }
 
 //------------------------------------------
-// iM300 config block
+// iSailBoat config block
 
 ProcessConfig = iSailBoat
 {
