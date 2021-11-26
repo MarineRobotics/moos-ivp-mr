@@ -2,10 +2,15 @@
 // ShoreSide Configuration File
 
 ServerHost = localhost
-ServerPort = $(MOOS_PORT)
+ServerPort = 9000
 Community  = shoreside
 
-#include plug_origin_warp.moos
+MOOSTimeWarp = 1
+
+// MIT Sailing Pavilion (PavLab)
+LatOrigin = 42.358436
+LongOrigin = -71.087448
+
 
 //--------------------------------------------------------
 Processconfig = ANTLER
@@ -23,8 +28,30 @@ Processconfig = ANTLER
   Run = uProcessWatch   @ NewConsole = false
 }
 
-#include plug_pShare.moos
-#include plug_pHostInfo.moos
+//---------------------------------------------------------
+// pShare Config Block
+
+ProcessConfig = pShare
+{
+  AppTick    = 2
+  CommsTick  = 2
+
+  input = route =  127.0.0.1:9200
+}
+
+//--------------------------------------------------
+// pHostInfo configuration block
+
+ProcessConfig = pHostInfo
+{
+  AppTick 	= 1
+  CommsTick = 1
+
+  //default_hostip_force = 127.0.0.1
+  default_hostip = 127.0.0.1
+}
+
+
 
 
 //--------------------------------------------------
@@ -92,20 +119,20 @@ ProcessConfig = pMarineViewer
   scope  = MVIEWER_LCLICK
   scope  = MVIEWER_RCLICK
 
-  action  = OCT_UPDATE=speed=10
-  action  = OCT_UPDATE=speed=0
-  action  = MENU_KEY=deploy # DEPLOY = true # RETURN = false
-  action+ = MENU_KEY=deploy # MOOS_MANUAL_OVERRIDE=false
-  action  = RETURN=true
-  action  = UPDATES_RETURN=speed=1.4
+  action  = OCT_UPDATE_ALL=speed=10
+  action  = OCT_UPDATE_ALL=speed=0
+  action  = MENU_KEY=deploy # DEPLOY_ALL = true # RETURN_ALL = false
+  action+ = MENU_KEY=deploy # MOOS_MANUAL_OVERRIDE_ALL =false
+  action  = RETURN_ALL=true
+  action  = UPDATES_RETURN_ALL=speed=1.4
 
-  button_one = OCTAGON # DEPLOY=true
-  button_one = MOOS_MANUAL_OVERRIDE=false 
-  button_one = RETURN=false # SURVEY = octagon
+  button_one = OCTAGON # DEPLOY_ALL=true
+  button_one = MOOS_MANUAL_OVERRIDE_ALL=false 
+  button_one = RETURN=false # SURVEY_ALL = octagon
 
-  button_two = PARK # MOOS_MANUAL_OVERRIDE=true      
+  button_two = PARK # MOOS_MANUAL_OVERRIDE_ALL=true      
 
-  button_three = RETURN  # RETURN=true
+  button_three = RETURN  # RETURN_ALL=true
 
 }
 
@@ -126,3 +153,4 @@ ProcessConfig = uProcessWatch
 
   summary_wait = 10
 }
+

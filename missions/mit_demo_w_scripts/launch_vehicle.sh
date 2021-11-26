@@ -15,16 +15,18 @@ CONFIRM="yes"
 AUTO_LAUNCHED="no"
 CMD_ARGS=""
 
-IP_ADDR="localhost"
+IP_ADDR="192.168.1.160"
 MOOS_PORT="9001"
 PSHARE_PORT="9201"
+
+FSEAT_IP="127.0.0.1"  # TODO: why does 'localhost' not work in iFrontSeat?
 
 # TODO: put likely shore IP here for MIT linux laptop
 SHORE_IP="192.168.1.241"
 SHORE_PSHARE="9200"
-VNAME=""
+VNAME="evan"
 INDEX="1"
-XMODE="GOBY"
+XMODE="SAILBOAT"
 
 REGION="pavlab"
 START_POS="0,0,180"
@@ -52,14 +54,14 @@ for ARGI; do
     echo "     Auto-launched by a script.                  "
     echo "     Will not launch uMAC as the final step.     "
 	echo "                                                 "
-	echo "  --ip=<localhost>                               " 
+	echo "  --ip=<192.168.1.160>                               " 
 	echo "    Force pHostInfo to use this IP Address       "
 	echo "  --mport=<9001>                                 "
 	echo "    Port number of this vehicle's MOOSDB port    "
 	echo "  --pshare=<9201>                                " 
 	echo "    Port number of this vehicle's pShare port    "
 	echo "                                                 "
-	echo "  --shore=<localhost>                            " 
+	echo "  --shore=<192.168.1.241>                        " 
 	echo "    IP address location of shoreside             "
 	echo "  --shore_pshare=<9300>                          " 
 	echo "    Port on which shoreside pShare is listening  "
@@ -68,6 +70,9 @@ for ARGI; do
 	echo "  --index=<1>                                    " 
 	echo "    Index for setting MOOSDB and pShare ports    "
 	echo "                                                 "
+	echo "  --fseat_ip=<localhost>                         "
+	echo "    IP address location of frontseat             "
+	echo "                                                 "
 	echo "  --start=<X,Y>     (default is 0,0)             " 
 	echo "    Start position chosen by script launching    "
 	echo "    this script (to ensure separation)           "
@@ -75,19 +80,12 @@ for ARGI; do
 	echo "    The speed use for transiting/loitering       "
 	echo "  --maxspd=meters/sec                            " 
 	echo "    Max speed of vehicle (for sim and in-field)  "
-	echo "                                                 "
-	echo "  --evan,  -E  : Evan vehicle.                   "
-	echo "  --felix, -F  : Felix vehicle.                  "
-	echo "  --gus,   -G  : Gus vehicle.                    "
-	echo "  --hal,   -H  : Hal vehicle.                    "
-	echo "  --ida,   -I  : Ida vehicle.                    "
-	echo "  --jing,  -J  : Jing vehicle.                   "
-	echo "  --kirk,  -K  : Kirk vehicle.                   "
-	echo "  --luke,  -L  : Luke vehicle.                   "
 	echo "                                                 "	
 	echo "  --goby       : Use iFrontSeat interface        "
-	echo "  --m300       : Use iM300 interface             "
+	echo "  --sailboat   : Use iSailBoat interface(default)"
 	echo "  --sim        : Use uSimMarine                  "
+    echo "  --pysim      : Use PyMunk sim                  "
+
 	exit 0;
     elif [ "${ARGI//[^0-9]/}" = "$ARGI" -a "$TIME_WARP" = 1 ]; then
         TIME_WARP=$ARGI
@@ -106,6 +104,8 @@ for ARGI; do
 		MOOS_PORT="${ARGI#--mport=*}"
     elif [ "${ARGI:0:9}" = "--pshare=" ]; then
         PSHARE_PORT="${ARGI#--pshare=*}"
+    elif [ "${ARGI:0:8}" = "--vname=" ]; then
+        VNAME="${ARGI#--vname=*}"        
 
     elif [ "${ARGI:0:8}" = "--shore=" ]; then
         SHORE_IP="${ARGI#--shore=*}"
@@ -116,6 +116,9 @@ for ARGI; do
     elif [ "${ARGI:0:8}" = "--index=" ]; then
         INDEX="${ARGI#--index=*}"
 
+    elif [ "${ARGI:0:11}" = "--fseat_ip=" ]; then
+        FSEAT_IP="${ARGI#--fseat_ip=*}"
+
     elif [ "${ARGI:0:8}" = "--start=" ]; then
         START_POS="${ARGI#--start=*}"
     elif [ "${ARGI:0:8}" = "--speed=" ]; then
@@ -123,30 +126,15 @@ for ARGI; do
     elif [ "${ARGI:0:9}" = "--maxspd=" ]; then
         MAXSPD="${ARGI#--maxspd=*}"
 
-	
-    elif [ "${ARGI}" = "--evan" -o "${ARGI}" = "-E" ]; then
-        VNAME="evan"
-    elif [ "${ARGI}" = "--felix" -o "${ARGI}" = "-F" ]; then
-        VNAME="felix"
-    elif [ "${ARGI}" = "--gus" -o "${ARGI}" = "-G" ]; then
-        VNAME="gus"
-    elif [ "${ARGI}" = "--hal" -o "${ARGI}" = "-H" ]; then
-        VNAME="hal"
-    elif [ "${ARGI}" = "--ida" -o "${ARGI}" = "-I" ]; then
-        VNAME="ida"
-    elif [ "${ARGI}" = "--jing" -o "${ARGI}" = "-J" ]; then
-        VNAME="jing"
-    elif [ "${ARGI}" = "--kirk" -o "${ARGI}" = "-K" ]; then
-        VNAME="kirk"
-    elif [ "${ARGI}" = "--luke" -o "${ARGI}" = "-L" ]; then
-        VNAME="luke"
 
     elif [ "${ARGI}" = "--sim" -o "${ARGI}" = "-s" ]; then
         XMODE="SIM"
         echo "Simulation mode ON."
-
-    elif [ "${ARGI}" = "--m300" -o "${ARGI}" = "-3" ]; then
-		XMODE="M300"
+    elif [ "${ARGI}" = "--pysim" -o "${ARGI}" = "-ps" ]; then
+        XMODE="PYSIM"
+        echo "Pymunk simulation mode ON. ${XMODE}"    
+    elif [ "${ARGI}" = "--sailboat" -o "${ARGI}" = "-3" ]; then
+		XMODE="SAILBOAT"
     elif [ "${ARGI}" = "--goby" -o "${ARGI}" = "-2" ]; then
 		XMODE="GOBY"
     else
@@ -159,43 +147,17 @@ done
 #  Part 3: Initialize and Launch the vehicles
 #---------------------------------------------------------------
 
-if [ -z $VNAME ]; then
-    if [ "${XMODE}" = "SIM" ]; then
-	VNAME="abe"
-    else
-	echo "No in-water vehicle selected. Exit Code 2."
-	exit 2
-    fi
-fi
-
-if [ "${VNAME}" = "evan" ]; then
-    INDEX=5
-elif [ "${VNAME}" = "felix" ]; then
-    INDEX=6
-elif [ "${VNAME}" = "gus" ]; then
-    INDEX=7
-elif [ "${VNAME}" = "hal" ]; then
-    INDEX=8
-elif [ "${VNAME}" = "ida" ]; then
-    INDEX=9
-elif [ "${VNAME}" = "jing" ]; then
-    INDEX=10
-elif [ "${VNAME}" = "kirk" ]; then
-    INDEX=11
-elif [ "${VNAME}" = "luke" ]; then
-    INDEX=12
-fi
 
 MOOS_PORT=`expr $INDEX + 9000`
 PSHARE_PORT=`expr $INDEX + 9200`
-FSEAT_IP="192.168.$INDEX.1"
-IP_ADDR="192.168.$INDEX.100"
-
-if [ "${XMODE}" = "SIM" ]; then
+# FSEAT_IP="192.168.$INDEX.1"   # For iSailBoat
+#IP_ADDR="192.168.$INDEX.100"  # For pShare
+echo "checking the mode and stuff ${XMODE}"
+if [ "${XMODE}" = "SIM" ] || [ "${XMODE}" = "PYSIM" ]; then
+    echo "sim is sim"
     IP_ADDR="localhost"
     SHORE_IP="localhost"
 fi
-
 
 #---------------------------------------------------------------
 #  Part 4: If verbose, show vars and confirm before launching
@@ -256,7 +218,7 @@ fi
 
 echo "Launching $VNAME MOOS Community. WARP="$TIME_WARP
 pAntler targ_${VNAME}.moos >& /dev/null &
-vecho "Done Launching $VNAME MOOS Community"
+echo "Done Launching $VNAME MOOS Community"
 
 #---------------------------------------------------------------
 #  Part 7: If launched from script, we're done, exit now

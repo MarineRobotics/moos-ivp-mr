@@ -7,7 +7,6 @@ ProcessConfig = pHostInfo
   CommsTick = 1
 
 #ifdef IP_ADDR
-  default_hostip_force = $(IP_ADDR)
+  default_hostip = $(IP_ADDR)
 #endif
 }
-
