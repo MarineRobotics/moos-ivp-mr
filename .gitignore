@@ -1,17 +1,22 @@
-MOOSLog*
-.LastOpenedMOOSLogDirectory
-*.moos++
-.mem_info*
 .vscode
-bin
-build/
-bin/
-lib/
-CMakeCache.txt
-cmake_install.cmake
-CMakeFiles/
-cmake-build-debug/
-Makefile
+
+# folder
+bin/*
+build/*
+/data/
+lib/*
+*/MOOS*/
+*/LOG*/
+
+# file
+*.moos++
+*.LastOpenedMOOSLogDirectory
+*targ_*
+*.alog
+*.blog
+*.slog
+*.ylog
+*._moos
 
 
 

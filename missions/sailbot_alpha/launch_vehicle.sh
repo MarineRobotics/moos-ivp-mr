@@ -152,9 +152,8 @@ MOOS_PORT=`expr $INDEX + 9000`
 PSHARE_PORT=`expr $INDEX + 9200`
 # FSEAT_IP="192.168.$INDEX.1"   # For iSailBoat
 #IP_ADDR="192.168.$INDEX.100"  # For pShare
-echo "checking the mode and stuff ${XMODE}"
 if [ "${XMODE}" = "SIM" ] || [ "${XMODE}" = "PYSIM" ]; then
-    echo "sim is sim"
+    echo "mode is sim"
     IP_ADDR="localhost"
     SHORE_IP="localhost"
 fi

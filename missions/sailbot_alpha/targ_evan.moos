@@ -24,7 +24,6 @@ ProcessConfig = ANTLER
   Run = uFldNodeBroker     @ NewConsole = false
 
   Run = iSailBoat              @ NewConsole = true
-//  Run = iM300Health        @ NewConsole = false
 }
 
 
@@ -38,11 +37,11 @@ ProcessConfig = iSailBoat
 
   //comms_type = $(COMMS_TYPE)
   //port       = $(PORT)
-  //ip_addr    = 127.0.0.1
+  //ip_addr    = 0.0.0.0
 
   comms_type = client
   port       = 54321
-  ip_addr    = 127.0.0.1
+  ip_addr    = 0.0.0.0
 
   stale_thresh = 15
 	
@@ -113,11 +112,8 @@ ProcessConfig = pHostInfo
   AppTick 	= 1
   CommsTick = 1
 
-  //default_hostip_force = localhost
   default_hostip = localhost
 }
-
-
 //--------------------------------------------------
 // uFldNodeBroker Config Block
 
