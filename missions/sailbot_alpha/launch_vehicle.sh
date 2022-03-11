@@ -19,7 +19,7 @@ IP_ADDR="192.168.1.160"
 MOOS_PORT="9001"
 PSHARE_PORT="9201"
 
-FSEAT_IP="127.0.0.1"  # TODO: why does 'localhost' not work in iFrontSeat?
+FSEAT_IP="172.17.0.1"
 
 # TODO: put likely shore IP here for MIT linux laptop
 SHORE_IP="192.168.1.241"
