@@ -50,6 +50,7 @@ protected: // App Specific functions
   bool handleMsgMRSPW(std::string);
   bool handleMsgMRGNS(std::string);
   bool handleMsgMRFSS(std::string);
+  bool handleMsgMRMWV(std::string);
 
   bool reportBadMessage(std::string msg, std::string reason="");
   bool GeodesySetup();
@@ -93,6 +94,11 @@ private: // State variables
   double       m_nav_y;
   double       m_nav_hdg;
   double       m_nav_spd;
+
+  double       m_wind_speed_r;
+  double       m_wind_angle_r;
+  double       m_wind_speed_t;
+  double       m_wind_angle_t;
 
   //new Marine Robotics variable
   enum states

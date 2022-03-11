@@ -156,6 +156,7 @@ if [ "${XMODE}" = "SIM" ] || [ "${XMODE}" = "PYSIM" ]; then
     echo "mode is sim"
     IP_ADDR="localhost"
     SHORE_IP="localhost"
+    #FSEAT_IP="172.17.0.1"
 fi
 
 #---------------------------------------------------------------

@@ -24,6 +24,7 @@ ProcessConfig = ANTLER
   Run = uFldNodeBroker     @ NewConsole = false
 
   Run = iSailBoat              @ NewConsole = true
+//  Run = iM300Health        @ NewConsole = false
 }
 
 
@@ -37,11 +38,11 @@ ProcessConfig = iSailBoat
 
   //comms_type = $(COMMS_TYPE)
   //port       = $(PORT)
-  //ip_addr    = 0.0.0.0
+  //ip_addr    = 127.0.0.1
 
   comms_type = client
   port       = 54321
-  ip_addr    = 0.0.0.0
+  ip_addr    = 127.0.0.1
 
   stale_thresh = 15
 	

@@ -284,6 +284,8 @@ void SailBoat::readMessagesFromSocket()
       handled = handleMsgMRGNS(msg);
     else if(strBegins(msg, "$MRFSS"))
       handled = handleMsgMRFSS(msg);
+    else if (strBegins(msg, "$MRMWV"))
+      handled = handleMsgMRMWV(msg);
     else
       reportBadMessage(msg, "Unknown NMEA Key");
             
@@ -643,6 +645,71 @@ bool SailBoat::handleMsgMRFSS(string msg)
   return(true);
 }
 
+//----------------------------------------------------------
+// Procedure: handleMsgMRMWV()
+//      Note: Proper NMEA format and checksum prior confirmed
+//   Example: $MRMWV,270,T,8,N,A*29
+
+// 0 $MRMWV                Sentence type, contains frontseat state info
+// 1 [Wind angle]          0.0 to 359.9 degrees, in relation to the vessel’s bow/centerline, to the nearest 0.1
+//                         degree. If the data for this field is not valid, the field will be blank.
+// 2 [Reference]           R = Relative (apparent wind, as felt when standing on the moving ship)
+//                         T = Theoretical (calculated actual wind, as though the vessel were stationary)
+// 3 [Wind speed]          Wind speed, to the nearest tenth of a unit.  If the data for this field is not valid, the field will be blank.
+// 4 [Wind speed units]    K = km/hr
+//                         M = m/s
+//                         N = knots
+//                         S = statute miles/hr
+// 5 [Status]              A = data valid; V = data invalid
+bool SailBoat::handleMsgMRMWV(string msg)
+{
+  if(!strBegins(msg, "$MRMWV,"))
+    return(false);
+
+  // Remove the checksum info from end
+  rbiteString(msg, '*');
+
+  vector<string> flds = parseString(msg, ',');
+  if(flds.size() != 6)
+    return(reportBadMessage(msg, "Wrong field count"));
+
+  string str_angle = flds[1];
+  double dbl_angle = atof(str_angle.c_str());
+  string str_reference = flds[2];
+  string str_speed = flds[3];
+  double dbl_speed = atof(str_speed.c_str());
+  string str_unit = flds[4];
+  string str_status = flds[5];
+
+  // TODO: check if true or apparent, publish accordingly
+
+  // Convert speed to M/S if necessary
+  if(str_unit == "K")
+    dbl_speed = dbl_speed * 2.77778;
+  else if(str_unit == "N")
+    dbl_speed = dbl_speed * 0,514444;
+  else if(str_unit == "S")
+    dbl_speed = dbl_speed * 0,44704;
+
+  if(str_reference == "R")
+  {
+    // publish relative wind
+    m_wind_speed_r = dbl_speed;
+    m_wind_angle_r = dbl_angle;
+    Notify("WIND_SPEED_R", dbl_speed, "MRMWV");
+    Notify("WIND_ANGLE_R", dbl_angle, "MRMWV");
+
+  }
+  else
+  {
+    m_wind_speed_t = dbl_speed;
+    m_wind_angle_t = dbl_angle;
+    Notify("WIND_SPEED_T", dbl_speed, "MRMWV");
+    Notify("WIND_ANGLE_T", dbl_angle, "MRMWV");
+  }
+
+  return(true);
+}
 
 // END new MR message handlers
 //---------------------------------------------------------
@@ -667,7 +734,7 @@ void SailBoat::reportWarningsEvents()
 {
   // Part 1: Handle Event Messages()
   list<string> events = m_ninja.getEvents();
-  list<string>::iterator p;  
+  list<string>::iterator p;
   for(p=events.begin(); p!=events.end(); p++) {
     string event_str = *p;
     reportEvent(event_str);
