@@ -14,9 +14,14 @@ The MOOS-IvP tree extension for the Marine Robotics Sailbot
 ## Using the frontseat sim docker container
 This IvP tree can be used together with our docker sim ([download here](https://hub.docker.com/repository/docker/mrobotics/mr-frontseat-sim))
 ### Launch alpha mission with sim
+ **Using ubuntu with default docker settings**
  * `cd missions/sailbot_alpha`
  * `./launch_vehicle.sh --pysim`
 
+ **Using macOS with default docker settings**
+ *  `cd missions/sailbot_alpha`
+ * `./launch_vehicle.sh --fseat_ip=0.0.0.0 --ip=localhost --shore=localhost`
+ 
  **Note: if your docker ip is not the default 172.17.0.1 you have 2 options:**  
  (to find your docker ip, run ifconfig, look for the "docker0" network interface)  
  * Option 1: modify launch_vehicle.sh. Change the default "FSEAT_IP" value on line 22 to your docker ip
