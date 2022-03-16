@@ -14,7 +14,7 @@ ProcessConfig = ANTLER
   Run = pShare             @ NewConsole = false
   Run = pLogger            @ NewConsole = false
   Run = pNodeReporter      @ NewConsole = false
-  Run = pHelmIvP           @ NewConsole = true
+  Run = pHelmIvP           @ NewConsole = false
   Run = pHostInfo          @ NewConsole = false
   Run = uFldNodeBroker     @ NewConsole = false
 
@@ -24,9 +24,9 @@ ProcessConfig = ANTLER
 #elseifdef XMODE GOBY
   Run = iFrontSeat	       @ NewConsole = false
 #elseifdef XMODE SAILBOAT
-  Run = iSailBoat              @ NewConsole = true
+  Run = iSailBoat              @ NewConsole = false
 #elseifdef XMODE PYSIM
-  Run = iSailBoat              @ NewConsole = true
+  Run = iSailBoat              @ NewConsole = false
 //  Run = iM300Health        @ NewConsole = false
 #endif
 }
