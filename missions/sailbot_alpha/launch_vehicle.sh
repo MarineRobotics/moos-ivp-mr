@@ -29,7 +29,7 @@ VNAME="evan"
 INDEX="1"
 XMODE="SAILBOAT"
 
-REGION="pavlab"
+REGION="forest_lake"
 START_POS="0,0,180"
 SPEED="2.0"
 RETURN_POS="5,0"
