@@ -5,6 +5,6 @@ ProcessConfig = pNodeReporter
 {
   AppTick     = 2
   CommsTick   = 2
-
+  crossfill_policy = global
   vessel_type = kayak
 }

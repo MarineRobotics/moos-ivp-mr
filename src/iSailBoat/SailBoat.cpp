@@ -457,8 +457,8 @@ bool SailBoat::handleMsgMRINF(string msg)
   if(ok) {
     m_nav_x = x;
     m_nav_y = y;
-    Notify("NAV_X", x, "MRINF");
-    Notify("NAV_Y", y, "MRINF");
+    Notify("NAV_X", m_nav_x, "MRINF");
+    Notify("NAV_Y", m_nav_y, "MRINF");
   }
 
   double dbl_vw = atof(str_vw.c_str());
