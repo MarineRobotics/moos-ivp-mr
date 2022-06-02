@@ -441,20 +441,24 @@ bool SailBoat::handleMsgMRINF(string msg)
   string str_hdg = flds[1];
   string str_vw  = flds[3];
   string str_v_unit = flds[4];
+
+  m_longitude = str_lon;
   
+  cout << "LAT: " << str_lat << "LON: " << str_lon << endl;
+
   double dbl_lat = atof(str_lat.c_str());
   double dbl_lon = atof(str_lon.c_str());
 
   Notify("NAV_LAT", dbl_lat, "MRINF");
-  Notify("NAV_LON", dbl_lon, "MRINF");
+  Notify("NAV_LONG", dbl_lon, "MRINF");
   
   double x, y;
   bool ok = m_geodesy.LatLong2LocalGrid(dbl_lat, dbl_lon, y, x);
   if(ok) {
     m_nav_x = x;
     m_nav_y = y;
-    Notify("NAV_X", x, "MRINF");
-    Notify("NAV_Y", y, "MRINF");
+    Notify("NAV_X", m_nav_x, "MRINF");
+    Notify("NAV_Y", m_nav_y, "MRINF");
   }
 
   double dbl_vw = atof(str_vw.c_str());
@@ -827,6 +831,7 @@ bool SailBoat::buildReport()
   m_msgs << "------------------------------------------------------" << endl;
   m_msgs << "System:    voltage: " << "pd_volt" << "   satellites: " << "str_sats" << endl;
   m_msgs << "------------------------------------------------------" << endl;
+  m_msgs << "Longitude: " << m_longitude << endl;
   
   list<string> summary_lines = m_ninja.getSummary();
   list<string>::iterator p;
