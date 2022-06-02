@@ -442,6 +442,8 @@ bool SailBoat::handleMsgMRINF(string msg)
   string str_vw  = flds[3];
   string str_v_unit = flds[4];
   
+  cout << "LAT: " << str_lat << "LON: " << str_lon << endl;
+
   double dbl_lat = atof(str_lat.c_str());
   double dbl_lon = atof(str_lon.c_str());
 
@@ -827,6 +829,7 @@ bool SailBoat::buildReport()
   m_msgs << "------------------------------------------------------" << endl;
   m_msgs << "System:    voltage: " << "pd_volt" << "   satellites: " << "str_sats" << endl;
   m_msgs << "------------------------------------------------------" << endl;
+  m_msgs << "Longitude: " << m_longitude << endl;
   
   list<string> summary_lines = m_ninja.getSummary();
   list<string>::iterator p;
