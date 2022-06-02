@@ -592,8 +592,8 @@ bool SailBoat::handleMsgMRGNS(string msg)
   if(ok) {
     m_nav_x = x;
     m_nav_y = y;
-    Notify("NAV_X", x, "GPRMC");
-    Notify("NAV_Y", y, "GPRMC");
+    Notify("NAV_X", m_nav_x, "GPRMC");
+    Notify("NAV_Y", m_nav_y, "GPRMC");
   }
 
   return(true);
