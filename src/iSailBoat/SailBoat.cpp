@@ -441,6 +441,8 @@ bool SailBoat::handleMsgMRINF(string msg)
   string str_hdg = flds[1];
   string str_vw  = flds[3];
   string str_v_unit = flds[4];
+
+  m_longitude = str_lon;
   
   cout << "LAT: " << str_lat << "LON: " << str_lon << endl;
 

@@ -100,6 +100,7 @@ private: // State variables
   double       m_wind_speed_t;
   double       m_wind_angle_t;
 
+  std::string       m_longitude;
   //new Marine Robotics variable
   enum states
     {
