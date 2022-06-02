@@ -450,7 +450,7 @@ bool SailBoat::handleMsgMRINF(string msg)
   double dbl_lon = atof(str_lon.c_str());
 
   Notify("NAV_LAT", dbl_lat, "MRINF");
-  Notify("NAV_LON", dbl_lon, "MRINF");
+  Notify("NAV_LONG", dbl_lon, "MRINF");
   
   double x, y;
   bool ok = m_geodesy.LatLong2LocalGrid(dbl_lat, dbl_lon, y, x);
