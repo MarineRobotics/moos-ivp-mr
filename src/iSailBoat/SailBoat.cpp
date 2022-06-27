@@ -189,8 +189,13 @@ bool SailBoat::Iterate()
     m_ninja.setupConnection();
 
   if(m_ninja.getState() == "connected") {
+    // send timeout if allstop and state is active
+    
+    // Only send messages if not allstop
+    if(!m_stale_mode)
+      sendMessagesToSocket();
+        
     checkFrontSeatState();
-    sendMessagesToSocket();
     readMessagesFromSocket();
   }
 
@@ -327,6 +332,7 @@ void SailBoat::checkForStalenessOrAllStop()
 {
   if(m_ivp_allstop) {
     m_des_speed = 0;
+    m_stale_mode = true;
     return;
   }
 

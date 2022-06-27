@@ -3,8 +3,8 @@
 
 ProcessConfig = iSailBoat
 {
-  AppTick    = 4
-  CommsTick  = 4
+  AppTick    = 10
+  CommsTick  = 10
 
   //comms_type = $(COMMS_TYPE)
   //port       = $(PORT)

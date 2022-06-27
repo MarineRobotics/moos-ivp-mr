@@ -4,9 +4,9 @@ Community  = evan
 
 MOOSTimeWarp = 1
 
-// MIT Sailing Pavilion (PavLab)
-LatOrigin = 42.358436
-LongOrigin = -71.087448
+// Forest Lake Maine
+LatOrigin  = 43.825300 
+LongOrigin = -70.330400 
 
 
 //------------------------------------------------------------
@@ -19,12 +19,11 @@ ProcessConfig = ANTLER
   Run = pShare             @ NewConsole = false
   Run = pLogger            @ NewConsole = false
   Run = pNodeReporter      @ NewConsole = false
-  Run = pHelmIvP           @ NewConsole = true
+  Run = pHelmIvP           @ NewConsole = false
   Run = pHostInfo          @ NewConsole = false
   Run = uFldNodeBroker     @ NewConsole = false
 
-  Run = iSailBoat              @ NewConsole = true
-//  Run = iM300Health        @ NewConsole = false
+  Run = iSailBoat              @ NewConsole = false
 }
 
 
@@ -33,8 +32,8 @@ ProcessConfig = ANTLER
 
 ProcessConfig = iSailBoat
 {
-  AppTick    = 4
-  CommsTick  = 4
+  AppTick    = 10
+  CommsTick  = 10
 
   //comms_type = $(COMMS_TYPE)
   //port       = $(PORT)
@@ -57,7 +56,7 @@ ProcessConfig = pShare
   AppTick    = 2
   CommsTick  = 2
 
-  input = route =  localhost:9201
+  input = route =  127.0.0.1:9201
 }
 
 //--------------------------------------------------
@@ -89,7 +88,7 @@ ProcessConfig = pNodeReporter
 {
   AppTick     = 2
   CommsTick   = 2
-
+  crossfill_policy = global
   vessel_type = kayak
 }
 
@@ -113,7 +112,7 @@ ProcessConfig = pHostInfo
   AppTick 	= 1
   CommsTick = 1
 
-  default_hostip = localhost
+  default_hostip = 127.0.0.1
 }
 //--------------------------------------------------
 // uFldNodeBroker Config Block
@@ -123,7 +122,7 @@ ProcessConfig = uFldNodeBroker
   AppTick   = 1
   CommsTick = 1
 
-  try_shore_host = pshare_route=localhost:9200
+  try_shore_host = pshare_route=127.0.0.1:9200
 
   bridge = src=VIEW_POLYGON
   bridge = src=VIEW_POINT
