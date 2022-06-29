@@ -75,8 +75,8 @@ private: // State variables
 
   //Marine Robotics
   double       m_des_heading;
-  double       m_des_speed;
-  std::string  m_des_speed_unit;
+  double       m_des_prop_speed;
+  std::string  m_des_prop_speed_unit;
 
   double      m_ivp_allstop;
 
@@ -88,7 +88,7 @@ private: // State variables
   
   // MR Stale Message Detection
   double       m_tstamp_des_heading;
-  double       m_tstamp_des_speed;
+  double       m_tstamp_des_prop_speed;
   
   double       m_nav_x;
   double       m_nav_y;

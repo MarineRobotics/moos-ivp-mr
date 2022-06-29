@@ -8,4 +8,5 @@ ProcessConfig = pHelmIvP
   verbose      = false
   domain       = course:0:359:360
   domain       = speed:0:1:41
+  domain       = prop_speed:-1:100:101
 }

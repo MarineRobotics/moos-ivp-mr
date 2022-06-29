@@ -116,8 +116,9 @@ ProcessConfig = pMarineViewer
   scope  = MVIEWER_LCLICK
   scope  = MVIEWER_RCLICK
 
-  action  = OCT_UPDATE_ALL=speed=10
+  action  = OCT_UPDATE_ALL=speed=100
   action  = OCT_UPDATE_ALL=speed=0
+  action  = OCT_UPDATE_ALL=speed=-1
   action  = MENU_KEY=deploy # DEPLOY_ALL = true # RETURN_ALL = false
   action+ = MENU_KEY=deploy # MOOS_MANUAL_OVERRIDE_ALL =false
   action  = RETURN_ALL=true

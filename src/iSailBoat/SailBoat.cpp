@@ -37,7 +37,7 @@ SailBoat::SailBoat()
   m_stale_threshold     = 1.5;
   m_count_stale         = 0;
   m_tstamp_des_heading  = 0;
-  m_tstamp_des_speed    = 0;
+  m_tstamp_des_prop_speed    = 0;
 
   m_bad_nmea_semantic   = 0;
 
@@ -129,6 +129,7 @@ void SailBoat::registerVariables()
   Register("IVPHELM_ALLSTOP", 0);
   Register("DESIRED_HEADING", 0);
   Register("DESIRED_SPEED", 0);
+  Register("DESIRED_PROP_SPEED", 0);
 }
 
 //---------------------------------------------------------
@@ -160,12 +161,13 @@ bool SailBoat::OnNewMail(MOOSMSG_LIST &NewMail)
       m_tstamp_des_heading = mtime;
       m_des_heading = dval;
     }
-    else if(key == "DESIRED_SPEED"){
-      // TODO: moos missoin should specify units here instead of hardcoding
-      m_tstamp_des_speed = mtime;
-      m_des_speed = dval;
-      m_des_speed_unit = "MS";
+    else if(key == "DESIRED_PROP_SPEED"){
+      // TODO: moos mission should specify units here instead of hardcoding
+      m_tstamp_des_prop_speed = mtime;
+      m_des_prop_speed = dval;
+      m_des_prop_speed_unit = "PCT";
     }
+
     else if(key != "APPCAST_REQ") // handled by AppCastingMOOSApp
       reportRunWarning("Unhandled Mail: " + key);
   }
@@ -250,8 +252,8 @@ void SailBoat::sendMessagesToSocket()
   msg += doubleToStringX(m_curr_time,1) + ",";
   msg += doubleToStringX(m_des_heading,1) + ",";
   msg += "T,";;
-  msg += doubleToStringX(m_des_speed,1) + ",";
-  msg += m_des_speed_unit;
+  msg += doubleToStringX(m_des_prop_speed,1) + ",";
+  msg += m_des_prop_speed_unit;
   msg = "$" + msg + "*" + checksumHexStr(msg) + "\r\n";
 
   m_ninja.sendSockMessage(msg);
@@ -331,7 +333,7 @@ bool SailBoat::handleConfigIgnoreMsg(string str)
 void SailBoat::checkForStalenessOrAllStop()
 {
   if(m_ivp_allstop) {
-    m_des_speed = 0;
+    m_des_prop_speed = 0;
     m_stale_mode = true;
     return;
   }
@@ -343,7 +345,7 @@ void SailBoat::checkForStalenessOrAllStop()
     return;
   }
   double lag_heading = m_curr_time - m_tstamp_des_heading;
-  double lag_speed = m_curr_time - m_tstamp_des_speed;
+  double lag_speed = m_curr_time - m_tstamp_des_prop_speed;
 
   bool stale_heading = (lag_heading > m_stale_threshold);
   bool stale_speed = (lag_speed > m_stale_threshold);
@@ -359,7 +361,7 @@ void SailBoat::checkForStalenessOrAllStop()
     // TODO: it would be cool to make the boat
     //       weatherhelm here instead of just setting speed to 0
     //       same goes for all stop
-    m_des_speed = 0;
+    m_des_prop_speed = 0;
     stale_mode = true;
   }
 
