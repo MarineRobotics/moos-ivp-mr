@@ -165,7 +165,11 @@ bool SailBoat::OnNewMail(MOOSMSG_LIST &NewMail)
       // TODO: moos mission should specify units here instead of hardcoding
       m_tstamp_des_prop_speed = mtime;
       m_des_prop_speed = dval;
-      m_des_prop_speed_unit = "PCT";
+      m_des_prop_speed_unit = "PC";
+    }
+    else if(key == "DESIRED_SPEED"){
+      // TODO: moos mission should specify units here instead of hardcoding
+      // do nothing for now
     }
 
     else if(key != "APPCAST_REQ") // handled by AppCastingMOOSApp

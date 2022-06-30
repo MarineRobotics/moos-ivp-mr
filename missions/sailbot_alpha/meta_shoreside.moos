@@ -35,7 +35,7 @@ ProcessConfig = uFldShoreBroker
   AppTick       = 1
   CommsTick     = 1
 
-  qbridge  = DEPLOY, RETURN, SURVEY, OCT_UPDATE, NODE_REPORT, NODE_MESSAGE
+  qbridge  = DEPLOY, RETURN, SURVEY, OCT_UPDATE, NODE_REPORT, NODE_MESSAGE, DESIRED_PROP_SPEED
   qbridge  = MOOS_MANUAL_OVERRIDE, APPCAST_REQ
   qbridge  = SAY_MOOS
 
@@ -92,9 +92,10 @@ ProcessConfig = pMarineViewer
   scope  = MVIEWER_LCLICK
   scope  = MVIEWER_RCLICK
 
-  action  = OCT_UPDATE_ALL=speed=100
-  action  = OCT_UPDATE_ALL=speed=0
-  action  = OCT_UPDATE_ALL=speed=-1
+  action  = DESIRED_PROP_SPEED_ALL=-1
+  action  = DESIRED_PROP_SPEED_ALL=0
+  action  = DESIRED_PROP_SPEED_ALL=100
+
   action  = MENU_KEY=deploy # DEPLOY_ALL = true # RETURN_ALL = false
   action+ = MENU_KEY=deploy # MOOS_MANUAL_OVERRIDE_ALL =false
   action  = RETURN_ALL=true
@@ -102,7 +103,7 @@ ProcessConfig = pMarineViewer
 
   button_one = OCTAGON # DEPLOY_ALL=true
   button_one = MOOS_MANUAL_OVERRIDE_ALL=false 
-  button_one = RETURN=false # SURVEY_ALL = octagon
+  button_one = RETURN_ALL=false # SURVEY_ALL = octagon
 
   button_two = PARK # MOOS_MANUAL_OVERRIDE_ALL=true      
 
