@@ -32,12 +32,13 @@ SailBoat::SailBoat()
   m_ivp_allstop      = true;
 
   // Stale Message Detection
-  m_stale_check_enabled = false;
-  m_stale_mode          = false;
-  m_stale_threshold     = 1.5;
-  m_count_stale         = 0;
-  m_tstamp_des_heading  = 0;
-  m_tstamp_des_prop_speed    = 0;
+  m_stale_check_enabled    = false;
+  m_stale_mode             = false;
+  m_stale_threshold        = 1.5;
+  m_count_stale            = 0;
+  m_tstamp_des_heading     = 0;
+  m_tstamp_des_prop_speed  = 0;
+  m_des_prop_speed         = 0;
 
   m_bad_nmea_semantic   = 0;
 
