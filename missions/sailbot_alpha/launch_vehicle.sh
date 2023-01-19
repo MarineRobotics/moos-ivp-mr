@@ -29,11 +29,12 @@ VNAME="evan"
 INDEX="1"
 XMODE="SAILBOAT"
 
-REGION="forest_lake"
+#REGION="forest_lake"
+REGION="pavlab"
 START_POS="0,0,180"
-SPEED="2.0"
+SPEED="100.0"
 RETURN_POS="5,0"
-MAXSPD="2"
+MAXSPD="100"
 
 #---------------------------------------------------------------
 #  Part 2: Check for and handle command-line arguments

@@ -4,6 +4,7 @@
 initialize   DEPLOY = false
 initialize   RETURN = false
 initialize   STATION_KEEP = false
+initialize   DESIRED_PROP_SPEED = 0
 
 //----------------------------------------------
 Behavior = BHV_Waypoint
@@ -14,6 +15,8 @@ Behavior = BHV_Waypoint
   condition = DEPLOY = true
   condition = SURVEY = octagon
   endflag   = RETURN = true
+
+  runflag   = DESIRED_PROP_SPEED = -1
 
   updates   = OCT_UPDATE
   perpetual = true
@@ -51,6 +54,9 @@ Behavior=BHV_Waypoint
   pwt        = 100
   condition  = RETURN = true
   condition  = DEPLOY = true
+
+  runflag    = DESIRED_PROP_SPEED = -1
+
   perpetual  = true
   updates    = RETURN_UPDATE
   endflag    = RETURN = false

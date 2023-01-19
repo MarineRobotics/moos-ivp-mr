@@ -4,6 +4,7 @@
 initialize   DEPLOY = false
 initialize   RETURN = false
 initialize   STATION_KEEP = false
+initialize   DESIRED_PROP_SPEED = 0
 
 //----------------------------------------------
 Behavior = BHV_Waypoint
@@ -15,13 +16,15 @@ Behavior = BHV_Waypoint
   condition = SURVEY = octagon
   endflag   = RETURN = true
 
+  runflag   = DESIRED_PROP_SPEED = -1
+
   updates   = OCT_UPDATE
   perpetual = true
 
                 lead = 40
          lead_damper = 4
        lead_to_start = true
-               speed = 2.0  // meters per second
+               speed = 100.0  // meters per second
 	      
         capture_line = true
       capture_radius = 10
@@ -51,13 +54,16 @@ Behavior=BHV_Waypoint
   pwt        = 100
   condition  = RETURN = true
   condition  = DEPLOY = true
+
+  runflag    = DESIRED_PROP_SPEED = 100
+
   perpetual  = true
   updates    = RETURN_UPDATE
   endflag    = RETURN = false
   endflag    = DEPLOY = false
   endflag    = MISSION = complete
 
-	   speed = 2.0
+	   speed = 100.0
   capture_radius = 2.0
      slip_radius = 8.0
           points = 0,-10
