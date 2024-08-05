@@ -1,0 +1,184 @@
+//-------------------------------------------------
+// NAME: M. Sacarny, MIT MechE
+// FILE: meta_shoreside.moos
+//-------------------------------------------------
+
+ServerHost = localhost
+ServerPort = $(MOOS_PORT)
+Community  = shoreside
+
+#include plug_origin_warp.moos
+
+//------------------------------------------
+// Antler configuration  block
+
+ProcessConfig = ANTLER
+{
+  MSBetweenLaunches = 200
+
+  Run = MOOSDB		     @ NewConsole = false
+  Run = pRealm         @ NewConsole = false
+  Run = pMarineViewer  @ NewConsole = false
+  Run = pLogger        @ NewConsole = false
+  Run = pShare         @ NewConsole = false 
+  Run = pHostInfo      @ NewConsole = false  
+  Run = uFldShoreBroker @ NewConsole = false
+  Run = uProcessWatch	 @ NewConsole = false
+  
+#ifdef XMODE SIM
+  Run = uFldAnemo      @ NewConsole = false  
+#elseifdef XMODE SIMD
+  Run = uFldAnemo      @ NewConsole = false  
+#endif  
+
+}
+
+#include plug_pShare.moos
+#include plug_pHostInfo.moos
+
+//------------------------------------------
+// pMarineViewer config block
+
+ProcessConfig = pMarineViewer
+{
+  AppTick    = 4
+  CommsTick  = 4
+
+  set_pan_x   = -90
+  set_pan_y   = -280
+  zoom        = 0.95
+
+#ifdef REGION pavlab
+  tiff_file            = MIT_SP.tif
+#elseifdef REGION forest_lake
+  tiff_file            = forrest19.tif
+#elseifdef REGION deer_island
+  tiff_file            = deer_island.tif
+#endif
+  
+  vehicle_shape_scale  = 1.5
+  hash_delta           = 50
+  hash_shade           = 0.4
+  hash_viewable        = true
+
+  trails_point_size   = 1
+
+  stale_report_thresh = 10
+  stale_remove_thresh = 20
+
+  // Appcast configuration
+  appcast_height       = 75
+  appcast_width        = 30
+  appcast_viewable     = true
+  appcast_color_scheme = indigo
+  nodes_font_size      = xlarge
+  procs_font_size      = xlarge
+  appcast_font_size    = large
+  
+  scope = PCT_TO_NEXT
+  
+  button_1 = DEPLOY # DEPLOY_ALL=true
+  button_1 = MOOS_MANUAL_OVERRIDE_ALL=false # RETURN_ALL=false
+  button_2 = RETURN:T # RETURN_ALL=true
+  button_3 = RETURN:F # RETURN_ALL=false
+  button_4 = DEPLOY:F # DEPLOY_ALL=false
+  button_5 = WDIR++ # WIND_DIR_MOD=20
+  button_6 = WDIR-- # WIND_DIR_MOD=-20
+  button_7 = WSPD++ # WIND_SPD_MOD=1
+  button_8 = WSPD-- # WIND_SPD_MOD=-1
+  button_9 = ALL STOP # DEPLOY_ALL=false
+  
+  log_the_image = true    
+  }
+
+//--------------------------------------------------
+// pLogger Configuration Block
+
+ProcessConfig = pLogger
+{
+  AppTick       = 8
+  CommsTick     = 8
+  
+  File          = LOG_SHORESIDE
+  PATH          = ./
+  AsyncLog      = true
+  FileTimeStamp = true
+
+  // Log it all!!!!!
+  LogAuxSrc = true
+  WildCardLogging = true 
+  WildCardOmitPattern = DB_VARSUMMARY
+  WildCardOmitPattern = DB_RWSUMMARY
+  WildCardOmitPattern = *_ITER_GAP
+  WildCardOmitPattern = *_ITER_LEN
+  WildCardOmitPattern = *_SUMMARY
+  WildCardOmitPattern = *_STATUS
+
+}
+
+
+//--------------------------------------------------
+// uFldShoreBroker Configuration Block
+// variables are bridged from shore to vessels
+
+ProcessConfig = uFldShoreBroker
+{
+  AppTick   = 1
+  CommsTick = 1
+
+  qbridge = DEPLOY, NODE_REPORT, NODE_MESSAGE
+  qbridge = STATION, APPCAST_REQ
+  qbridge = MOOS_MANUAL_OVERRIDE
+
+// from uFldAnemo
+#ifdef XMODE SIM
+  bridge  = src=WIND_CONDITIONS, alias=WIND_CONDITIONS
+#else
+  bridge  = src=WIND_CONDITIONS_DKR, alias=WIND_CONDITIONS_DKR
+#endif
+  bridge  = src=WIND_SPEED_R, alias=WIND_SPEED_R
+  bridge  = src=WIND_DIRECTION_R, alias=WIND_DIRECTION_R
+  bridge  = src=WIND_SPEED_T, alias=WIND_SPEED_T
+  bridge  = src=WIND_DIRECTION_T, alias=WIND_DIRECTION_T
+  bridge  = src=SAILPT_UPDATE
+
+  bridge  = src=RETURN_ALL, alias=RETURN
+  bridge  = src=RETURN_$V,  alias=RETURN
+}
+
+//------------------------------------------
+// uProcessWatch config block
+
+ProcessConfig = uProcessWatch
+{
+  AppTick   = 4
+  CommsTick = 4
+
+  summary_wait = 5
+
+  nowatch   = uXMS*
+  nowatch   = uMAC*
+  nowatch   = uPokeDB*
+  nowatch   = uTermCommand*
+  nowatch   = uQueryDB
+  watch_all = true
+}
+
+//------------------------------------------
+// uQueryDB config block
+
+ProcessConfig = uQueryDB
+{
+  pass_condition = SM_TRIAL_STATE=complete
+}
+
+#ifdef XMODE SIM
+  #include plug_uFldAnemo.moos
+#elseifdef XMODE SIMD
+  #include plug_uFldAnemo.moos  
+#endif  
+
+
+
+
+

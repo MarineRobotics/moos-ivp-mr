@@ -1,0 +1,40 @@
+//--------------------------------------------------
+// uFldAnemo Configuration Block
+
+ProcessConfig = uFldAnemo
+{
+  AppTick   = 4
+  CommsTick = 4
+
+
+#ifdef WSPEED
+  wind_spd = $(WSPEED)
+#else
+  wind_spd = 4
+#endif
+#ifdef WDIR
+  wind_dir = $(WDIR)
+#else
+  wind_dir = 180
+#endif  
+
+  //wind_file = "moos-ivp-pavlab/src_sailing/uFldAnemo/data/20221104_sp_7.7_1.9.csv"
+  // path _FROM_ $HOME to wind data file eg- moos-ivp-pavlab/foo.csv
+  // if given, supersedes WSPEED and WDIR  
+#ifdef WFILE
+  wind_file = $(WFILE)
+#endif  
+
+// determines wind data and visual publishing
+#ifdef XMODE
+  xmode = $(XMODE)
+#else
+  xmode = SIM
+#endif
+
+  arrow_ctr_x = -20
+  arrow_ctr_y = -80
+  arrow_color = yellow
+  arrow_trans = 0.2
+  arrow_size  = 1
+}

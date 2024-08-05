@@ -1,0 +1,143 @@
+//--------    FILE: meta_vehicle.bhv   -------------
+
+initialize   DEPLOY = false
+initialize   RETURN = false
+initialize   AVOIDING = idle
+//initialize   DRIFT_X = 0.5
+//initialize   DRIFT_Y = 0.7
+
+// //----------------------------------------------
+Behavior = BHV_SailMax
+{ 
+  name      = sailmax
+  pwt       = 100
+  condition = RETURN = false
+  condition = DEPLOY = true
+	endflag   = RETURN = true
+
+  updates    = SAIL_UPDATE
+  perpetual  = true
+
+             speed     = 2.0  // meters per second
+      capture_line     = true
+    capture_radius     = 5
+       slip_radius     = 15
+     channel_width     = 100  // m
+  upwind_threshold     = 62   // degrees
+  prop_timer_trigger   = 120  // sec
+windir_filter_length   = 10   // sec
+     replan_interval   = 60   // sec
+  close_enough_angle   = 3    // degrees
+  close_enough_pos     = 100   // m
+   tack_imp_factor     = 1.5  // ratio
+
+#ifdef SHAPE tri       
+      points = pts={50,-50:100,-50:100,-150:50,-50}
+      //points = pts={50,-50:300,-50:300,-150:50,-50}
+#elseifdef SHAPE rect
+      points = pts={25,-25:75,-25:75,-125:25,-125:25,-25}
+#elseifdef SHAPE oct
+      //points = pts={-250,120:-610,435:-700,350:-485,360:95,-30:-510,-60:-510,-400:450,-455:500,-655:-315,-770:75,-520}
+      points = pts={48,-25:102,-25:140,-63:140,-117:102,-155:48,-155:10,-117:10,-63:48,-25}
+      //points = pts={48,-125:102,-125:140,-163:140,-217:102,-255:48,-255:10,-217:10,-163:48,-125}
+#elseifdef SHAPE tri-sw
+      points = pts={50,-50:100,-50:100,-150:50,-50}
+#elseifdef SHAPE tri-nw
+      points = pts={71,-43:120,-118:27,-74:71,-43}
+#elseifdef SHAPE tri-ne
+      points = pts={50,-50:100,-50:100,-150:50,-50}
+#elseifdef SHAPE tri-se
+      points = pts={50,-50:100,-50:100,-150:50,-50}
+///////
+// Triangles
+///////
+#elseifdef SHAPE red-cw
+      points = pts={91,-5:140,-75:-63,-73:91,-5}
+#elseifdef SHAPE red-ccw
+      points = pts={-63,-73:140,-75:91,-5:-63,-73}
+#elseifdef SHAPE purple-cw
+      points = pts={82,0:-42,-118:-24,-49:82,0}
+#elseifdef SHAPE purple-ccw
+      points = pts={-24,-49:-42,-118:82,0:-24,-49}
+#elseifdef SHAPE orange-cw
+      points = pts={90,12:83,-73:-54,-53:90,12}
+#elseifdef SHAPE orange-ccw
+      points = pts={-54,-53:83,-73:90,12:-54,-53}
+#elseifdef SHAPE blue-cw
+      points = pts={70,6:-8,-105:-38,-44:70,6}
+#elseifdef SHAPE blue-ccw
+      points = pts={-38,-44:-8,-105:70,6:-38,-44}
+///////
+// reaching - full range
+///////
+#elseifdef SHAPE 0-180-full
+      points = pts={37,-183:33,-15}
+#elseifdef SHAPE 33-213-full
+      points = pts={-50,-100:100,0}
+#elseifdef SHAPE 45-225-full
+      points = pts={100,0:-50,-150}
+#elseifdef SHAPE 90-270-full
+      points = pts={0,-50:250,-50}
+#elseifdef SHAPE 135-315-full
+      points = pts={125,-125:25,-25}
+///////
+// reaching - partial range
+///////
+#elseifdef SHAPE 90-270-partial
+      points = pts={225,-40:20,-40}
+#elseifdef SHAPE 45-225-partial
+      points = pts={75,-125:200,0}
+#elseifdef SHAPE 65-245-partial
+      points = pts={50,-75:240,15}
+#elseifdef SHAPE 0-180-partial
+      points = pts={75,0:75,-150}
+#endif
+#ifdef ORDER
+                 order = $(ORDER)
+#endif
+#ifdef REPEAT                 
+                repeat = $(REPEAT)
+#endif
+
+#include plug_polar.moos		
+
+   visual_hints = nextpt_color=yellow
+   visual_hints = nextpt_vertex_size=8
+   visual_hints = nextpt_lcolor=gray70
+   visual_hints = vertex_color=dodger_blue, edge_color=white
+   visual_hints = vertex_size=6, edge_size=1
+}
+
+//----------------------------------------------
+Behavior=BHV_Waypoint
+{
+  name       = waypt_return
+  pwt        = 100
+  condition  = RETURN = true
+  condition  = DEPLOY = true
+  perpetual  = true
+  updates    = RETURN_UPDATE
+  endflag    = RETURN = false
+  endflag    = DEPLOY = false
+  endflag    = MISSION = complete
+
+	endflag   = EFLAG  = r_endings=$[CTR_02]
+	cycleflag = CFLAG  = r_cyles=$[CTR_01]
+	wptflag   = WFLAG  = r_waypoints=$[CTR]
+
+      lead_condition = AVOIDING != active
+
+                lead = 8
+         lead_damper = 1
+       lead_to_start = true
+
+           speed = 2.0
+  capture_radius = 6.0
+     slip_radius = 8.0
+#ifdef REGION pavlab    
+          point = 0,-20
+#else
+          point = 0, 0
+#endif          
+ }
+

@@ -1,0 +1,15 @@
+MOOSTimeWarp = $(WARP)
+
+#ifdef REGION pavlab
+// MIT Sailing Pavilion (PavLab)
+LatOrigin = 42.358436
+LongOrigin = -71.087448
+#elseifdef REGION forest_lake
+// Forest Lake Maine
+LatOrigin  = 43.825300 
+LongOrigin = -70.330400 
+#elseifdef REGION deer_island
+// Deer Island, Boston Harbor
+LatOrigin = 42.351301
+LongOrigin = -70.969501
+#endif

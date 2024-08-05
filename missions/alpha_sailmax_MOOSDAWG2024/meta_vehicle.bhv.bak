@@ -1,0 +1,92 @@
+//--------    FILE: meta_vehicle.bhv   -------------
+
+initialize   DEPLOY = false
+initialize   RETURN = false
+initialize   AVOIDING = idle
+//initialize   DRIFT_X = 0.5
+//initialize   DRIFT_Y = 0.7
+
+// //----------------------------------------------
+Behavior = BHV_SailMax
+{ 
+  name      = sailmax
+  pwt       = 100
+  condition = RETURN = false
+  condition = DEPLOY = true
+	endflag   = RETURN = true
+
+  updates    = SAIL_UPDATE
+  perpetual  = true
+
+             speed     = 2.0  // meters per second
+      capture_line     = true
+    capture_radius     = 5
+       slip_radius     = 15
+     channel_width     = 100  // m
+  upwind_threshold     = 62   // degrees
+  prop_timer_trigger   = 120  // sec
+windir_filter_length   = 10   // sec
+     replan_interval   = 120   // sec
+  close_enough_angle   = 3    // degrees
+  close_enough_pos     = 40   // m
+   tack_imp_factor     = 1.5  // ratio
+
+#ifdef SHAPE tri       
+      points = pts={50,-50:100,-50:100,-150:50,-50}
+      //points = pts={50,-50:300,-50:300,-150:50,-50}
+#elseifdef SHAPE rect
+      points = pts={25,-25:75,-25:75,-125:25,-125:25,-25}
+#elseifdef SHAPE oct
+      //points = pts={-250,120:-610,435:-700,350:-485,360:95,-30:-510,-60:-510,-400:450,-455:500,-655:-315,-770:75,-520}
+      points = pts={48,-25:102,-25:140,-63:140,-117:102,-155:48,-155:10,-117:10,-63:48,-25}
+      //points = pts={48,-125:102,-125:140,-163:140,-217:102,-255:48,-255:10,-217:10,-163:48,-125}
+#endif          
+#ifdef ORDER
+                 order = $(ORDER)
+#endif
+#ifdef REPEAT                 
+                repeat = $(REPEAT)
+#endif
+
+#include plug_polar.moos		
+
+   visual_hints = nextpt_color=yellow
+   visual_hints = nextpt_vertex_size=8
+   visual_hints = nextpt_lcolor=gray70
+   visual_hints = vertex_color=dodger_blue, edge_color=white
+   visual_hints = vertex_size=6, edge_size=1
+}
+
+//----------------------------------------------
+Behavior=BHV_Waypoint
+{
+  name       = waypt_return
+  pwt        = 100
+  condition  = RETURN = true
+  condition  = DEPLOY = true
+  perpetual  = true
+  updates    = RETURN_UPDATE
+  endflag    = RETURN = false
+  endflag    = DEPLOY = false
+  endflag    = MISSION = complete
+
+	endflag   = EFLAG  = r_endings=$[CTR_02]
+	cycleflag = CFLAG  = r_cyles=$[CTR_01]
+	wptflag   = WFLAG  = r_waypoints=$[CTR]
+
+      lead_condition = AVOIDING != active
+
+                lead = 8
+         lead_damper = 1
+       lead_to_start = true
+
+           speed = 2.0
+  capture_radius = 2.0
+     slip_radius = 8.0
+#ifdef REGION pavlab    
+          point = 0,-20
+#else
+          point = 0, 0
+#endif          
+ }
+

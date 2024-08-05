@@ -1,0 +1,6 @@
+  // polar plot parameters for 0 to 180°
+  // Dramatically simplified from historic by mjs on 2/7/2023
+  // These are in heading/dimensionless magnitude pairs, _not_ speeds!
+  // polar_plot = 0,0:55,50:62,50:69,50:90,50:135,50:155,50:169,44:180,42 
+//polar_plot = 0,0:40,0:45,15:55,35:62,50:69,50:90,50:135,50:155,50:169,44:180,42 
+polar_plot = 0,0:20,40:45,40:55,40:62,50:69,50:90,50:135,50:155,50:169,44:180,42 

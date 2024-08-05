@@ -1,0 +1,4 @@
+  // polar plot parameters for 0 to 180°
+  // From Ray Turissi historical analysis Sept 9,2022
+  // These are in heading/dimensionless magnitude pairs, _not_ speeds!
+  polar_plot = 0,0:6,9:18,7:30,23:45,41:57,37:69,37:81,45:93,53:105,62:117,60:129,49:141,69:153,86:168,79:180,80

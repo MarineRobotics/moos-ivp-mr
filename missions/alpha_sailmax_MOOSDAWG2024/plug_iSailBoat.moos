@@ -1,0 +1,28 @@
+//------------------------------------------
+// iSailBoat config block
+
+ProcessConfig = iSailBoat
+{
+  AppTick    = 10
+  CommsTick  = 10
+
+  //comms_type = $(COMMS_TYPE)
+  //port       = $(PORT)
+  //ip_addr    = $(FSEAT_IP)
+
+  comms_type = client
+  port       = 54321
+  ip_addr    = $(FSEAT_IP)
+
+  stale_thresh = 15
+	
+  max_speed  = 2
+  prop_speed = -1
+  
+  arrow_ctr_x = -20
+  arrow_ctr_y = -80
+  arrow_color = yellow
+  arrow_trans = 0.2
+  arrow_size  = 1
+    
+}
